@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width = device-width, initial-scale = 1, maximum-scale = 1">
+
+	<title>開発手順予定書</title>
+
+	<style>
+		header {
+			background-color: #01579B;
+			height: 75px;
+		}
+
+		header li {
+			list-style: none;
+			float: left;
+			line-height: 75px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		header a {
+			color: #F5F5F5;
+			text-decoration: none;
+		}
+
+		footer {
+			background-color: #33691E;
+			color: #F5F5F5;
+			height: 100px;
+			text-align: center;
+			line-height: 100px;
+		}
+
+		main {
+			text-align: center;
+		}
+
+		a {
+			color: #3F51B5;
+		}
+	</style>
+</head>
+
+<body>
+
+	<header>
+		<ul>
+			<li><a href="index.html" target="_blank" rel="noopener">夕食提案ツール(仮)</a></li>
+			<li><a href="開発手順予定書.html" target="_blank" rel="noopener">開発手順予定書</a></li>
+			<li><a href="開発者向けReadme.html" target="_blank" rel="noopener">開発者向けReadme</a></li>
+			<li><a href="要件定義書.html" target="_blank" rel="noopener">要件定義書</a></li>
+			<li><a href="よくあると想定される質問.html" target="_blank" rel="noopener">Q&A</a></li>
+		</ul>
+	</header>
+
+	<main>
+		<h1>初めに</h1>
+		基本的にこの予定書の手順に沿って開発することになります。<br>
+		実行時の都合によって変更される可能性があります。
+
+		<h1>開発ソフトウェア検討</h1>
+		今回開発するソフトウェアの検討を行います。<br>
+		ここで検討したソフトウェア案を元に機能の縮小や拡張を行っていきます。
+
+		<h1>グループ名・開発ソフトウェア名称決定</h1>
+		開発グループ名と開発ソフトウェアの名称を決定します。
+
+		<h1>Gitの利用設定</h1>
+		今回は開発する際にGitを利用しようと考えています。<br>
+		Gitを利用することで開発の効率化やコード破壊リスクの低下などが実現されます。<br>
+		GitHubのアカウント作成やEclipseでの設定・最低限の使い方については<a href="Git利用手順書.html" target="_blank"
+			rel="noopener">Git利用手順書</a>を参照してください。
+
+		<h1>Eclipseの設定</h1>
+		保存時に自動コード整形を実行するように設定します。<br>
+		設定→エディター→保管アクションの保存時に選択したアクションを実行にチェックを入れ、ソース・コードのフォーマットにもチェックを入れます。
+
+		<h1>CSVファイルの作成</h1>
+		今回作成するソフトウェアで利用するデータはCSVファイルとして作成する予定です。<br>
+		CSVファイルは和食、洋食、中華の三種類を作成することにし、各自分かれて作成します。<br>
+		詳しい仕様などは<a href="要件定義書.html" target="_blank" rel="noopener">要件定義書</a>を参照してください。
+
+		<h1>ソフトウェアの開発</h1>
+		基本的に画面を作成してから処理を記述していきます。<br>
+		機能ごとに担当を分けて開発することとします。<br>
+		簡単なタスク管理に関しては<a href="タスク管理表.xlsx" target="_blank" rel="noopener">タスク管理表</a>を参照してください。</a><br>
+		一応画面設計は作成してありますが、Top画面に関しては全員が集まって作成し、各画面はそれに合わせたデザインを各自検討することとします。<br>
+		詳しい仕様などは<a href="要件定義書.html" target="_blank" rel="noopener">要件定義書</a>を参照してください。<br>
+		どのような処理なのか簡潔にコメントアウトで記述したり、どのような流れのコードなのかを記すコード説明書などの作成もお願いします。<br>
+		詳しい注意点などは<a href="開発者向けReadme.html" target="_blank" rel="noopener">開発者向けReadme</a>を参照してください。<br>
+		機能単位では最初に最低限の機能を作成して完成させます。<br>
+		その後、機能を追加していって完成度を高めていきます。
+
+		<h1>マージ・修正</h1>
+		作成されたコードをマージし、ソフトウェアとして問題なく動作するかチェックします。<br>
+		マージに関してはリーダー・プログラムリーダーが行います。<br>
+		修正は基本的に機能担当者が行うこととします。
+
+		<h1>動作テスト</h1>
+		完成したソフトウェアを全員で動作テストをします。
+
+		<h1>最終チェック・書類作成</h1>
+		ソフトウェアの最終チェックを行い、書類作成をします。<br>
+		書類は基本的にリーダーが開発と並行して作成します。<br>
+		各開発者が作成するドキュメントを元に書類を作成するので、正確でわかりやすい記述をお願いします。
+	</main>
+
+	<footer>
+		(C)2020 パラキートステップ(仮)</a>
+	</footer>
+</body>
+
+</html>

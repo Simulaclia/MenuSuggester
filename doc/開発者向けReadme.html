@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width = device-width, initial-scale = 1, maximum-scale = 1">
+
+	<title>開発者向けReadme</title>
+
+	<style>
+		header {
+			background-color: #01579B;
+			height: 75px;
+		}
+
+		header li {
+			list-style: none;
+			float: left;
+			line-height: 75px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		header a {
+			color: #F5F5F5;
+			text-decoration: none;
+		}
+
+		footer {
+			background-color: #33691E;
+			color: #F5F5F5;
+			height: 100px;
+			text-align: center;
+			line-height: 100px;
+		}
+
+		main {
+			text-align: center;
+		}
+
+		a {
+			color: #3F51B5;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<ul>
+			<li><a href="index.html" target="_blank" rel="noopener">夕食提案ツール(仮)</a></li>
+			<li><a href="開発手順予定書.html" target="_blank" rel="noopener">開発手順予定書</a></li>
+			<li><a href="開発者向けReadme.html" target="_blank" rel="noopener">開発者向けReadme</a></li>
+			<li><a href="要件定義書.html" target="_blank" rel="noopener">要件定義書</a></li>
+			<li><a href="よくあると想定される質問.html" target="_blank" rel="noopener">Q&A</a></li>
+		</ul>
+	</header>
+
+	<main>
+		<h1>IDEについて</h1>
+		IDEに関しては自由とします。<br>
+		ただし推奨はEclipseで、それ以外はノンサポートとします。
+
+
+		<h1>変数名について</h1>
+		基本的には自由とします。<br>
+		ただしある程度何のための変数なのかわかる英語にしてください。
+
+
+		<h1>コードの記述について</h1>
+		ループ用の変数など明らかにわかる物以外の変数や処理などに関しては基本的にコメントアウトでどのような目的の処理なのか簡潔に記述してください。<br>
+		また、コードを記述する際に参考にした記事がある場合はわかりやすい場所にURLを記述しておいてください。<br>
+		詳しくは<a href="コード記述例.java" target="_blank" rel="noopener">コード記述例</a>を参照してください。
+
+
+		<h1>GitHubについて</h1>
+		今回開発にGitHubを利用する予定です。<br>
+		開発時にはPrivate状態ですが、発表の際にPublic状態にする予定です。<br>
+		開発するコードやドキュメントに開発者の個人情報を残さないようにお願いします。
+
+		<h1>CSVファイル構成について</h1>
+		料理名,料理国名,料理ジャンル,2人前価格,料理所要時間カロリー,タンパク質量,脂質量,炭水化物量,クックパッドの料理名検索リンク<br>
+		料理国は和食、洋食、中華の三択にします。<br>
+		料理ジャンルは揚げ物、煮物、焼き物等を記述してください。<br>
+		価格は10円単位、2人前の価格とします。<br>
+		料理の所要時間は10分単位とします。<br>
+		カロリーは1kcal単位とします。<br>
+		タンパク質、脂質、炭水化物量は0.1g単位とします。<br>
+		記述する料理は基本的に夕食として食べる料理とします。
+
+
+		<h1>お気に入り機能と作成履歴機能について</h1>
+		お気に入りや作成履歴用のCSVを別に用意し、お気に入りや作成をしたときに上から追記することとします。<br>
+		より良い実装が可能な場合は再度検討します。
+
+		<h1>インデントについて</h1>
+		コードの体裁はEclipseの自動整形機能によるものとします。<br>
+		"設定"→"Java"→"エディター"→"保管アクション"から"保存時に選択したアクションを実行"にチェックを入れ、"ソース・コードのフォーマット"にチェックを入れることでコードの保存時に自動で整形されます。
+	</main>
+
+	<footer>
+		(C)2020 パラキートステップ(仮)</a>
+	</footer>
+</body>
+
+</html>

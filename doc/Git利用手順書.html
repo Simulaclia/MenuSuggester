@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width = device-width, initial-scale = 1, maximum-scale = 1">
+
+	<title>Git利用手順書</title>
+
+	<style>
+		header {
+			background-color: #01579B;
+			height: 75px;
+		}
+
+		header li {
+			list-style: none;
+			float: left;
+			line-height: 75px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		header a {
+			color: #F5F5F5;
+			text-decoration: none;
+		}
+
+		footer {
+			background-color: #33691E;
+			color: #F5F5F5;
+			height: 100px;
+			text-align: center;
+			line-height: 100px;
+		}
+
+		main {
+			text-align: center;
+		}
+
+		a {
+			color: #3F51B5;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<ul>
+			<li><a href="index.html" target="_blank" rel="noopener">夕食提案ツール(仮)</a></li>
+			<li><a href="開発手順予定書.html" target="_blank" rel="noopener">開発手順予定書</a></li>
+			<li><a href="開発者向けReadme.html" target="_blank" rel="noopener">開発者向けReadme</a></li>
+			<li><a href="要件定義書.html" target="_blank" rel="noopener">要件定義書</a></li>
+			<li><a href="よくあると想定される質問.html" target="_blank" rel="noopener">Q&A</a></li>
+		</ul>
+	</header>
+	<main>
+		<h1>GitHubアカウントの作成</h1>
+		<a href="https://github.co.jp/">GitHub.com</a><br>
+		右上のサインアップからアカウントを作成します。<br>
+		今後も利用する場合はユーザー名やメールアドレスをしっかりと検討してください。<br>
+		CAPTCHAを突破後、アンケートに答えメール認証をしてください。
+
+		<h1>チームへの参加</h1>
+		開発班で組織を作成し、今回作成するソフトウェアのソースコード等を管理します。<br>
+		追加するのでユーザー名を提出してください。
+
+		<h1>コミッターの設定</h1>
+		GitにPushする際に記録される名前等を設定します。<br>
+		ウィンドウ→設定→チーム→Git→構成のユーザー設定を開き、エントリーの追加をクリックします。<br>
+		キーに”user.name”、値にGitHubで利用しているユーザー名を追加します。<br>
+		また、キーに”user.email”、値にGitHubに登録しているメールアドレスを追加します。<br>
+		<a href="https://github.com/settings/emails">Email settings</a><br>
+		この際、メールアドレスを晒したくない場合は”Keep my email addresses private”欄にかかれているダミーのメールアドレスを利用することも可能です。
+
+		<h1>GitHubからEclipseにプロジェクトファイルをインポート</h1>
+		<a href="https://qiita.com/komikcomik/items/207794a332aa581c22d4">GitHubとEclipseの連携とかまとめ - Qiita</a><br>
+		GitHub上に用意してあるリポジトリからプロジェクトファイルをインポートします。<br>
+		ファイル→インポート→Gitからプロジェクト→クローンURIを選択して、URIにリポジトリページの左側あたりにあるClone or downloadをクリックして表示されるURLを入力します。<br>
+		自分のユーザー名とパスワードを入力、そのまま次へ、ディレクトリーを設定して次へ、既存プロジェクト・ウィザードを使用してインポートを選択することでインポートが完了します。
+
+		<h1>コーディング</h1>
+		自分の担当箇所をコーディングしてください。
+
+		<h1>コミットとプッシュ</h1>
+		コーディングが完了したら、プロジェクトファイル右クリック→チーム→コミットを選択します。<br>
+		ステージされていない変更をステージされた変更に移動させ、コミット・メッセージを入力、コミットおよびプッシュを選択することでコミットとプッシュが行われます。
+
+		<h1>Gitの学習について</h1>
+		基本的にEclipse上で利用する予定なためコマンドなどは記憶する必要はありませんが、Progateではコマンドを実際に打ち込みながらGitに関することを学ぶことができます。<br>
+		他にも解説しているサイトが大量にあるので、チェックしてみてください。
+
+		<h1>今回利用する機能について</h1>
+		今回は時短と省力化を目的として、ブランチなどは利用せずGitの基本的機能のみを利用することとします。<br>
+		ただしそれによってコードの破壊リスクが高まります。各自定期的にプロジェクトファイルごとのバックアップをお願いします。
+	</main>
+	<footer>
+		(C)2020 パラキートステップ(仮)</a>
+	</footer>
+
+</body>
+
+</html>
