@@ -9,59 +9,53 @@ import java.util.Calendar;
 public class SeasonSearchPage {
 	public static void main(String[] args) {
 		Calendar calendar = Calendar.getInstance();
-		String seasonFood = "ねぎ";
 
 		try {
+
 			// レシピCSVファイル読み込み処理
 			FileInputStream fisRec = new FileInputStream("csv/Recipe.csv");
 			InputStreamReader isrRec = new InputStreamReader(fisRec);
 			BufferedReader brRec = new BufferedReader(isrRec);
-
-			String tempData; // CSVファイル一行読み込みデータ
-			ArrayList<ArrayList<String>> recipeList = new ArrayList<ArrayList<String>>(); // 絞り込み後データ
+			String tempData; // レシピCSVファイル一行読み込みデータ
+			ArrayList<ArrayList<String>> recipeList = new ArrayList<ArrayList<String>>(); // レシピCSVファイル絞り込み後データ
 
 			// 旬食材CSVファイル読み込み処理
 			FileInputStream fisFoo = new FileInputStream("csv/FoodSeason.csv");
 			InputStreamReader isrFoo = new InputStreamReader(fisFoo);
 			BufferedReader brFoo = new BufferedReader(isrFoo);
+			String tempSeasonFoodData; // CSVファイル一行読み込みデータ
+			ArrayList<String> seasonFoodArrayList = new ArrayList<String>(); // 旬食材CSVファイル絞り込み後データ
 
-			String tempFoodData; // CSVファイル一行読み込みデータ
-			ArrayList<String> foodArrayList = new ArrayList<String>(); // 絞り込み後データ
-
-			int i = 1;
-			while ((tempFoodData = brFoo.readLine()) != null) { // CSVファイル内データの最後までループ
-				i++;
-				if (i == calendar.get(Calendar.MONTH) + 1 - 1) {
-					String[] tempFoodList = tempFoodData.split(","); // CSVファイル一行分から","で分割して配列代入
+			// 旬食材CSVファイル絞り込み処理
+			int i = 0; // 月カウント
+			while ((tempSeasonFoodData = brFoo.readLine()) != null) { // CSVファイル内データの最後までループ
+				if (i == calendar.get(Calendar.MONTH) + 1 - 1) { // 現在月と合致した行を取得
+					String[] tempFoodList = tempSeasonFoodData.split(","); // CSVファイル一行分から","で分割して配列代入
 					// 配列内データをリストに代入
 					for (String tempFo : tempFoodList) {
-						foodArrayList.add(tempFo);
+						seasonFoodArrayList.add(tempFo);
 					}
 				}
+				i++;
 			}
 
-			// CSVファイルリスト代入
+			// レシピCSVファイル絞り込み処理
 			while ((tempData = brRec.readLine()) != null) { // CSVファイル内データの最後までループ
 				String[] tempList = tempData.split(","); // CSVファイル一行分から","で分割して配列代入
-				ArrayList<String> tempArrayList = new ArrayList<String>();
+				ArrayList<String> tempArrayList = new ArrayList<String>(); // 1行代入用
 				// 配列内データをリストに代入
 				for (String tempLi : tempList) {
 					tempArrayList.add(tempLi);
 				}
-
-				for (String tempdata : foodArrayList) {
-					if (tempArrayList.get(12).equals(tempdata)) {
-						recipeList.add(tempArrayList); // 条件に合致したデータを代入
+				// 旬食材絞り込み処理
+				for (String tempdata : seasonFoodArrayList) { // 旬食材データから全て検索
+					if (tempArrayList.get(12).equals(tempdata)) { // 合致する食材を検索
+						recipeList.add(tempArrayList); // 合致したレシピを追加
 					}
 				}
-
-//				// 旬食材絞り込み
-//				if (tempArrayList.get(12).equals(seasonFood)) {
-//					recipeList.add(tempArrayList); // 条件に合致したデータを代入
-//				}
 			}
 
-			// 絞り込み後データ表示
+			// 絞り込み後データ表示(仮設)
 			for (ArrayList<String> recipe : recipeList) {
 				for (String data : recipe) {
 					System.out.print(data + "\t");
@@ -69,6 +63,7 @@ public class SeasonSearchPage {
 				System.out.println();
 			}
 
+			brFoo.close();
 			brRec.close();
 		} catch (Exception e) {
 			e.printStackTrace();
