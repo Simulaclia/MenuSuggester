@@ -23,8 +23,8 @@ public class SeasonSearchPage {
 				String[] tempList = tempData.split(","); // CSVファイル一行分から","で分割して配列代入
 				ArrayList<String> tempArrayList = new ArrayList<String>();
 				// 配列内データをリストに代入
-				for (int i = 0; i <= tempList.length - 1; i++) {
-					tempArrayList.add(tempList[i]);
+				for (String tempLi : tempList) {
+					tempArrayList.add(tempLi);
 				}
 				// 旬食材絞り込み
 				if (tempArrayList.get(12).equals(seasonFood)) {
