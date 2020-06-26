@@ -33,7 +33,7 @@
             <Font size="50.0" />
          </font>
       </Button>
-      <Button fx:id="SeasonSearch" layoutX="159.0" layoutY="627.0" mnemonicParsing="false" text="旬の食材からの提案">
+      <Button fx:id="SeasonSearch" layoutX="159.0" layoutY="627.0" mnemonicParsing="false" onAction="#SeasonSearch_onClick" text="旬の食材からの提案">
          <font>
             <Font size="50.0" />
          </font>
