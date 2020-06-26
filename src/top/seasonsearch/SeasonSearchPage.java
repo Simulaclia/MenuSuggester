@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 public class SeasonSearchPage {
-	public static void main(String[] args) {
+	public SeasonSearchPage() {
 		Calendar calendar = Calendar.getInstance();
 
 		try {
