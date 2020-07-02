@@ -8,10 +8,18 @@ import java.util.Calendar;
 
 public class SeasonSearchPage {
 	public SeasonSearchPage() {
+		// 絞り込み後データ表示(仮設)
+		for (ArrayList<String> recipe : SeasonSearch()) {
+			for (String data : recipe) {
+				System.out.print(data + "\t");
+			}
+			System.out.println();
+		}
+	}
+
+	public static ArrayList<ArrayList<String>> SeasonSearch() {
 		Calendar calendar = Calendar.getInstance();
-
 		try {
-
 			// レシピCSVファイル読み込み処理
 			FileInputStream fisRec = new FileInputStream("csv/Recipe.csv");
 			InputStreamReader isrRec = new InputStreamReader(fisRec);
@@ -54,19 +62,12 @@ public class SeasonSearchPage {
 					}
 				}
 			}
-
-			// 絞り込み後データ表示(仮設)
-			for (ArrayList<String> recipe : recipeList) {
-				for (String data : recipe) {
-					System.out.print(data + "\t");
-				}
-				System.out.println();
-			}
-
 			brFoo.close();
 			brRec.close();
+			return recipeList;
 		} catch (Exception e) {
 			e.printStackTrace();
+			return null;
 		}
 	}
 }
