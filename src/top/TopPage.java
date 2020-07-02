@@ -6,14 +6,13 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class Main extends Application {
+public class TopPage extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("TopPage.fxml")); // TopPage.fxmi表示
-			Scene scene = new Scene(root, 1600, 900); // 画面サイズ指定
-
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			AnchorPane topPage = (AnchorPane) FXMLLoader.load(getClass().getResource("TopPage.fxml")); // TopPage.fxml表示
+			Scene scene = new Scene(topPage);
+			scene.getStylesheets().add(getClass().getResource("TopPage.css").toExternalForm()); // CSS指定
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch (Exception e) {
