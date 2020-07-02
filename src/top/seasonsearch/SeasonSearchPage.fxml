@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.seasonsearch.SeasonSearchPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onDragDetected="#ReturnTopButton_OnClick" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.seasonsearch.SeasonSearchPageController">
    <children>
-      <Button layoutX="74.0" layoutY="40.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="326.0" text="Topへ戻る">
+      <Button layoutX="74.0" layoutY="40.0" mnemonicParsing="false" onAction="#ReturnTopButton_OnClick" prefHeight="95.0" prefWidth="326.0" text="Topへ戻る">
          <font>
             <Font size="42.0" />
          </font>
