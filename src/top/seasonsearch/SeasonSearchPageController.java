@@ -17,41 +17,8 @@ import javafx.stage.Window;
 public class SeasonSearchPageController {
 
 	@FXML
-	private Label menuName1;
-	@FXML
-	private Label menuName2;
-	@FXML
-	private Label menuName3;
-	@FXML
-	private Label country1;
-	@FXML
-	private Label country2;
-	@FXML
-	private Label country3;
-	@FXML
-	private Label genre1;
-	@FXML
-	private Label genre2;
-	@FXML
-	private Label genre3;
-	@FXML
-	private Label time1;
-	@FXML
-	private Label time2;
-	@FXML
-	private Label time3;
-	@FXML
-	private Label cal1;
-	@FXML
-	private Label cal2;
-	@FXML
-	private Label cal3;
-	@FXML
-	private Label seasonFood1;
-	@FXML
-	private Label seasonFood2;
-	@FXML
-	private Label seasonFood3;
+	private Label menuName1, menuName2, menuName3, country1, country2, country3, genre1, genre2, genre3, time1, time2,
+			time3, cal1, cal2, cal3, seasonFood1, seasonFood2, seasonFood3;
 
 	Random rand = new Random();
 
