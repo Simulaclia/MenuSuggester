@@ -59,7 +59,7 @@ public class TopPageController {
 			window.hide();
 
 			AnchorPane foodSerach = (AnchorPane) FXMLLoader
-					.load(getClass().getResource("/top/foodsearch/foodsearch.fxml"));
+					.load(getClass().getResource("/top/foodsearch/FoodSearchPage.fxml"));
 			Scene scene = new Scene(foodSerach);
 			Stage stage = new Stage();
 			stage.setScene(scene);
