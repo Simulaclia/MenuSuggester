@@ -8,7 +8,7 @@
 
 <AnchorPane fx:id="CHUCb" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="113.0" layoutY="87.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="326.0" text="Topに戻る">
+      <Button layoutX="120.0" layoutY="85.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="450.0" text="一週間ランダムに戻る">
          <font>
             <Font size="42.0" />
          </font>
