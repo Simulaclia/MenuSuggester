@@ -27,7 +27,6 @@ public class TopPageController {
 			stage.setScene(scene);
 			stage.show();
 		} catch (IOException e) {
-			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		}
 	}
@@ -47,7 +46,6 @@ public class TopPageController {
 			stage.setScene(scene);
 			stage.show();
 		} catch (IOException e) {
-			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		}
 	}
@@ -67,7 +65,6 @@ public class TopPageController {
 			stage.setScene(scene);
 			stage.show();
 		} catch (IOException e) {
-			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		}
 	}
@@ -87,7 +84,6 @@ public class TopPageController {
 			stage.setScene(scene);
 			stage.show();
 		} catch (IOException e) {
-			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		}
 	}
@@ -107,7 +103,6 @@ public class TopPageController {
 			stage.setScene(scene);
 			stage.show();
 		} catch (IOException e) {
-			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		}
 	}

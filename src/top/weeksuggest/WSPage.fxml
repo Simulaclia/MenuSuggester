@@ -1,188 +1,410 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ScrollBar?>
-<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="113.0" layoutY="87.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="326.0" text="Topへ戻る">
+      <ScrollPane hbarPolicy="NEVER" layoutX="-8.0" layoutY="176.0" prefHeight="1041.0" prefWidth="1602.0" vbarPolicy="ALWAYS">
+         <content>
+            <VBox prefHeight="2100.0" prefWidth="1600.0">
+               <children>
+                  <Pane prefHeight="250.0" prefWidth="1600.0">
+                     <children>
+                        <Label layoutX="120.0" layoutY="50.0" text="料理名1">
+                           <font>
+                              <Font size="110.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="650.0" layoutY="50.0" text="ジャンル">
+                           <font>
+                              <Font size="59.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="650.0" layoutY="140.0" text="調理法">
+                           <font>
+                              <Font size="59.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1100.0" layoutY="145.0" text="000">
+                           <font>
+                              <Font size="52.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="900.0" layoutY="55.0" text="所要時間：">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="900.0" layoutY="145.0" text="カロリー：">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1230.0" layoutY="55.0" text="分">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1200.0" layoutY="145.0" text="kcal">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1135.0" layoutY="55.0" text="000">
+                           <font>
+                              <Font size="52.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="10.0" prefHeight="250.0" prefWidth="1600.0">
+                     <children>
+                        <Label layoutX="120.0" layoutY="50.0" text="料理名2">
+                           <font>
+                              <Font size="110.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="650.0" layoutY="50.0" text="ジャンル">
+                           <font>
+                              <Font size="59.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="650.0" layoutY="140.0" text="調理法">
+                           <font>
+                              <Font size="59.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1100.0" layoutY="145.0" text="000">
+                           <font>
+                              <Font size="52.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="900.0" layoutY="55.0" text="所要時間：">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="900.0" layoutY="145.0" text="カロリー：">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1230.0" layoutY="55.0" text="分">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1200.0" layoutY="145.0" text="kcal">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1135.0" layoutY="55.0" text="000">
+                           <font>
+                              <Font size="52.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="260.0" prefHeight="250.0" prefWidth="1600.0">
+                     <children>
+                        <Label layoutX="120.0" layoutY="50.0" text="料理名3">
+                           <font>
+                              <Font size="110.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="650.0" layoutY="50.0" text="ジャンル">
+                           <font>
+                              <Font size="59.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="650.0" layoutY="140.0" text="調理法">
+                           <font>
+                              <Font size="59.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1100.0" layoutY="145.0" text="000">
+                           <font>
+                              <Font size="52.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="900.0" layoutY="55.0" text="所要時間：">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="900.0" layoutY="145.0" text="カロリー：">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1230.0" layoutY="55.0" text="分">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1200.0" layoutY="145.0" text="kcal">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1135.0" layoutY="55.0" text="000">
+                           <font>
+                              <Font size="52.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="510.0" prefHeight="250.0" prefWidth="1600.0">
+                     <children>
+                        <Label layoutX="120.0" layoutY="50.0" text="料理名4">
+                           <font>
+                              <Font size="110.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="650.0" layoutY="50.0" text="ジャンル">
+                           <font>
+                              <Font size="59.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="650.0" layoutY="140.0" text="調理法">
+                           <font>
+                              <Font size="59.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1100.0" layoutY="145.0" text="000">
+                           <font>
+                              <Font size="52.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="900.0" layoutY="55.0" text="所要時間：">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="900.0" layoutY="145.0" text="カロリー：">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1230.0" layoutY="55.0" text="分">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1200.0" layoutY="145.0" text="kcal">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1135.0" layoutY="55.0" text="000">
+                           <font>
+                              <Font size="52.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="760.0" prefHeight="250.0" prefWidth="1600.0">
+                     <children>
+                        <Label layoutX="120.0" layoutY="50.0" text="料理名5">
+                           <font>
+                              <Font size="110.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="650.0" layoutY="50.0" text="ジャンル">
+                           <font>
+                              <Font size="59.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="650.0" layoutY="140.0" text="調理法">
+                           <font>
+                              <Font size="59.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1100.0" layoutY="145.0" text="000">
+                           <font>
+                              <Font size="52.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="900.0" layoutY="55.0" text="所要時間：">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="900.0" layoutY="145.0" text="カロリー：">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1230.0" layoutY="55.0" text="分">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1200.0" layoutY="145.0" text="kcal">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1135.0" layoutY="55.0" text="000">
+                           <font>
+                              <Font size="52.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="1010.0" prefHeight="250.0" prefWidth="1600.0">
+                     <children>
+                        <Label layoutX="120.0" layoutY="50.0" text="料理名6">
+                           <font>
+                              <Font size="110.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="650.0" layoutY="50.0" text="ジャンル">
+                           <font>
+                              <Font size="59.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="650.0" layoutY="140.0" text="調理法">
+                           <font>
+                              <Font size="59.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1100.0" layoutY="145.0" text="000">
+                           <font>
+                              <Font size="52.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="900.0" layoutY="55.0" text="所要時間：">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="900.0" layoutY="145.0" text="カロリー：">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1230.0" layoutY="55.0" text="分">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1200.0" layoutY="145.0" text="kcal">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1135.0" layoutY="55.0" text="000">
+                           <font>
+                              <Font size="52.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="1260.0" prefHeight="250.0" prefWidth="1600.0">
+                     <children>
+                        <Label layoutX="120.0" layoutY="50.0" text="料理名7">
+                           <font>
+                              <Font size="110.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="650.0" layoutY="50.0" text="ジャンル">
+                           <font>
+                              <Font size="59.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="650.0" layoutY="140.0" text="調理法">
+                           <font>
+                              <Font size="59.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1100.0" layoutY="145.0" text="000">
+                           <font>
+                              <Font size="52.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="900.0" layoutY="55.0" text="所要時間：">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="900.0" layoutY="145.0" text="カロリー：">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1230.0" layoutY="55.0" text="分">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1200.0" layoutY="145.0" text="kcal">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1135.0" layoutY="55.0" text="000">
+                           <font>
+                              <Font size="52.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <Button layoutX="225.0" layoutY="45.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="330.0" text="Topへ戻る">
          <font>
             <Font size="42.0" />
          </font>
       </Button>
-      <Button layoutX="1167.0" layoutY="92.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="378.0" text="絞り込み条件設定">
+      <Button layoutX="1050.0" layoutY="45.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="380.0" text="絞り込み条件設定">
          <font>
             <Font size="42.0" />
          </font>
       </Button>
-      <Text layoutX="155.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="料理名1" wrappingWidth="403.4700622558594">
-         <font>
-            <Font size="110.0" />
-         </font>
-      </Text>
-      <ScrollBar layoutX="1580.0" layoutY="2.0" orientation="VERTICAL" prefHeight="898.0" prefWidth="22.0" visibleAmount="25.0">
-         <effect>
-            <Blend />
-         </effect>
-      </ScrollBar>
-      <Text layoutX="155.0" layoutY="516.0" strokeType="OUTSIDE" strokeWidth="0.0" text="料理名2" wrappingWidth="403.4700622558594">
-         <font>
-            <Font size="110.0" />
-         </font>
-      </Text>
-      <Text layoutX="155.0" layoutY="708.0" strokeType="OUTSIDE" strokeWidth="0.0" text="料理名3" wrappingWidth="403.4700622558594">
-         <font>
-            <Font size="110.0" />
-         </font>
-      </Text>
-      <Text layoutX="666.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ジャンル" wrappingWidth="232.8033447265625">
-         <font>
-            <Font size="59.0" />
-         </font>
-      </Text>
-      <Button layoutX="1345.0" layoutY="245.0" mnemonicParsing="false" prefHeight="99.0" prefWidth="178.0" text="お気に入り追加">
-         <font>
-            <Font size="23.0" />
-         </font>
-      </Button>
-      <Button layoutX="1345.0" layoutY="425.0" mnemonicParsing="false" prefHeight="99.0" prefWidth="178.0" text="お気に入り追加">
-         <font>
-            <Font size="23.0" />
-         </font>
-      </Button>
-      <Button layoutX="1345.0" layoutY="625.0" mnemonicParsing="false" prefHeight="99.0" prefWidth="178.0" text="お気に入り追加">
-         <font>
-            <Font size="23.0" />
-         </font>
-      </Button>
-      <Text layoutX="666.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="調理法" wrappingWidth="232.8033447265625">
-         <font>
-            <Font size="59.0" />
-         </font>
-      </Text>
-      <Text layoutX="666.0" layoutY="462.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ジャンル" wrappingWidth="232.8033447265625">
-         <font>
-            <Font size="59.0" />
-         </font>
-      </Text>
-      <Text layoutX="666.0" layoutY="542.0" strokeType="OUTSIDE" strokeWidth="0.0" text="調理法" wrappingWidth="232.8033447265625">
-         <font>
-            <Font size="59.0" />
-         </font>
-      </Text>
-      <Text layoutX="666.0" layoutY="664.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ジャンル" wrappingWidth="232.8033447265625">
-         <font>
-            <Font size="59.0" />
-         </font>
-      </Text>
-      <Text layoutX="666.0" layoutY="744.0" strokeType="OUTSIDE" strokeWidth="0.0" text="調理法" wrappingWidth="232.8033447265625">
-         <font>
-            <Font size="59.0" />
-         </font>
-      </Text>
-      <Text layoutX="946.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="所要時間:">
-         <font>
-            <Font size="50.0" />
-         </font>
-      </Text>
-      <Text layoutX="946.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="カロリー:">
-         <font>
-            <Font size="50.0" />
-         </font>
-      </Text>
-      <Text layoutX="946.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" text="所要時間:">
-         <font>
-            <Font size="50.0" />
-         </font>
-      </Text>
-      <Text layoutX="946.0" layoutY="542.0" strokeType="OUTSIDE" strokeWidth="0.0" text="カロリー:">
-         <font>
-            <Font size="50.0" />
-         </font>
-      </Text>
-      <Text layoutX="946.0" layoutY="659.0" strokeType="OUTSIDE" strokeWidth="0.0" text="所要時間:">
-         <font>
-            <Font size="50.0" />
-         </font>
-      </Text>
-      <Text layoutX="946.0" layoutY="737.0" strokeType="OUTSIDE" strokeWidth="0.0" text="カロリー:">
-         <font>
-            <Font size="50.0" />
-         </font>
-      </Text>
-      <Text layoutX="1240.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="分">
-         <font>
-            <Font size="50.0" />
-         </font>
-      </Text>
-      <Text layoutX="1240.0" layoutY="462.0" strokeType="OUTSIDE" strokeWidth="0.0" text="分">
-         <font>
-            <Font size="50.0" />
-         </font>
-      </Text>
-      <Text layoutX="1240.0" layoutY="655.0" strokeType="OUTSIDE" strokeWidth="0.0" text="分">
-         <font>
-            <Font size="50.0" />
-         </font>
-      </Text>
-      <Text layoutX="1210.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="kcal">
-         <font>
-            <Font size="50.0" />
-         </font>
-      </Text>
-      <Text layoutX="1210.0" layoutY="549.0" strokeType="OUTSIDE" strokeWidth="0.0" text="kcal">
-         <font>
-            <Font size="50.0" />
-         </font>
-      </Text>
-      <Text layoutX="1210.0" layoutY="738.0" strokeType="OUTSIDE" strokeWidth="0.0" text="kcal">
-         <font>
-            <Font size="50.0" />
-         </font>
-      </Text>
-      <Text layoutX="155.0" layoutY="891.0" strokeType="OUTSIDE" strokeWidth="0.0" text="料理名4" wrappingWidth="403.4700622558594">
-         <font>
-            <Font size="110.0" />
-         </font>
-      </Text>
-      <Button layoutX="1345.0" layoutY="815.0" mnemonicParsing="false" prefHeight="99.0" prefWidth="178.0" text="お気に入り追加">
-         <font>
-            <Font size="23.0" />
-         </font>
-      </Button>
-      <Text layoutX="666.0" layoutY="847.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ジャンル" wrappingWidth="232.8033447265625">
-         <font>
-            <Font size="59.0" />
-         </font>
-      </Text>
-      <Text layoutX="666.0" layoutY="927.0" strokeType="OUTSIDE" strokeWidth="0.0" text="調理法" wrappingWidth="232.8033447265625">
-         <font>
-            <Font size="59.0" />
-         </font>
-      </Text>
-      <Text layoutX="946.0" layoutY="842.0" strokeType="OUTSIDE" strokeWidth="0.0" text="所要時間:">
-         <font>
-            <Font size="50.0" />
-         </font>
-      </Text>
-      <Text layoutX="946.0" layoutY="920.0" strokeType="OUTSIDE" strokeWidth="0.0" text="カロリー:">
-         <font>
-            <Font size="50.0" />
-         </font>
-      </Text>
-      <Text layoutX="1240.0" layoutY="838.0" strokeType="OUTSIDE" strokeWidth="0.0" text="分">
-         <font>
-            <Font size="50.0" />
-         </font>
-      </Text>
-      <Text layoutX="1210.0" layoutY="921.0" strokeType="OUTSIDE" strokeWidth="0.0" text="kcal">
-         <font>
-            <Font size="50.0" />
-         </font>
-      </Text>
    </children>
 </AnchorPane>

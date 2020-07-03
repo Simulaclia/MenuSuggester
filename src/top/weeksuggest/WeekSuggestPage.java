@@ -22,7 +22,7 @@ public class WeekSuggestPage {
 			FileReader filereader = new FileReader("csv/Recipe.csv");
 			BufferedReader br = new BufferedReader(filereader);
 
-			//一行ずつ読み込んで
+			//一行ずつ読み込む
 			String str = br.readLine();
 			int count = 0;
 
@@ -53,7 +53,6 @@ public class WeekSuggestPage {
 
 		for (int i = 0; i <= 6; i++) {
 			int randomValue = random.nextInt(70);
-
 			for (int j = 0; j <= 13; j++) {
 				System.out.println(recipe[randomValue][j]);
 			}

@@ -7,15 +7,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 public class SeasonSearchPage {
-	public SeasonSearchPage() {
-		// 絞り込み後データ表示(仮設)
-		for (ArrayList<String> recipe : SeasonSearch()) {
-			for (String data : recipe) {
-				System.out.print(data + "\t");
-			}
-			System.out.println();
-		}
-	}
 
 	public static ArrayList<ArrayList<String>> SeasonSearch() {
 		Calendar calendar = Calendar.getInstance();
