@@ -1,18 +1,12 @@
 package top.seasonsearch;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
-import javafx.stage.Window;
+import top.TopPage;
 
 public class SeasonSearchPageController {
 
@@ -46,19 +40,7 @@ public class SeasonSearchPageController {
 	// Topに戻るボタンクリック時
 	@FXML
 	void ReturnTopButton_OnClick(ActionEvent evt) {
-		try {
-			Scene s = ((Node) evt.getSource()).getScene();
-			Window window = s.getWindow();
-			window.hide();
-
-			AnchorPane topPage = (AnchorPane) FXMLLoader.load(getClass().getResource("/top/TopPage.fxml"));
-			Scene scene = new Scene(topPage);
-			Stage stage = new Stage();
-			stage.setScene(scene);
-			stage.show();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		new TopPage().changePage("/top/TopPage.fxml");
 	}
 
 	// ランダムで旬レシピをラベルにセットする処理
