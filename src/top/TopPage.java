@@ -12,8 +12,8 @@ public class TopPage extends Application {
 	@Override
 	public void start(Stage stage) {
 		TopPage.stage = stage;
-		changePage("TopPage.fxml");
-		stage.show();
+		changePage("TopPage.fxml"); // ページ変更
+		stage.show(); // ページ表示
 	}
 
 	public static void main(String[] args) {
