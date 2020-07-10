@@ -58,8 +58,6 @@ public class WeekSuggestPage {
 			}
 		}
 
-		//		return Index;
-
 	}
 
 	/*  public void RandomExtraction(String[] R) {

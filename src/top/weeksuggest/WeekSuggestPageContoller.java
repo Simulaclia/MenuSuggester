@@ -35,10 +35,18 @@ public class WeekSuggestPageContoller {
 		//RandomSetMenu(WeekSuggest, label);
 	}
 
-	/*private void RandomSetMenu(ArrayList<ArrayList<String>> weekSuggest, Label[][] label) {
-		// TODO 自動生成されたメソッド・スタブ
+	//   絞り込み機能に飛ぶ処理
+	@FXML
+	void NextButton_OnClick() {
+		new WeekSuggestPage().chengePage("/top/weeksuggest/WSPNarrow_down.fxml");
+	}
+
+	/*   ブックマーク登録ボタン処理
+	@FXML
+	void bookmark_button_OnClick() {
 	
-	}*/
+	}
+	*/
 
 	@FXML //TOPに戻るボタンの処理
 	void ReturnTopButton_OnClick(ActionEvent evt) {
@@ -55,5 +63,6 @@ public class WeekSuggestPageContoller {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+
 	}
 }
