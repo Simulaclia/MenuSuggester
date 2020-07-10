@@ -60,7 +60,8 @@ public class WeekSuggestPage {
 
 	}
 
-	/*  public void RandomExtraction(String[] R) {
-	
-	}*/
+	public void chengePage(String string) {
+
+	}
+
 }

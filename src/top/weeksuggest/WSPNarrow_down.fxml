@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.weeksuggest.WSPN_Controller">
+<AnchorPane fx:id="CHUCb" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button fx:id="backPage_button" layoutX="113.0" layoutY="87.0" mnemonicParsing="false" onAction="#backPage_button_onClick" prefHeight="95.0" prefWidth="450.0" text="一週間ランダムに戻る">
+      <Button layoutX="113.0" layoutY="87.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="326.0" text="Topに戻る">
          <font>
             <Font size="42.0" />
          </font>
@@ -23,19 +23,19 @@
             <Font size="79.0" />
          </font>
       </Label>
-      <Button layoutX="400.0" layoutY="730.0" mnemonicParsing="false" onAction="#reset_OnClick" text="リセット">
+      <Button layoutX="400.0" layoutY="730.0" mnemonicParsing="false" text="リセット">
          <font>
             <Font size="60.0" />
          </font>
       </Button>
-      <Button fx:id="WSPNd" layoutX="1000.0" layoutY="730.0" mnemonicParsing="false" onAction="#Decision_OnClick" text="決定">
+      <Button layoutX="1000.0" layoutY="730.0" mnemonicParsing="false" text="決定">
          <font>
             <Font size="60.0" />
          </font>
       </Button>
       <ComboBox fx:id="WACb" layoutX="460.0" layoutY="380.0" prefHeight="70.0" prefWidth="110.0" />
       <ComboBox fx:id="YOCb" layoutX="460.0" layoutY="490.0" prefHeight="70.0" prefWidth="110.0" />
-      <ComboBox fx:id="CHUCb" layoutX="460.0" layoutY="600.0" prefHeight="70.0" prefWidth="110.0" />
+      <ComboBox layoutX="460.0" layoutY="600.0" prefHeight="70.0" prefWidth="110.0" />
       <Label layoutX="325.0" layoutY="375.0" text="和食">
          <font>
             <Font size="55.0" />
