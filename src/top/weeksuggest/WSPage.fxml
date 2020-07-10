@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="CookMenu7" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.weeksuggest.WSPN_Controller">
+<AnchorPane fx:id="CookMenu7" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.weeksuggest.WeekSuggestPageContoller">
    <children>
       <ScrollPane hbarPolicy="NEVER" layoutX="-8.0" layoutY="176.0" prefHeight="1040.0" prefWidth="1600.0" vbarPolicy="ALWAYS">
          <content>
@@ -36,7 +36,7 @@
                               <Font size="52.0" />
                            </font>
                         </Label>
-                        <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" onAction="#bookmark_button_OnClick" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
+                        <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
                            <font>
                               <Font size="23.0" />
                            </font>
@@ -90,7 +90,7 @@
                               <Font size="52.0" />
                            </font>
                         </Label>
-                        <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" onAction="#bookmark_button_OnClick" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
+                        <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
                            <font>
                               <Font size="23.0" />
                            </font>
@@ -144,7 +144,7 @@
                               <Font size="52.0" />
                            </font>
                         </Label>
-                        <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" onAction="#bookmark_button_OnClick" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
+                        <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
                            <font>
                               <Font size="23.0" />
                            </font>
@@ -198,7 +198,7 @@
                               <Font size="52.0" />
                            </font>
                         </Label>
-                        <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" onAction="#bookmark_button_OnClick" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
+                        <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
                            <font>
                               <Font size="23.0" />
                            </font>
@@ -252,11 +252,6 @@
                               <Font size="52.0" />
                            </font>
                         </Label>
-                        <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" onAction="#bookmark_button_OnClick" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
-                           <font>
-                              <Font size="23.0" />
-                           </font>
-                        </Button>
                         <Label layoutX="900.0" layoutY="55.0" text="所要時間：">
                            <font>
                               <Font size="50.0" />
@@ -306,7 +301,7 @@
                               <Font size="52.0" />
                            </font>
                         </Label>
-                        <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" onAction="#bookmark_button_OnClick" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
+                        <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
                            <font>
                               <Font size="23.0" />
                            </font>
@@ -336,6 +331,11 @@
                               <Font size="52.0" />
                            </font>
                         </Label>
+                        <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
                      </children>
                   </Pane>
                   <Pane layoutX="10.0" layoutY="1260.0" prefHeight="250.0" prefWidth="1600.0">
@@ -396,12 +396,12 @@
             </VBox>
          </content>
       </ScrollPane>
-      <Button fx:id="ReturnTopButton" layoutX="225.0" layoutY="45.0" mnemonicParsing="false" onAction="#ReturnTopButton_OnClick" prefHeight="100.0" prefWidth="330.0" text="Topへ戻る">
+      <Button fx:id="ReturnTopButton" layoutX="221.0" layoutY="42.0" mnemonicParsing="false" onAction="#ReturnTopButton_OnClick" prefHeight="100.0" prefWidth="330.0" text="Topへ戻る">
          <font>
             <Font size="42.0" />
          </font>
       </Button>
-      <Button fx:id="nextPage_button" layoutX="1050.0" layoutY="45.0" mnemonicParsing="false" onAction="#nextPage_button_onClick" prefHeight="100.0" prefWidth="380.0" text="絞り込み条件設定">
+      <Button fx:id="nextPage_button" layoutX="1050.0" layoutY="45.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="380.0" text="絞り込み条件設定">
          <font>
             <Font size="42.0" />
          </font>
