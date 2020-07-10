@@ -31,4 +31,15 @@ public class WeekSuggestPageContoller {
 	void ReturnTopButton_OnClick() {
 		new TopPage().changePage("/top/TopPage.fxml");
 	}
+
+	@FXML
+	void nextPage_OnClick() {
+		new TopPage().changePage("/top/WPSNarrow_down.fxml");
+	}
+
+	@FXML
+	void backPage_button_OnClick() {
+		new TopPage().changePage("/top/WSPage.fxml");
+	}
+
 }

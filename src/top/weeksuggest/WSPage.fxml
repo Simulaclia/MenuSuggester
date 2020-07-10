@@ -401,7 +401,7 @@
             <Font size="42.0" />
          </font>
       </Button>
-      <Button fx:id="nextPage_button" layoutX="1050.0" layoutY="45.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="380.0" text="絞り込み条件設定">
+      <Button fx:id="nextPage_button" layoutX="1050.0" layoutY="45.0" mnemonicParsing="false" onAction="#nextPage_OnClick" prefHeight="100.0" prefWidth="380.0" text="絞り込み条件設定">
          <font>
             <Font size="42.0" />
          </font>
