@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"> fx:controller="top.foodsearch.FoodSearchPageController"
    <children>
       <Button layoutX="50.0" layoutY="56.0" mnemonicParsing="false" onAction="#ReturnTopButton_OnClick" prefHeight="95.0" prefWidth="326.0" text="Topへ戻る">
          <font>
@@ -19,12 +19,12 @@
             <Font size="96.0" />
          </font>
       </Label>
-      <Button layoutX="510.0" layoutY="691.0" mnemonicParsing="false" onAction="#ReSuggest_OnClick" text="リセット">
+      <Button layoutX="510.0" layoutY="691.0" mnemonicParsing="false" text="リセット">
          <font>
             <Font size="60.0" />
          </font>
       </Button>
-      <Button layoutX="954.0" layoutY="696.0" mnemonicParsing="false" onAction="#ReSuggest_OnClick" text="決定!">
+      <Button layoutX="954.0" layoutY="696.0" mnemonicParsing="false" text="決定!">
          <font>
             <Font size="60.0" />
          </font>
