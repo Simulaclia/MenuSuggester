@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width = device-width, initial-scale = 1, maximum-scale = 1">
+
+	<title>fxml開発手順</title>
+
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+	<header>
+		<ul>
+			<li><a href="../index.html" target="_blank" rel="noopener">献提-MenuSuggester-</a></li>
+			<li><a href="開発手順予定書.html" target="_blank" rel="noopener">開発手順予定書</a></li>
+			<li><a href="開発者向けReadme.html" target="_blank" rel="noopener">開発者向けReadme</a></li>
+			<li><a href="要件定義書.html" target="_blank" rel="noopener">要件定義書</a></li>
+			<li><a href="../よくあると想定される質問.html" target="_blank" rel="noopener">Q&A</a></li>
+			<li><a href="../開発週誌.html" target="_blank" rel="noopener">開発週誌</a></li>
+		</ul>
+	</header>
+	<main>
+
+		<h1>SceneBuilderでの画面作成</h1>
+		<p>
+			まずSceneBuilderで画面を作成します。<br>
+			とりあえず仮にボタンやラベルなどを配置して動作チェック用として作成します。
+		</p>
+
+		<h1>Controllerクラスの作成</h1>
+		<p>Eclipseに戻り、Controllerクラスを作成します。
+			Controllerクラス内に画面内に存在しているボタンやラベルなどの処理を記述します。
+			基本的に"TopPageController.java"などページ名にControllerを合わせたファイル名で作成してください。<br>
+		</p>
+
+		<h1>Controllerクラスとfxmlの紐付け</h1>
+		<p>
+			各画面でどのControllerクラスを利用するか紐付けをします。<br>
+			SceneBuilderを開き、左下のControllerを開き、Controller classに紐付けするControllerクラスのパスを指定します。<br>
+			例えばSeeasonSerchPageControllerの場合は"top.SeeasonSerchPage.SeeasonSerchPageController"を指定します。
+		</p>
+		</h1>
+
+		<h1>ボタンクリック時に実行される処理の指定</h1>
+		<p>	
+			ボタンを選択し、右側のCodeからOn Actionにボタンをクリックしたときに実行する関数名を指定します。<br>
+			Topへ戻るボタンの場合は"ReturnTopPage_OnClick"のようなわかりやすい関数名を指定してください。
+		</p>
+
+		<h1>処理の記述</h1>
+		<p>
+			Eclipseに戻り、処理を記述します。<br>
+			TopPageController.javaなどを参考にしてください。<br>
+			
+		</p>	
+
+	</main>
+	<footer>
+		(C)2020 <a href="https://github.com/Simulaclia" style="color: #FAFAFA">Simulaclia</a>
+	</footer>
+
+</body>
+
+</html>
