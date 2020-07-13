@@ -11,7 +11,7 @@ public class FoodSearchPageController {
 	}
 
 	@FXML //決定ボタン→ansへ
-	void nextPage_OnClick() {
+	void AnsPage_OnClick() {
 		new TopPage().changePage("/top/foodsearchFoodSearchPage_ans.fxml");
 	}
 }
