@@ -33,12 +33,12 @@ public class SeasonSearchPageController {
 
 	@FXML
 	void addBookmark1_OnClick() {
-		BookmarkPage.addBookmark(randomRecipe.get(0));
+		BookmarkPage.AddBookmark(randomRecipe.get(0));
 	}
 
 	@FXML
 	void addBookmark2_OnClick() {
-		BookmarkPage.addBookmark(randomRecipe.get(1));
+		BookmarkPage.AddBookmark(randomRecipe.get(1));
 
 	}
 

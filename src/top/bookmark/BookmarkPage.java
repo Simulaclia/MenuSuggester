@@ -38,7 +38,7 @@ public class BookmarkPage {
 		try {
 			int count = 1;
 			File file = new File("csv/Bookmark.csv");
-			FileWriter filewriter = new FileWriter(file, true);
+			FileWriter filewriter = new FileWriter(file, false);
 			for (String str : recipe) {
 				if (count <= recipe.size() - 1)
 					filewriter.write(str + ",");
@@ -48,6 +48,36 @@ public class BookmarkPage {
 			filewriter.close();
 		} catch (IOException e) {
 			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
+	}
+
+	public static void deleteBookmark(ArrayList<String> recipe) {
+		try {
+
+			File file = new File("csv/Bookmark.csv");
+			FileWriter filewriter = new FileWriter(file, false);
+			filewriter.write("");
+			filewriter.close();
+
+			// FileInputStream fisRec = new FileInputStream("csv/Bookmark.csv");
+			// InputStreamReader isrRec = new InputStreamReader(fisRec);
+			// BufferedReader brRec = new BufferedReader(isrRec);
+			// String tempData;
+			//
+			// while ((tempData = brRec.readLine()) != null) {
+			// String[] tempList = tempData.split(",");
+			// ArrayList<String> tempArrayList = new ArrayList<String>();
+			// for (String tempLi : tempList) {
+			// tempArrayList.add(tempLi);
+			// }
+			// if(recipe == tempArrayList.get()) {
+			// addBookmark
+			// }
+			//
+			// }
+			// brRec.close();
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
