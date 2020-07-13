@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 import top.TopPage;
 
 public class FoodSearchPageController {
-	@FXML
+	@FXML //Topボタン
 	void ReturnTopButton_OnClick() {
 		new TopPage().changePage("/top/TopPage.fxml");
 	}
