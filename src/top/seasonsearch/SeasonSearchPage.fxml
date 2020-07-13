@@ -107,5 +107,20 @@
             <Font size="55.0" />
          </font>
       </Label>
+      <Button layoutX="1244.0" layoutY="248.0" mnemonicParsing="false" onAction="#addBookmark1_OnClick" text="お気に入り追加">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Button>
+      <Button layoutX="1241.0" layoutY="448.0" mnemonicParsing="false" onAction="#addBookmark2_OnClick" text="お気に入り追加">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Button>
+      <Button layoutX="1233.0" layoutY="661.0" mnemonicParsing="false" onAction="#addBookmark3_OnClick" text="お気に入り追加">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
