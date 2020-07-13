@@ -252,6 +252,11 @@
                               <Font size="52.0" />
                            </font>
                         </Label>
+                        <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
                         <Label layoutX="900.0" layoutY="55.0" text="所要時間：">
                            <font>
                               <Font size="50.0" />
@@ -331,11 +336,6 @@
                               <Font size="52.0" />
                            </font>
                         </Label>
-                        <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
-                           <font>
-                              <Font size="23.0" />
-                           </font>
-                        </Button>
                      </children>
                   </Pane>
                   <Pane layoutX="10.0" layoutY="1260.0" prefHeight="250.0" prefWidth="1600.0">

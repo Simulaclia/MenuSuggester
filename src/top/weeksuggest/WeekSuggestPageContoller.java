@@ -26,17 +26,19 @@ public class WeekSuggestPageContoller {
 	// { calorie1, calorie2, calorie3, calorie4, calorie5, calorie6, calorie7 } };
 	// }
 
-	// 絞り込み機能に飛ぶ処理
+	// トップページに飛ぶ処理
 	@FXML
 	void ReturnTopButton_OnClick() {
 		new TopPage().changePage("/top/TopPage.fxml");
 	}
 
+	//絞り込み機能に飛ぶ処理
 	@FXML
 	void nextPage_OnClick() {
-		new TopPage().changePage("/top/WPSNarrow_down.fxml");
+		new TopPage().changePage("/top/WPSNarrow_down2.fxml");
 	}
 
+	//一週間ランダム表示に戻る処理
 	@FXML
 	void backPage_button_OnClick() {
 		new TopPage().changePage("/top/WSPage.fxml");
