@@ -32,16 +32,16 @@ public class WeekSuggestPageContoller {
 		new TopPage().changePage("/top/TopPage.fxml");
 	}
 
-	//絞り込み機能に飛ぶ処理
+	// 絞り込み機能に飛ぶ処理
 	@FXML
 	void nextPage_OnClick() {
-		new TopPage().changePage("/top/WPSNarrow_down2.fxml");
+		new TopPage().changePage("/top/weeksuggest/WSPNarrow_down2.fxml");
 	}
 
-	//一週間ランダム表示に戻る処理
+	// 一週間ランダム表示に戻る処理
 	@FXML
 	void backPage_button_OnClick() {
-		new TopPage().changePage("/top/WSPage.fxml");
+		new TopPage().changePage("/top/weeksuggest/WSPage.fxml");
 	}
 
 }
