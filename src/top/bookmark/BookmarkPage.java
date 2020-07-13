@@ -34,11 +34,11 @@ public class BookmarkPage {
 		}
 	}
 
-	public static void addBookmark(ArrayList<String> recipe) {
+	public static void AddBookmark(ArrayList<String> recipe) {
 		try {
 			int count = 1;
 			File file = new File("csv/Bookmark.csv");
-			FileWriter filewriter = new FileWriter(file, false);
+			FileWriter filewriter = new FileWriter(file, true);
 			for (String str : recipe) {
 				if (count <= recipe.size() - 1)
 					filewriter.write(str + ",");
@@ -52,31 +52,37 @@ public class BookmarkPage {
 		}
 	}
 
-	public static void deleteBookmark(ArrayList<String> recipe) {
+	public static void DeleteBookmark(ArrayList<String> recipe) {
 		try {
+			ArrayList<ArrayList<String>> bookmarkList = new ArrayList<ArrayList<String>>();
+			FileInputStream fisRec = new FileInputStream("csv/Bookmark.csv");
+			InputStreamReader isrRec = new InputStreamReader(fisRec);
+			BufferedReader brRec = new BufferedReader(isrRec);
+			String tempData;
+
+			while ((tempData = brRec.readLine()) != null) {
+
+				String[] tempList = tempData.split(",");
+				ArrayList<String> tempArrayList = new ArrayList<String>();
+				for (String tempLi : tempList) {
+					tempArrayList.add(tempLi);
+				}
+				if (!(recipe.get(0).equals(tempArrayList.get(0)) && recipe.get(8).equals(tempArrayList.get(8)))) {
+					bookmarkList.add(tempArrayList);
+				}
+			}
+
+			brRec.close();
 
 			File file = new File("csv/Bookmark.csv");
 			FileWriter filewriter = new FileWriter(file, false);
 			filewriter.write("");
 			filewriter.close();
 
-			// FileInputStream fisRec = new FileInputStream("csv/Bookmark.csv");
-			// InputStreamReader isrRec = new InputStreamReader(fisRec);
-			// BufferedReader brRec = new BufferedReader(isrRec);
-			// String tempData;
-			//
-			// while ((tempData = brRec.readLine()) != null) {
-			// String[] tempList = tempData.split(",");
-			// ArrayList<String> tempArrayList = new ArrayList<String>();
-			// for (String tempLi : tempList) {
-			// tempArrayList.add(tempLi);
-			// }
-			// if(recipe == tempArrayList.get()) {
-			// addBookmark
-			// }
-			//
-			// }
-			// brRec.close();
+			for (ArrayList<String> list : bookmarkList) {
+				AddBookmark(list);
+			}
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

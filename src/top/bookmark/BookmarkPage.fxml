@@ -35,7 +35,7 @@
                   <Font size="52.0" />
                </font>
             </Label>
-            <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="180.0" text="お気に入り削除">
+            <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" onAction="#DeleteBookmark1_OnClick" prefHeight="100.0" prefWidth="180.0" text="お気に入り削除">
                <font>
                   <Font size="23.0" />
                </font>
@@ -89,7 +89,7 @@
                   <Font size="52.0" />
                </font>
             </Label>
-            <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="180.0" text="お気に入り削除">
+            <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" onDragDetected="#DeleteBookmark3_OnClick" prefHeight="100.0" prefWidth="180.0" text="お気に入り削除">
                <font>
                   <Font size="23.0" />
                </font>
@@ -143,7 +143,7 @@
                   <Font size="52.0" />
                </font>
             </Label>
-            <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="180.0" text="お気に入り削除">
+            <Button layoutX="1342.0" layoutY="82.0" mnemonicParsing="false" onAction="#DeleteBookmark2_OnClick" prefHeight="100.0" prefWidth="180.0" text="お気に入り削除">
                <font>
                   <Font size="23.0" />
                </font>

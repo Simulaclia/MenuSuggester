@@ -11,16 +11,31 @@ public class BookmarkPageController {
 	private Label menuName1, menuName2, menuName3, genre1, genre2, genre3, cookGenre1, cookGenre2, cookGenre3, time1,
 			time2, time3, cal1, cal2, cal3;
 
-	// ArrayList<ArrayList<String>> bookmarkRecipe;
+	ArrayList<ArrayList<String>> bookmarkRecipe;
 
 	// 初期処理
 	@FXML
 	void initialize() {
-		// bookmarkRecipe = new ArrayList<ArrayList<String>>();
+		bookmarkRecipe = new ArrayList<ArrayList<String>>();
 		Label[][] label = { { menuName1, menuName2, menuName3 }, { cookGenre1, cookGenre2, cookGenre3 },
 				{ genre1, genre2, genre3 }, { time1, time2, time3 }, { cal1, cal2, cal3 } };
 		ArrayList<ArrayList<String>> bookmarkMenu = BookmarkPage.Bookmark();
 		bookmarkSetMenu(bookmarkMenu, label);
+	}
+
+	@FXML
+	void DeleteBookmark1_OnClick() {
+		BookmarkPage.DeleteBookmark(bookmarkRecipe.get(0));
+	}
+
+	@FXML
+	void DeleteBookmark2_OnClick() {
+		BookmarkPage.DeleteBookmark(bookmarkRecipe.get(1));
+	}
+
+	@FXML
+	void DeleteBookmark3_OnClick() {
+		BookmarkPage.DeleteBookmark(bookmarkRecipe.get(2));
 	}
 
 	@FXML
@@ -35,7 +50,7 @@ public class BookmarkPageController {
 			label[1][i].setText(bookmarkMenu.get(i).get(1)); // 料理国
 			label[3][i].setText(bookmarkMenu.get(i).get(4) + "分"); // 所要時間
 			label[4][i].setText(bookmarkMenu.get(i).get(5) + "kcal"); // カロリー
-			// bookmarkRecipe.add(bookmarkMenu.get(0));
+			bookmarkRecipe.add(bookmarkMenu.get(i));
 		}
 	}
 }
