@@ -1,10 +1,11 @@
 package top.bookmark;
 
 import javafx.fxml.FXML;
+import top.TopPage;
 
 public class BookmarkPageController {
 	@FXML
-	void Button_OnClick() {
-		BookmarkPage.addBookmark();
+	void ReturnTopPage_OnClick() {
+		new TopPage().changePage("/top/TopPage.fxml");
 	}
 }
