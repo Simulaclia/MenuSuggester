@@ -22,7 +22,7 @@
             <Font size="60.0" />
          </font>
       </Button>
-      <Button fx:id="sB1" layoutX="946.0" layoutY="683.0" mnemonicParsing="false" onAction="#AnsPage_OnClick" text="決定!">
+      <Button fx:id="SuggestButton" layoutX="946.0" layoutY="683.0" mnemonicParsing="false" onAction="#AnsPage_OnClick" text="決定!">
          <font>
             <Font size="60.0" />
          </font>
