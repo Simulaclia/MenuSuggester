@@ -31,8 +31,8 @@ public class BookmarkPageController {
 	void bookmarkSetMenu(ArrayList<ArrayList<String>> bookmarkMenu, Label[][] label) {
 		for (int i = 0; i <= 2; i++) {
 			label[0][i].setText(bookmarkMenu.get(i).get(0)); // 料理名
-			label[1][i].setText(bookmarkMenu.get(i).get(1)); // 料理国
 			label[2][i].setText(bookmarkMenu.get(i).get(2)); // 料理ジャンル
+			label[1][i].setText(bookmarkMenu.get(i).get(1)); // 料理国
 			label[3][i].setText(bookmarkMenu.get(i).get(4) + "分"); // 所要時間
 			label[4][i].setText(bookmarkMenu.get(i).get(5) + "kcal"); // カロリー
 			// bookmarkRecipe.add(bookmarkMenu.get(0));
