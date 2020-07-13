@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
@@ -23,7 +22,6 @@
             <Font size="60.0" />
          </font>
       </Button>
-
       <Button layoutX="954.0" layoutY="696.0" mnemonicParsing="false" text="決定!">
          <font>
             <Font size="60.0" />
