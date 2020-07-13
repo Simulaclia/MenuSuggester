@@ -44,7 +44,7 @@ public class SeasonSearchPageController {
 
 	@FXML
 	void addBookmark3_OnClick() {
-		BookmarkPage.addBookmark(randomRecipe.get(2));
+		BookmarkPage.AddBookmark(randomRecipe.get(2));
 	}
 
 	// 再提案ボタンクリック時処理
