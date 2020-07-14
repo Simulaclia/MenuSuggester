@@ -14,4 +14,5 @@ public class FoodSearchPageController {
 	void AnsPage_OnClick() {
 		new TopPage().changePage("/top/foodsearch/FSP_ans.fxml");
 	}
+
 }
