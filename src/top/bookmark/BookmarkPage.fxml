@@ -120,15 +120,19 @@
             </Button>
          </children>
       </Pane>
-      <Button fx:id="backButton" layoutX="290.0" layoutY="732.0" mnemonicParsing="false" text="前へ">
+      <Button fx:id="backButton" layoutX="290.0" layoutY="732.0" mnemonicParsing="false" onAction="#backButton_OnClick" text="前へ">
          <font>
             <Font size="52.0" />
          </font>
       </Button>
-      <Button fx:id="nextButton" layoutX="1062.0" layoutY="740.0" mnemonicParsing="false" text="次へ">
+      <Button fx:id="nextButton" layoutX="1062.0" layoutY="740.0" mnemonicParsing="false" onAction="#nextButton_OnClick" text="次へ">
          <font>
             <Font size="52.0" />
          </font>
       </Button>
+      <Label fx:id="pageNum" layoutX="633.0" layoutY="732.0">
+         <font>
+            <Font size="96.0" />
+         </font></Label>
    </children>
 </AnchorPane>
