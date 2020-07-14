@@ -35,6 +35,7 @@ public class BookmarkPage {
 	}
 
 	public static void AddBookmark(ArrayList<String> recipe) {
+		DeleteBookmark(recipe);
 		try {
 			int count = 1;
 			File file = new File("csv/Bookmark.csv");
