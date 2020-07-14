@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -17,15 +18,16 @@
             <Font size="96.0" />
          </font>
       </Label>
-      <Button layoutX="510.0" layoutY="691.0" mnemonicParsing="false" text="リセット">
+      <Button layoutX="453.0" layoutY="647.0" mnemonicParsing="false" text="リセット">
          <font>
             <Font size="60.0" />
          </font>
       </Button>
-      <Button fx:id="SuggestButton" layoutX="946.0" layoutY="683.0" mnemonicParsing="false" onAction="#AnsPage_OnClick" text="決定!">
+      <Button fx:id="SuggestButton" layoutX="914.0" layoutY="652.0" mnemonicParsing="false" onAction="#AnsPage_OnClick" text="決定!">
          <font>
             <Font size="60.0" />
          </font>
       </Button>
+      <ComboBox layoutX="711.0" layoutY="459.0" prefHeight="70.0" prefWidth="200.0" promptText="食材を選択" visibleRowCount="5" />
    </children>
 </AnchorPane>
