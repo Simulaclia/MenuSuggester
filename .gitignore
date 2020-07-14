@@ -24,4 +24,4 @@ hs_err_pid*
 /bin/
 
 .classpath
-csv\Bookmark.csv
+/csv/Bookmark.csv
