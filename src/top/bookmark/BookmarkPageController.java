@@ -154,6 +154,7 @@ public class BookmarkPageController {
 			}
 		} else {
 			pageCount--;
+			buttonHide(bookmarkMenu.size());
 			bookmarkSetMenu(bookmarkMenu, label);
 		}
 	}
