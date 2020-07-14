@@ -8,15 +8,19 @@ import javafx.scene.control.Label;
 import top.TopPage;
 
 public class BookmarkPageController {
+	// ラベル取得
 	@FXML
 	private Label menuName1, menuName2, menuName3, genre1, genre2, genre3, cookGenre1, cookGenre2, cookGenre3, time1,
 			time2, time3, cal1, cal2, cal3, noBookmarkText, pageNum;
 
+	// ボタン取得
 	@FXML
 	private Button deleteBookmarkButton1, deleteBookmarkButton2, deleteBookmarkButton3, backButton, nextButton;
 
+	// ブックマークされているレシピ用リスト
 	ArrayList<ArrayList<String>> bookmarkRecipe;
 
+	// 現在ページ数
 	int pageCount = 1;
 
 	// 初期処理
@@ -25,11 +29,12 @@ public class BookmarkPageController {
 		bookmarkRecipe = new ArrayList<ArrayList<String>>();
 		Label[][] label = { { menuName1, menuName2, menuName3 }, { cookGenre1, cookGenre2, cookGenre3 },
 				{ genre1, genre2, genre3 }, { time1, time2, time3 }, { cal1, cal2, cal3 } };
-		ArrayList<ArrayList<String>> bookmarkMenu = BookmarkPage.Bookmark();
-		buttonHide(bookmarkMenu.size());
-		bookmarkSetMenu(bookmarkMenu, label);
+		ArrayList<ArrayList<String>> bookmarkMenu = BookmarkPage.Bookmark(); // ブックマークされているレシピリスト取得
+		buttonHide(bookmarkMenu.size()); // 前へ・次へボタンの表示・非表示処理
+		bookmarkSetMenu(bookmarkMenu, label); // ブックマークをラベルへセットする処理
 	}
 
+	// 前へボタンクリック処理
 	@FXML
 	void backButton_OnClick() {
 		pageCount--;
@@ -42,6 +47,7 @@ public class BookmarkPageController {
 		bookmarkSetMenu(bookmarkMenu, label);
 	}
 
+	// 次へボタンクリック処理
 	@FXML
 	void nextButton_OnClick() {
 		pageCount++;
@@ -54,17 +60,20 @@ public class BookmarkPageController {
 		bookmarkSetMenu(bookmarkMenu, label);
 	}
 
+	// お気に入り解除ボタン1クリック処理
 	@FXML
 	void DeleteBookmark1_OnClick() {
-		BookmarkPage.DeleteBookmark(bookmarkRecipe.get(0));
+		BookmarkPage.DeleteBookmark(bookmarkRecipe.get(0)); // ブックマーク削除処理
 
 		bookmarkRecipe = new ArrayList<ArrayList<String>>();
 		Label[][] label = { { menuName1, menuName2, menuName3 }, { cookGenre1, cookGenre2, cookGenre3 },
 				{ genre1, genre2, genre3 }, { time1, time2, time3 }, { cal1, cal2, cal3 } };
 		ArrayList<ArrayList<String>> bookmarkMenu = BookmarkPage.Bookmark();
+		buttonHide(bookmarkMenu.size());
 		bookmarkSetMenu(bookmarkMenu, label);
 	}
 
+	// お気に入り解除ボタン2クリック処理
 	@FXML
 	void DeleteBookmark2_OnClick() {
 		BookmarkPage.DeleteBookmark(bookmarkRecipe.get(1));
@@ -73,9 +82,11 @@ public class BookmarkPageController {
 		Label[][] label = { { menuName1, menuName2, menuName3 }, { cookGenre1, cookGenre2, cookGenre3 },
 				{ genre1, genre2, genre3 }, { time1, time2, time3 }, { cal1, cal2, cal3 } };
 		ArrayList<ArrayList<String>> bookmarkMenu = BookmarkPage.Bookmark();
+		buttonHide(bookmarkMenu.size());
 		bookmarkSetMenu(bookmarkMenu, label);
 	}
 
+	// お気に入り解除ボタン3クリック処理
 	@FXML
 	void DeleteBookmark3_OnClick() {
 		BookmarkPage.DeleteBookmark(bookmarkRecipe.get(2));
@@ -84,14 +95,17 @@ public class BookmarkPageController {
 		Label[][] label = { { menuName1, menuName2, menuName3 }, { cookGenre1, cookGenre2, cookGenre3 },
 				{ genre1, genre2, genre3 }, { time1, time2, time3 }, { cal1, cal2, cal3 } };
 		ArrayList<ArrayList<String>> bookmarkMenu = BookmarkPage.Bookmark();
+		buttonHide(bookmarkMenu.size());
 		bookmarkSetMenu(bookmarkMenu, label);
 	}
 
+	// Topへ戻るボタンクリック処理
 	@FXML
 	void ReturnTopPage_OnClick() {
 		new TopPage().changePage("/top/TopPage.fxml");
 	}
 
+	// ブックマークをラベルへセットする処理
 	void bookmarkSetMenu(ArrayList<ArrayList<String>> bookmarkMenu, Label[][] label) {
 		// ラベル初期化処理
 		for (int i = 0; i <= 2; i++) {
@@ -100,42 +114,45 @@ public class BookmarkPageController {
 			label[1][i].setText(""); // 料理国
 			label[3][i].setText(""); // 所要時間
 			label[4][i].setText(""); // カロリー
-			pageNum.setText(String.valueOf(pageCount));
-			deleteBookmarkButton1.setVisible(true);
-			deleteBookmarkButton2.setVisible(true);
-			deleteBookmarkButton3.setVisible(true);
+			pageNum.setText(String.valueOf(pageCount)); // ページ数セット
+			deleteBookmarkButton1.setVisible(true); // お気に入り解除ボタン1表示
+			deleteBookmarkButton2.setVisible(true); // お気に入り解除ボタン2表示
+			deleteBookmarkButton3.setVisible(true); // お気に入り解除ボタン3表示
 		}
 		// ブックマークされたメニューが1つも無いとき
 		if (bookmarkMenu.size() == 0) {
-			deleteBookmarkButton1.setVisible(false);
-			deleteBookmarkButton2.setVisible(false);
-			deleteBookmarkButton3.setVisible(false);
+			deleteBookmarkButton1.setVisible(false); // お気に入り解除ボタン1非表示
+			deleteBookmarkButton2.setVisible(false); // お気に入り解除ボタン2非表示
+			deleteBookmarkButton3.setVisible(false); // お気に入り解除ボタン3非表示
 
 			noBookmarkText.setText("ブックマークはありません");
 		}
 		// ブックマークされたメニューが1つのとき
 		else if (bookmarkMenu.size() - ((pageCount - 1) * 3) == 1) {
-			deleteBookmarkButton2.setVisible(false);
-			deleteBookmarkButton3.setVisible(false);
+			deleteBookmarkButton2.setVisible(false); // お気に入り解除ボタン2非表示
+			deleteBookmarkButton3.setVisible(false); // お気に入り解除ボタン3非表示
 
-			label[0][0].setText(bookmarkMenu.get(((pageCount - 1) * 3)).get(0)); // 料理名
-			label[2][0].setText(bookmarkMenu.get(((pageCount - 1) * 3)).get(2)); // 料理ジャンル
-			label[1][0].setText(bookmarkMenu.get(((pageCount - 1) * 3)).get(1)); // 料理国
-			label[3][0].setText(bookmarkMenu.get(((pageCount - 1) * 3)).get(4) + "分"); // 所要時間
-			label[4][0].setText(bookmarkMenu.get(((pageCount - 1) * 3)).get(5) + "kcal"); // カロリー
-			bookmarkRecipe.add(bookmarkMenu.get(((pageCount - 1) * 3)));
-
+			// 1段目のみ代入
+			label[0][0].setText(bookmarkMenu.get(((pageCount - 1) * 3)).get(0));
+			label[2][0].setText(bookmarkMenu.get(((pageCount - 1) * 3)).get(2));
+			label[1][0].setText(bookmarkMenu.get(((pageCount - 1) * 3)).get(1));
+			label[3][0].setText(bookmarkMenu.get(((pageCount - 1) * 3)).get(4) + "分");
+			label[4][0].setText(bookmarkMenu.get(((pageCount - 1) * 3)).get(5) + "kcal");
+			bookmarkRecipe.add(bookmarkMenu.get(((pageCount - 1) * 3))); // ブックマーク追加処理用リスト追加
 		}
 		// ブックマークされたメニューが2つのとき
 		else if (bookmarkMenu.size() - ((pageCount - 1) * 3) == 2) {
-			deleteBookmarkButton3.setVisible(false);
+			deleteBookmarkButton3.setVisible(false);// お気に入り解除ボタン3非表示
+
 			int j = 0;
 			for (int i = ((pageCount - 1) * 3); i <= (((pageCount - 1) * 3) + 1); i++) {
-				label[0][j].setText(bookmarkMenu.get(i).get(0)); // 料理名
-				label[2][j].setText(bookmarkMenu.get(i).get(2)); // 料理ジャンル
-				label[1][j].setText(bookmarkMenu.get(i).get(1)); // 料理国
-				label[3][j].setText(bookmarkMenu.get(i).get(4) + "分"); // 所要時間
-				label[4][j].setText(bookmarkMenu.get(i).get(5) + "kcal"); // カロリー
+
+				// 1,2段目代入
+				label[0][j].setText(bookmarkMenu.get(i).get(0));
+				label[2][j].setText(bookmarkMenu.get(i).get(2));
+				label[1][j].setText(bookmarkMenu.get(i).get(1));
+				label[3][j].setText(bookmarkMenu.get(i).get(4) + "分");
+				label[4][j].setText(bookmarkMenu.get(i).get(5) + "kcal");
 				bookmarkRecipe.add(bookmarkMenu.get(i));
 				j++;
 			}
@@ -144,32 +161,43 @@ public class BookmarkPageController {
 		else if (bookmarkMenu.size() - ((pageCount - 1) * 3) >= 3) {
 			int j = 0;
 			for (int i = ((pageCount - 1) * 3); i <= ((pageCount - 1) * 3) + 2; i++) {
-				label[0][j].setText(bookmarkMenu.get(i).get(0)); // 料理名
-				label[2][j].setText(bookmarkMenu.get(i).get(2)); // 料理ジャンル
-				label[1][j].setText(bookmarkMenu.get(i).get(1)); // 料理国
-				label[3][j].setText(bookmarkMenu.get(i).get(4) + "分"); // 所要時間
-				label[4][j].setText(bookmarkMenu.get(i).get(5) + "kcal"); // カロリー
+				// 全段代入
+				label[0][j].setText(bookmarkMenu.get(i).get(0));
+				label[2][j].setText(bookmarkMenu.get(i).get(2));
+				label[1][j].setText(bookmarkMenu.get(i).get(1));
+				label[3][j].setText(bookmarkMenu.get(i).get(4) + "分");
+				label[4][j].setText(bookmarkMenu.get(i).get(5) + "kcal");
 				bookmarkRecipe.add(bookmarkMenu.get(i));
 				j++;
 			}
-		} else {
-			pageCount--;
+		}
+		// ページ数減少処理
+		else {
+			pageCount--; // ページ減少
 			buttonHide(bookmarkMenu.size());
 			bookmarkSetMenu(bookmarkMenu, label);
 		}
 	}
 
+	// 前へ・次へボタン表示・非表示処理
 	void buttonHide(int bookmarkMenuSize) {
+		// ブックマークレシピ数が3つ以下の場合
 		if (bookmarkMenuSize <= 3) {
+			backButton.setVisible(false); // 前へボタン非表示
+			nextButton.setVisible(false); // 次へボタン非表示
+		}
+		// 1ページ目の場合
+		else if (pageCount == 1) {
 			backButton.setVisible(false);
+			nextButton.setVisible(true); // 次へボタン表示
+		}
+		// 最終ページの場合
+		else if ((bookmarkMenuSize - ((pageCount - 1) * 3)) <= 3) {
+			backButton.setVisible(true); // 前へボタン表示
 			nextButton.setVisible(false);
-		} else if (pageCount == 1) {
-			backButton.setVisible(false);
-			nextButton.setVisible(true);
-		} else if ((bookmarkMenuSize - ((pageCount - 1) * 3)) <= 3) {
-			backButton.setVisible(true);
-			nextButton.setVisible(false);
-		} else {
+		}
+		// 途中ページの場合
+		else {
 			backButton.setVisible(true);
 			nextButton.setVisible(true);
 		}
