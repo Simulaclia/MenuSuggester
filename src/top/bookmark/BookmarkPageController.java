@@ -3,13 +3,17 @@ package top.bookmark;
 import java.util.ArrayList;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import top.TopPage;
 
 public class BookmarkPageController {
 	@FXML
 	private Label menuName1, menuName2, menuName3, genre1, genre2, genre3, cookGenre1, cookGenre2, cookGenre3, time1,
-			time2, time3, cal1, cal2, cal3;
+			time2, time3, cal1, cal2, cal3, noBookmarkText;
+
+	@FXML
+	private Button deleteBookmarkButton1, deleteBookmarkButton2, deleteBookmarkButton3;
 
 	ArrayList<ArrayList<String>> bookmarkRecipe;
 
@@ -62,13 +66,20 @@ public class BookmarkPageController {
 	}
 
 	void bookmarkSetMenu(ArrayList<ArrayList<String>> bookmarkMenu, Label[][] label) {
-		for (int i = 0; i <= 2; i++) {
-			label[0][i].setText(bookmarkMenu.get(i).get(0)); // 料理名
-			label[2][i].setText(bookmarkMenu.get(i).get(2)); // 料理ジャンル
-			label[1][i].setText(bookmarkMenu.get(i).get(1)); // 料理国
-			label[3][i].setText(bookmarkMenu.get(i).get(4) + "分"); // 所要時間
-			label[4][i].setText(bookmarkMenu.get(i).get(5) + "kcal"); // カロリー
-			bookmarkRecipe.add(bookmarkMenu.get(i));
+		if (bookmarkMenu.size() == 0) {
+			noBookmarkText.setText("ブックマークはありません");
+			deleteBookmarkButton1.setVisible(false);
+			deleteBookmarkButton2.setVisible(false);
+			deleteBookmarkButton3.setVisible(false);
+		} else {
+			for (int i = 0; i <= 2; i++) {
+				label[0][i].setText(bookmarkMenu.get(i).get(0)); // 料理名
+				label[2][i].setText(bookmarkMenu.get(i).get(2)); // 料理ジャンル
+				label[1][i].setText(bookmarkMenu.get(i).get(1)); // 料理国
+				label[3][i].setText(bookmarkMenu.get(i).get(4) + "分"); // 所要時間
+				label[4][i].setText(bookmarkMenu.get(i).get(5) + "kcal"); // カロリー
+				bookmarkRecipe.add(bookmarkMenu.get(i));
+			}
 		}
 	}
 }
