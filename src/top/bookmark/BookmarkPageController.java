@@ -26,16 +26,34 @@ public class BookmarkPageController {
 	@FXML
 	void DeleteBookmark1_OnClick() {
 		BookmarkPage.DeleteBookmark(bookmarkRecipe.get(0));
+
+		bookmarkRecipe = new ArrayList<ArrayList<String>>();
+		Label[][] label = { { menuName1, menuName2, menuName3 }, { cookGenre1, cookGenre2, cookGenre3 },
+				{ genre1, genre2, genre3 }, { time1, time2, time3 }, { cal1, cal2, cal3 } };
+		ArrayList<ArrayList<String>> bookmarkMenu = BookmarkPage.Bookmark();
+		bookmarkSetMenu(bookmarkMenu, label);
 	}
 
 	@FXML
 	void DeleteBookmark2_OnClick() {
 		BookmarkPage.DeleteBookmark(bookmarkRecipe.get(1));
+
+		bookmarkRecipe = new ArrayList<ArrayList<String>>();
+		Label[][] label = { { menuName1, menuName2, menuName3 }, { cookGenre1, cookGenre2, cookGenre3 },
+				{ genre1, genre2, genre3 }, { time1, time2, time3 }, { cal1, cal2, cal3 } };
+		ArrayList<ArrayList<String>> bookmarkMenu = BookmarkPage.Bookmark();
+		bookmarkSetMenu(bookmarkMenu, label);
 	}
 
 	@FXML
 	void DeleteBookmark3_OnClick() {
 		BookmarkPage.DeleteBookmark(bookmarkRecipe.get(2));
+
+		bookmarkRecipe = new ArrayList<ArrayList<String>>();
+		Label[][] label = { { menuName1, menuName2, menuName3 }, { cookGenre1, cookGenre2, cookGenre3 },
+				{ genre1, genre2, genre3 }, { time1, time2, time3 }, { cal1, cal2, cal3 } };
+		ArrayList<ArrayList<String>> bookmarkMenu = BookmarkPage.Bookmark();
+		bookmarkSetMenu(bookmarkMenu, label);
 	}
 
 	@FXML

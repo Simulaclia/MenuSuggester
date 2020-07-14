@@ -47,7 +47,6 @@ public class BookmarkPage {
 			filewriter.write(recipe.get(recipe.size() - 1) + "\n");
 			filewriter.close();
 		} catch (IOException e) {
-			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		}
 	}
