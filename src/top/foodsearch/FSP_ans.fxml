@@ -396,7 +396,12 @@
             </VBox>
          </content>
       </ScrollPane>
-      <Button layoutX="225.0" layoutY="45.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="330.0" text="Topへ戻る">
+      <Button layoutX="225.0" layoutY="45.0" mnemonicParsing="false" onAction="#ReturnTopButton_OnClick" prefHeight="100.0" prefWidth="330.0" text="Topへ戻る">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Button>
+      <Button layoutX="1026.0" layoutY="46.0" mnemonicParsing="false" onAction="#FoodSerach_onClick" prefHeight="100.0" prefWidth="330.0" text="食材を選択">
          <font>
             <Font size="42.0" />
          </font>

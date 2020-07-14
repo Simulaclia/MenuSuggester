@@ -15,4 +15,9 @@ public class FoodSearchPageController {
 		new TopPage().changePage("/top/foodsearch/FSP_ans.fxml");
 	}
 
+	@FXML
+	void FoodSerach_onClick() {
+		new TopPage().changePage("/top/foodsearch/FoodSearchPage.fxml");
+	}
+
 }
