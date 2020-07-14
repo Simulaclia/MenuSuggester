@@ -1,47 +1,116 @@
 package top.weeksuggest;
 
+import java.util.ArrayList;
+import java.util.Random;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import top.TopPage;
+import top.bookmark.BookmarkPage;
 
 public class WeekSuggestPageContoller {
 
-	// // ラベルの取得
-	// private Label CookMenu1, CookMenu2, CookMenu3, CookMenu4, CookMenu5,
-	// CookMenu6, CookMenu7, Genre1, Genre2, Genre3,
-	// Genre4, Genre5, Genre6, Genre7, cooking1, cooking2, cooking3, cooking4,
-	// cooking5, cooking6, cooking7, time1,
-	// time2, time3, time4, time5, time6, time7, calorie1, calorie2, calorie3,
-	// calorie4, calorie5, calorie6,
-	// calorie7;
+	// ラベルの取得
+	private Label CookMenu1, CookMenu2, CookMenu3, CookMenu4, CookMenu5, CookMenu6, CookMenu7,
+			Genre1, Genre2, Genre3, Genre4, Genre5, Genre6, Genre7,
+			cooking1, cooking2, cooking3, cooking4, cooking5, cooking6, cooking7,
+			time1, time2, time3, time4, time5, time6, time7,
+			calorie1, calorie2, calorie3, calorie4, calorie5, calorie6, calorie7,
+			WACb, YOCb, CHUCb;
 
-	// Random rand = new Random();
+	Random rand = new Random();
 
-	// @FXML
-	// void initialize() {
-	// Label[][] label = { { CookMenu1, CookMenu2, CookMenu3, CookMenu4, CookMenu5,
-	// CookMenu6, CookMenu7 },
-	// { Genre1, Genre2, Genre3, Genre4, Genre5, Genre6, Genre7 },
-	// { cooking1, cooking2, cooking3, cooking4, cooking5, cooking6, cooking7 },
-	// { time1, time2, time3, time4, time5, time6, time7 },
-	// { calorie1, calorie2, calorie3, calorie4, calorie5, calorie6, calorie7 } };
-	// }
+	ArrayList<ArrayList<String>> randomRecipe;
 
 	// トップページに飛ぶ処理
 	@FXML
-	void ReturnTopButton_OnClick() {
+	void ReturnTopButton_OnClick(ActionEvent evt) {
 		new TopPage().changePage("/top/TopPage.fxml");
 	}
 
 	// 絞り込み機能に飛ぶ処理
 	@FXML
-	void nextPage_OnClick() {
+	void nextPage_OnClick(ActionEvent evt) {
 		new TopPage().changePage("/top/weeksuggest/WSPNarrow_down2.fxml");
 	}
 
 	// 一週間ランダム表示に戻る処理
 	@FXML
-	void backPage_button_OnClick() {
+	void backPage_button_OnClick(ActionEvent evt) {
 		new TopPage().changePage("/top/weeksuggest/WSPage.fxml");
 	}
+
+	//ブックマークボタンの処理
+	@FXML
+	void bookmark_01_OnClick() {
+		BookmarkPage.AddBookmark(randomRecipe.get(0));
+	}
+
+	@FXML
+	void bookmark_02_OnClick() {
+		BookmarkPage.AddBookmark(randomRecipe.get(1));
+	}
+
+	@FXML
+	void bookmark_03_OnClick() {
+		BookmarkPage.AddBookmark(randomRecipe.get(2));
+	}
+
+	@FXML
+	void bookmark_04_OnClick() {
+		BookmarkPage.AddBookmark(randomRecipe.get(3));
+	}
+
+	@FXML
+	void bookmark_05_OnClick() {
+		BookmarkPage.AddBookmark(randomRecipe.get(4));
+	}
+
+	@FXML
+	void bookmark_06_OnClick() {
+		BookmarkPage.AddBookmark(randomRecipe.get(5));
+	}
+
+	@FXML
+	void bookmark_07_OnClick() {
+		BookmarkPage.AddBookmark(randomRecipe.get(6));
+	}
+
+	@FXML
+	void initialize() {
+		randomRecipe = new ArrayList<ArrayList<String>>();
+		Label[][] label = {
+				{ CookMenu1, CookMenu2, CookMenu3, CookMenu4, CookMenu5, CookMenu6, CookMenu7 },
+				{ Genre1, Genre2, Genre3, Genre4, Genre5, Genre6, Genre7 },
+				{ cooking1, cooking2, cooking3, cooking4, cooking5, cooking6, cooking7 },
+				{ time1, time2, time3, time4, time5, time6, time7 },
+				{ calorie1, calorie2, calorie3, calorie4, calorie5, calorie6, calorie7 } };
+		ArrayList<ArrayList<String>> Weeksuggest = WeekSuggestPage.Weeksuggest();
+		RandomSetMenu(randomRecipe, label);
+	}
+
+	// ランダムでラベルにセット
+	void RandomSetMenu(ArrayList<ArrayList<String>> seasonMenu, Label[][] label) {
+		for (int i = 0; i <= 6; i++) {
+			int randomValue = rand.nextInt(seasonMenu.size());
+			label[0][i].setText(seasonMenu.get(randomValue).get(0)); // 料理名
+			label[1][i].setText(seasonMenu.get(randomValue).get(1)); // 料理国
+			label[2][i].setText(seasonMenu.get(randomValue).get(2)); // 料理ジャンル
+			label[3][i].setText(seasonMenu.get(randomValue).get(4)); // 所要時間
+			label[4][i].setText(seasonMenu.get(randomValue).get(5)); // カロリー
+			randomRecipe.add(seasonMenu.get(randomValue));
+			seasonMenu.remove(randomValue);
+		}
+	}
+
+	ChoiceBox<String> cb1 = new ChoiceBox<>();
+	/*ChoiceBox<String> cb2 = new ChoiceBox<>();
+	ChoiceBox<String> cb3 = new ChoiceBox<>();
+	ChoiceBox<String> cb4 = new ChoiceBox<>();
+	
+	*/
+	//cb1.getItems().addALL("1","2","3","4","5","6","7");
 
 }
