@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.weeksuggest.WeekSuggestPageContoller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.weeksuggest.WSPN2contoroller">
    <children>
       <Button fx:id="backPage_button" layoutX="113.0" layoutY="87.0" mnemonicParsing="false" onAction="#backPage_button_OnClick" prefHeight="95.0" prefWidth="450.0" text="一週間ランダムに戻る">
          <font>
@@ -71,6 +71,6 @@
             <Font size="65.0" />
          </font>
       </Label>
-      <ComboBox layoutX="925.0" layoutY="450.0" prefHeight="80.0" prefWidth="300.0" />
+      <ComboBox fx:id="price" layoutX="925.0" layoutY="450.0" prefHeight="80.0" prefWidth="300.0" />
    </children>
 </AnchorPane>

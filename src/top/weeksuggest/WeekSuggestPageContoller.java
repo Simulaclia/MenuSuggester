@@ -5,7 +5,6 @@ import java.util.Random;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import top.TopPage;
 import top.bookmark.BookmarkPage;
@@ -38,12 +37,6 @@ public class WeekSuggestPageContoller {
 	@FXML
 	void nextPage_OnClick(ActionEvent evt) {
 		new TopPage().changePage("/top/weeksuggest/WSPNarrow_down2.fxml");
-	}
-
-	// 一週間ランダム表示に戻る処理
-	@FXML
-	void backPage_button_OnClick(ActionEvent evt) {
-		new TopPage().changePage("/top/weeksuggest/WSPage.fxml");
 	}
 
 	// ブックマークボタンの処理
@@ -100,6 +93,8 @@ public class WeekSuggestPageContoller {
 		};
 		ArrayList<ArrayList<String>> Weeksuggest = WeekSuggestPage.Weeksuggest();
 		RandomSetMenu(Weeksuggest, label);
+
+		//		WACb.getItems().addAll("jfiewj", ";pkewjf", "kfpewo");
 	}
 
 	// ランダムでラベルにセット
@@ -116,11 +111,6 @@ public class WeekSuggestPageContoller {
 		}
 	}
 
-	ComboBox<String> WACb = new ComboBox<>();
-	ComboBox<String> YOCb = new ComboBox<>();
-	ComboBox<String> CHUCb = new ComboBox<>();
-	ComboBox<String> price = new ComboBox<>();
-
-	//cb1.getItems().addALL("1","2","3","4","5","6","7");
+	//WACb.getItems().addALL("1","2","3","4","5","6","7");
 
 }
