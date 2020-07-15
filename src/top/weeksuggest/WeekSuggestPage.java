@@ -4,16 +4,29 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Random;
+import java.util.ArrayList;
+
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class WeekSuggestPage {
-	public static void main(String[] args) {
 
-		/* adress = 読み込みたいテキストファイルがある場所。
-		 */
+	public void start(Stage primaryStage) throws Exception {
+
+		// fxmlファイルの読み込み
+
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("top/weeksuggest/WSPage.fxml"));
+		Parent root = loader.load();
+		Scene scene = new Scene(root);
+		primaryStage.setScene(scene);
+		primaryStage.show();
+	}
+
+	public static ArrayList<ArrayList<String>> Weeksuggest() {
 
 		//配列[ノード番号][ノードの要素]の配列を準備
-		//		int Index[][] = new int[100][100];
 		String[][] recipe = new String[100][100];
 
 		//ファイルの読み込み
@@ -48,19 +61,21 @@ public class WeekSuggestPage {
 			System.out.println(e);
 		}
 
-		//Recipeからランダムで表示
+		/*
+		//Recipeからランダムでセット
 		Random random = new Random();
-
+		
 		for (int i = 0; i <= 6; i++) {
 			int randomValue = random.nextInt(70);
 			for (int j = 0; j <= 13; j++) {
-				System.out.println(recipe[randomValue][j]);
+		
+				//System.out.println(recipe[randomValue][j]);
 			}
-		}
+		
+		
+		}*/
 
-	}
-
-	public void chengePage(String string) {
+		return null;
 
 	}
 
