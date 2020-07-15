@@ -1,14 +1,11 @@
 package top.foodsearch;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import top.TopPage;
 
 public class FoodSearchPageController {
+
 	@FXML // Topボタン
 	void ReturnTopButton_OnClick() {
 		new TopPage().changePage("/top/TopPage.fxml");
@@ -19,41 +16,26 @@ public class FoodSearchPageController {
 		new TopPage().changePage("/top/foodsearch/FSP_ans.fxml");
 	}
 
-	@FXML
+	@FXML //ansから検索画面へ
 	void FoodSerach_onClick() {
 		new TopPage().changePage("/top/foodsearch/FoodSearchPage.fxml");
 	}
 
-	public class Controller implements Initializable {
+	@FXML
+	private ComboBox<String> FoodList;
 
-		@FXML
-		private ComboBox<String> cbKind;
+	@FXML
+	public void initialize() {
+		// コンボボックスに項目を追加
+		FoodList.getItems().add("食材を選択");
+		FoodList.getItems().add("豚肉");
+		FoodList.getItems().add("たまご");
+		FoodList.getItems().add("鶏肉");
+		FoodList.getItems().add("にんじん");
+		FoodList.getItems().add("タケノコ");
 
-		public ComboBox<String> getCbKind() {
-			return cbKind;
-		}
+		FoodList.getSelectionModel().select(0);
 
-		public void setCbKind(ComboBox<String> cbKind) {
-			this.cbKind = cbKind;
-		}
-
-		@Override
-		public void initialize(URL arg0, ResourceBundle arg1) {
-			// TODO 自動生成されたメソッド・スタブ
-			cbKind.getItems().add("じゃがいも");
-			cbKind.getItems().add("人参");
-			cbKind.getItems().add("豚肉");
-			cbKind.getItems().add("卵");
-			cbKind.getItems().add("大根");
-			cbKind.getItems().add("鶏肉");
-
-			// 初期選択状態を設定
-			cbKind.getSelectionModel().select(0);
-
-		}
 	}
-
-	//ComboBox<String> comboBox = new ComboBox<>();
-	//comboBox.getItems().addAll();
 
 }
