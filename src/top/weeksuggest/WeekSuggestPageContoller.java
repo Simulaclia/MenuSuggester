@@ -13,12 +13,10 @@ import top.bookmark.BookmarkPage;
 public class WeekSuggestPageContoller {
 
 	// ラベルの取得
-	private Label CookMenu1, CookMenu2, CookMenu3, CookMenu4, CookMenu5, CookMenu6, CookMenu7,
-			Genre1, Genre2, Genre3, Genre4, Genre5, Genre6, Genre7,
-			cooking1, cooking2, cooking3, cooking4, cooking5, cooking6, cooking7,
-			time1, time2, time3, time4, time5, time6, time7,
-			calorie1, calorie2, calorie3, calorie4, calorie5, calorie6, calorie7,
-			WACb, YOCb, CHUCb;
+	private Label CookMenu1, CookMenu2, CookMenu3, CookMenu4, CookMenu5, CookMenu6, CookMenu7, Genre1, Genre2, Genre3,
+			Genre4, Genre5, Genre6, Genre7, cooking1, cooking2, cooking3, cooking4, cooking5, cooking6, cooking7, time1,
+			time2, time3, time4, time5, time6, time7, calorie1, calorie2, calorie3, calorie4, calorie5, calorie6,
+			calorie7, WACb, YOCb, CHUCb;
 
 	Random rand = new Random();
 
@@ -42,7 +40,7 @@ public class WeekSuggestPageContoller {
 		new TopPage().changePage("/top/weeksuggest/WSPage.fxml");
 	}
 
-	//ブックマークボタンの処理
+	// ブックマークボタンの処理
 	@FXML
 	void bookmark_01_OnClick() {
 		BookmarkPage.AddBookmark(randomRecipe.get(0));
@@ -81,14 +79,13 @@ public class WeekSuggestPageContoller {
 	@FXML
 	void initialize() {
 		randomRecipe = new ArrayList<ArrayList<String>>();
-		Label[][] label = {
-				{ CookMenu1, CookMenu2, CookMenu3, CookMenu4, CookMenu5, CookMenu6, CookMenu7 },
+		Label[][] label = { { CookMenu1, CookMenu2, CookMenu3, CookMenu4, CookMenu5, CookMenu6, CookMenu7 },
 				{ Genre1, Genre2, Genre3, Genre4, Genre5, Genre6, Genre7 },
 				{ cooking1, cooking2, cooking3, cooking4, cooking5, cooking6, cooking7 },
 				{ time1, time2, time3, time4, time5, time6, time7 },
 				{ calorie1, calorie2, calorie3, calorie4, calorie5, calorie6, calorie7 } };
 		ArrayList<ArrayList<String>> Weeksuggest = WeekSuggestPage.Weeksuggest();
-		RandomSetMenu(randomRecipe, label);
+		RandomSetMenu(Weeksuggest, label);
 	}
 
 	// ランダムでラベルにセット
@@ -96,21 +93,21 @@ public class WeekSuggestPageContoller {
 		for (int i = 0; i <= 6; i++) {
 			int randomValue = rand.nextInt(seasonMenu.size());
 			label[0][i].setText(seasonMenu.get(randomValue).get(0)); // 料理名
-			label[1][i].setText(seasonMenu.get(randomValue).get(1)); // 料理国
-			label[2][i].setText(seasonMenu.get(randomValue).get(2)); // 料理ジャンル
-			label[3][i].setText(seasonMenu.get(randomValue).get(4)); // 所要時間
-			label[4][i].setText(seasonMenu.get(randomValue).get(5)); // カロリー
+//			label[1][i].setText(seasonMenu.get(randomValue).get(1)); // 料理国
+//			label[2][i].setText(seasonMenu.get(randomValue).get(2)); // 料理ジャンル
+//			label[3][i].setText(seasonMenu.get(randomValue).get(4)); // 所要時間
+//			label[4][i].setText(seasonMenu.get(randomValue).get(5)); // カロリー
 			randomRecipe.add(seasonMenu.get(randomValue));
 			seasonMenu.remove(randomValue);
 		}
 	}
 
 	ChoiceBox<String> cb1 = new ChoiceBox<>();
-	/*ChoiceBox<String> cb2 = new ChoiceBox<>();
-	ChoiceBox<String> cb3 = new ChoiceBox<>();
-	ChoiceBox<String> cb4 = new ChoiceBox<>();
-	
-	*/
-	//cb1.getItems().addALL("1","2","3","4","5","6","7");
+	/*
+	 * ChoiceBox<String> cb2 = new ChoiceBox<>(); ChoiceBox<String> cb3 = new
+	 * ChoiceBox<>(); ChoiceBox<String> cb4 = new ChoiceBox<>();
+	 * 
+	 */
+	// cb1.getItems().addALL("1","2","3","4","5","6","7");
 
 }

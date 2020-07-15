@@ -36,7 +36,7 @@
                               <Font size="52.0" />
                            </font>
                         </Label>
-                        <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
+                        <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" onAction="#bookmark_01_OnClick" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
                            <font>
                               <Font size="23.0" />
                            </font>
