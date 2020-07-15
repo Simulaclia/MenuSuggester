@@ -169,7 +169,7 @@
                               <Font size="50.0" />
                            </font>
                         </Label>
-                        <Label layoutX="1135.0" layoutY="55.0" text="000">
+                        <Label fx:id="time3" layoutX="1135.0" layoutY="55.0" text="000">
                            <font>
                               <Font size="52.0" />
                            </font>
