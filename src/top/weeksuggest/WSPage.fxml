@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="CookMenu7" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.weeksuggest.WeekSuggestPageContoller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.weeksuggest.WeekSuggestPageContoller">
    <children>
       <ScrollPane hbarPolicy="NEVER" layoutX="-8.0" layoutY="176.0" prefHeight="1040.0" prefWidth="1600.0" vbarPolicy="ALWAYS">
          <content>
@@ -68,7 +68,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Pane fx:id="CookMenu2" layoutX="10.0" layoutY="10.0" prefHeight="250.0" prefWidth="1600.0">
+                  <Pane layoutX="10.0" layoutY="10.0" prefHeight="250.0" prefWidth="1600.0">
                      <children>
                         <Label fx:id="CookMenu2" layoutX="120.0" layoutY="50.0" text="料理名2">
                            <font>
