@@ -114,7 +114,7 @@ public class BookmarkPageController {
 			label[1][i].setText(""); // 料理国
 			label[3][i].setText(""); // 所要時間
 			label[4][i].setText(""); // カロリー
-			pageNum.setText(String.valueOf(pageCount)); // ページ数セット
+			pageNum.setText(bookmarkMenu.size() + "件 / " + String.valueOf(pageCount) + "ページ目"); // ページ数セット
 			deleteBookmarkButton1.setVisible(true); // お気に入り解除ボタン1表示
 			deleteBookmarkButton2.setVisible(true); // お気に入り解除ボタン2表示
 			deleteBookmarkButton3.setVisible(true); // お気に入り解除ボタン3表示
