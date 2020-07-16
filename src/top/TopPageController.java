@@ -15,7 +15,7 @@ public class TopPageController {
 
 	@FXML
 	void FoodSerach_onClick() {
-		new TopPage().changePage("/top/foodsearch/FoodSearchPage.fxml");
+		new TopPage().changePage("/top/foodsearch/FSP.fxml");
 	}
 
 	@FXML
