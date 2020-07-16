@@ -172,7 +172,7 @@ public class BookmarkPageController {
 			deleteBookmarkButton2.setVisible(false); // お気に入り解除ボタン2非表示
 			deleteBookmarkButton3.setVisible(false); // お気に入り解除ボタン3非表示
 
-			noBookmarkText.setText("ブックマークはありません");
+			noBookmarkText.setText("条件に合致したブックマークはありません");
 		}
 		// ブックマークされたメニューが1つのとき
 		else if (bookmarkMenu.size() - ((pageCount - 1) * 3) == 1) {
