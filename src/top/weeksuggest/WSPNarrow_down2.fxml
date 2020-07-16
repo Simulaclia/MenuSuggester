@@ -23,12 +23,12 @@
             <Font size="79.0" />
          </font>
       </Label>
-      <Button layoutX="400.0" layoutY="730.0" mnemonicParsing="false" text="リセット">
+      <Button layoutX="400.0" layoutY="730.0" mnemonicParsing="false" onAction="#resetButton_OnClick" text="リセット">
          <font>
             <Font size="60.0" />
          </font>
       </Button>
-      <Button fx:id="WSPNd" layoutX="1000.0" layoutY="730.0" mnemonicParsing="false" text="決定">
+      <Button layoutX="1000.0" layoutY="730.0" mnemonicParsing="false" onAction="#decision_OnClick" text="決定">
          <font>
             <Font size="60.0" />
          </font>
@@ -72,5 +72,11 @@
          </font>
       </Label>
       <ComboBox fx:id="price" layoutX="925.0" layoutY="450.0" prefHeight="80.0" prefWidth="300.0" />
+      <Label text="Label" />
+      <Label layoutX="280.0" layoutY="675.0" text="※合計で7品になるように入力してください">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

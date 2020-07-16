@@ -37,6 +37,40 @@ public class BookmarkPage {
 		}
 	}
 
+	public static ArrayList<ArrayList<String>> Bookmark(String genre, String country, String cal, String price) {
+		try {
+			// Bookmark.csvファイル読み込み
+			FileInputStream fisRec = new FileInputStream("csv/Bookmark.csv");
+			InputStreamReader isrRec = new InputStreamReader(fisRec);
+			BufferedReader brRec = new BufferedReader(isrRec);
+
+			String tempData;
+			ArrayList<ArrayList<String>> bookmarkList = new ArrayList<ArrayList<String>>(); // Bookmark.csv内のレシピリスト
+
+			// リスト代入処理
+			while ((tempData = brRec.readLine()) != null) {
+				String[] tempList = tempData.split(",");
+				ArrayList<String> tempArrayList = new ArrayList<String>();
+				for (String tempLi : tempList) {
+					tempArrayList.add(tempLi);
+				}
+				// 食材絞り込み処理
+				if ((tempArrayList.get(2).equals(genre) || genre.equals("選択なし"))
+						&& (tempArrayList.get(1).equals(country) || country.equals("選択なし"))
+						&& (cal.equals("選択なし") || (Integer.parseInt(tempArrayList.get(5)) <= (Integer.parseInt(cal))))
+						&& (price.equals("選択なし")
+								|| (Integer.parseInt(tempArrayList.get(3)) <= (Integer.parseInt(price))))) { // 合致する食材を検索
+					bookmarkList.add(tempArrayList); // 合致したレシピを追加
+				}
+			}
+			brRec.close();
+			return bookmarkList; // Bookmark.csv内レシピリスト返却
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+
 	// ブックマーク追加処理
 	public static void AddBookmark(ArrayList<String> recipe) {
 		DeleteBookmark(recipe); // 重複しているブックマークの場合は元ブックマークを削除
