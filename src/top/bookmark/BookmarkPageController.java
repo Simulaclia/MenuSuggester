@@ -17,15 +17,13 @@ public class BookmarkPageController {
 	@FXML
 	private Button deleteBookmarkButton1, deleteBookmarkButton2, deleteBookmarkButton3, backButton, nextButton;
 
-	// ブックマークされているレシピ用リスト
-	ArrayList<ArrayList<String>> bookmarkRecipe;
+	ArrayList<ArrayList<String>> bookmarkRecipe; // ブックマークされているレシピ用リスト
 
-	ArrayList<ArrayList<String>> bookmarkMenu;
+	ArrayList<ArrayList<String>> bookmarkMenu; // 絞り込み後レシピリスト
 
-	String[] narrowDownData;
+	String[] narrowDownData; // 絞り込み条件データ
 
-	// 現在ページ数
-	int pageCount = 1;
+	int pageCount = 1; // 現在ページ数
 
 	// 初期処理
 	@FXML
@@ -34,16 +32,20 @@ public class BookmarkPageController {
 		Label[][] label = { { menuName1, menuName2, menuName3 }, { cookGenre1, cookGenre2, cookGenre3 },
 				{ genre1, genre2, genre3 }, { time1, time2, time3 }, { cal1, cal2, cal3 } };
 
-		narrowDownData = BookmarkNarrowDownPageController.getNarrowDownData();
+		narrowDownData = BookmarkNarrowDownPageController.getNarrowDownData(); // 絞り込み条件取得
+
+		// 絞り込み条件が取得されていない場合
 		if (narrowDownData == null) {
 			bookmarkMenu = BookmarkPage.Bookmark(); // ブックマークされているレシピリスト取得
 			buttonHide(bookmarkMenu.size()); // 前へ・次へボタンの表示・非表示処理
 			bookmarkSetMenu(bookmarkMenu, label); // ブックマークをラベルへセットする処理
-		} else {
+		}
+		// 絞り込み条件が取得されている場合
+		else {
 			bookmarkMenu = BookmarkPage.Bookmark(narrowDownData[0], narrowDownData[1], narrowDownData[2],
-					narrowDownData[3]); // ブックマークされているレシピリスト取得
-			buttonHide(bookmarkMenu.size()); // 前へ・次へボタンの表示・非表示処理
-			bookmarkSetMenu(bookmarkMenu, label); // ブックマークをラベルへセットする処理
+					narrowDownData[3]); // ブックマークされているレシピリストを絞り込んで取得
+			buttonHide(bookmarkMenu.size());
+			bookmarkSetMenu(bookmarkMenu, label);
 		}
 	}
 
@@ -71,6 +73,7 @@ public class BookmarkPageController {
 		bookmarkSetMenu(bookmarkMenu, label);
 	}
 
+	// 絞り込みボタンクリック処理
 	@FXML
 	void NarrowDowntButton_OnClick() {
 		new TopPage().changePage("/top/bookmark/BookmarkNarrowDownPage.fxml");
@@ -84,9 +87,18 @@ public class BookmarkPageController {
 		bookmarkRecipe = new ArrayList<ArrayList<String>>();
 		Label[][] label = { { menuName1, menuName2, menuName3 }, { cookGenre1, cookGenre2, cookGenre3 },
 				{ genre1, genre2, genre3 }, { time1, time2, time3 }, { cal1, cal2, cal3 } };
-		bookmarkMenu = BookmarkPage.Bookmark();
-		buttonHide(bookmarkMenu.size());
-		bookmarkSetMenu(bookmarkMenu, label);
+		if (narrowDownData == null) {
+			bookmarkMenu = BookmarkPage.Bookmark(); // ブックマークされているレシピリスト取得
+			buttonHide(bookmarkMenu.size()); // 前へ・次へボタンの表示・非表示処理
+			bookmarkSetMenu(bookmarkMenu, label); // ブックマークをラベルへセットする処理
+		}
+		// 絞り込み条件が取得されている場合
+		else {
+			bookmarkMenu = BookmarkPage.Bookmark(narrowDownData[0], narrowDownData[1], narrowDownData[2],
+					narrowDownData[3]); // ブックマークされているレシピリストを絞り込んで取得
+			buttonHide(bookmarkMenu.size());
+			bookmarkSetMenu(bookmarkMenu, label);
+		}
 	}
 
 	// お気に入り解除ボタン2クリック処理
@@ -97,9 +109,18 @@ public class BookmarkPageController {
 		bookmarkRecipe = new ArrayList<ArrayList<String>>();
 		Label[][] label = { { menuName1, menuName2, menuName3 }, { cookGenre1, cookGenre2, cookGenre3 },
 				{ genre1, genre2, genre3 }, { time1, time2, time3 }, { cal1, cal2, cal3 } };
-		bookmarkMenu = BookmarkPage.Bookmark();
-		buttonHide(bookmarkMenu.size());
-		bookmarkSetMenu(bookmarkMenu, label);
+		if (narrowDownData == null) {
+			bookmarkMenu = BookmarkPage.Bookmark(); // ブックマークされているレシピリスト取得
+			buttonHide(bookmarkMenu.size()); // 前へ・次へボタンの表示・非表示処理
+			bookmarkSetMenu(bookmarkMenu, label); // ブックマークをラベルへセットする処理
+		}
+		// 絞り込み条件が取得されている場合
+		else {
+			bookmarkMenu = BookmarkPage.Bookmark(narrowDownData[0], narrowDownData[1], narrowDownData[2],
+					narrowDownData[3]); // ブックマークされているレシピリストを絞り込んで取得
+			buttonHide(bookmarkMenu.size());
+			bookmarkSetMenu(bookmarkMenu, label);
+		}
 	}
 
 	// お気に入り解除ボタン3クリック処理
@@ -110,9 +131,18 @@ public class BookmarkPageController {
 		bookmarkRecipe = new ArrayList<ArrayList<String>>();
 		Label[][] label = { { menuName1, menuName2, menuName3 }, { cookGenre1, cookGenre2, cookGenre3 },
 				{ genre1, genre2, genre3 }, { time1, time2, time3 }, { cal1, cal2, cal3 } };
-		ArrayList<ArrayList<String>> bookmarkMenu = BookmarkPage.Bookmark();
-		buttonHide(bookmarkMenu.size());
-		bookmarkSetMenu(bookmarkMenu, label);
+		if (narrowDownData == null) {
+			bookmarkMenu = BookmarkPage.Bookmark(); // ブックマークされているレシピリスト取得
+			buttonHide(bookmarkMenu.size()); // 前へ・次へボタンの表示・非表示処理
+			bookmarkSetMenu(bookmarkMenu, label); // ブックマークをラベルへセットする処理
+		}
+		// 絞り込み条件が取得されている場合
+		else {
+			bookmarkMenu = BookmarkPage.Bookmark(narrowDownData[0], narrowDownData[1], narrowDownData[2],
+					narrowDownData[3]); // ブックマークされているレシピリストを絞り込んで取得
+			buttonHide(bookmarkMenu.size());
+			bookmarkSetMenu(bookmarkMenu, label);
+		}
 	}
 
 	// Topへ戻るボタンクリック処理
@@ -142,7 +172,7 @@ public class BookmarkPageController {
 			deleteBookmarkButton2.setVisible(false); // お気に入り解除ボタン2非表示
 			deleteBookmarkButton3.setVisible(false); // お気に入り解除ボタン3非表示
 
-			noBookmarkText.setText("ブックマークはありません");
+			noBookmarkText.setText("条件に合致したブックマークはありません");
 		}
 		// ブックマークされたメニューが1つのとき
 		else if (bookmarkMenu.size() - ((pageCount - 1) * 3) == 1) {
