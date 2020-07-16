@@ -18,7 +18,7 @@
             <Font size="79.0" />
          </font>
       </Label>
-      <Label layoutX="860.0" layoutY="230.0" text="一週間二人前価格">
+      <Label layoutX="920.0" layoutY="230.0" text="二人前価格">
          <font>
             <Font size="79.0" />
          </font>
@@ -72,8 +72,7 @@
          </font>
       </Label>
       <ComboBox fx:id="price" layoutX="925.0" layoutY="450.0" prefHeight="80.0" prefWidth="300.0" />
-      <Label text="Label" />
-      <Label layoutX="280.0" layoutY="675.0" text="※合計で7品になるように入力してください">
+      <Label fx:id="warning" layoutX="280.0" layoutY="675.0" text="※合計で7品になるように入力してください">
          <font>
             <Font size="30.0" />
          </font>

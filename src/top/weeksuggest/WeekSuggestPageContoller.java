@@ -27,6 +27,8 @@ public class WeekSuggestPageContoller {
 
 	ArrayList<ArrayList<String>> randomRecipe;
 
+	Integer[] deliveryData;
+
 	// トップページに飛ぶ処理
 	@FXML
 	void ReturnTopButton_OnClick(ActionEvent evt) {
@@ -93,24 +95,23 @@ public class WeekSuggestPageContoller {
 		};
 		ArrayList<ArrayList<String>> Weeksuggest = WeekSuggestPage.Weeksuggest();
 		RandomSetMenu(Weeksuggest, label);
+		//絞り込みデータの取得
+		deliveryData = WSPN2contoroller.getdelivery();
 
-		//		WACb.getItems().addAll("jfiewj", ";pkewjf", "kfpewo");
 	}
 
 	// ランダムでラベルにセット
-	void RandomSetMenu(ArrayList<ArrayList<String>> seasonMenu, Label[][] label) {
+	void RandomSetMenu(ArrayList<ArrayList<String>> WeekSugeestMenu, Label[][] label) {
 		for (int i = 0; i <= 6; i++) {
-			int randomValue = rand.nextInt(seasonMenu.size());
-			label[0][i].setText(seasonMenu.get(randomValue).get(0)); // 料理名
-			label[1][i].setText(seasonMenu.get(randomValue).get(1)); // 料理国
-			label[2][i].setText(seasonMenu.get(randomValue).get(2)); // 料理ジャンル
-			label[3][i].setText(seasonMenu.get(randomValue).get(4)); // 所要時間
-			label[4][i].setText(seasonMenu.get(randomValue).get(5)); // カロリー
-			randomRecipe.add(seasonMenu.get(randomValue));
-			seasonMenu.remove(randomValue);
+			int randomValue = rand.nextInt(WeekSugeestMenu.size());
+			label[0][i].setText(WeekSugeestMenu.get(randomValue).get(0)); // 料理名
+			label[1][i].setText(WeekSugeestMenu.get(randomValue).get(1)); // 料理国
+			label[2][i].setText(WeekSugeestMenu.get(randomValue).get(2)); // 料理ジャンル
+			label[3][i].setText(WeekSugeestMenu.get(randomValue).get(4)); // 所要時間
+			label[4][i].setText(WeekSugeestMenu.get(randomValue).get(5)); // カロリー
+			randomRecipe.add(WeekSugeestMenu.get(randomValue));
+			WeekSugeestMenu.remove(randomValue);
 		}
 	}
-
-	//WACb.getItems().addALL("1","2","3","4","5","6","7");
 
 }

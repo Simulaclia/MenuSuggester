@@ -61,7 +61,7 @@
                               <Font size="50.0" />
                            </font>
                         </Label>
-                        <Label fx:id="time1" layoutX="1135.0" layoutY="55.0" text="000">
+                        <Label fx:id="time1" layoutX="1150.0" layoutY="55.0" text="00">
                            <font>
                               <Font size="52.0" />
                            </font>
@@ -115,7 +115,7 @@
                               <Font size="50.0" />
                            </font>
                         </Label>
-                        <Label fx:id="time2" layoutX="1135.0" layoutY="55.0" text="000">
+                        <Label fx:id="time2" layoutX="1150.0" layoutY="55.0" text="00">
                            <font>
                               <Font size="52.0" />
                            </font>
@@ -169,7 +169,7 @@
                               <Font size="50.0" />
                            </font>
                         </Label>
-                        <Label fx:id="time3" layoutX="1135.0" layoutY="55.0" text="000">
+                        <Label fx:id="time3" layoutX="1150.0" layoutY="55.0" text="00">
                            <font>
                               <Font size="52.0" />
                            </font>
@@ -223,7 +223,7 @@
                               <Font size="50.0" />
                            </font>
                         </Label>
-                        <Label fx:id="time4" layoutX="1135.0" layoutY="55.0" text="000">
+                        <Label fx:id="time4" layoutX="1150.0" layoutY="55.0" text="00">
                            <font>
                               <Font size="52.0" />
                            </font>
@@ -277,7 +277,7 @@
                               <Font size="50.0" />
                            </font>
                         </Label>
-                        <Label fx:id="time5" layoutX="1135.0" layoutY="55.0" text="000">
+                        <Label fx:id="time5" layoutX="1150.0" layoutY="55.0" text="00">
                            <font>
                               <Font size="52.0" />
                            </font>
@@ -331,7 +331,7 @@
                               <Font size="50.0" />
                            </font>
                         </Label>
-                        <Label fx:id="time6" layoutX="1135.0" layoutY="55.0" text="000">
+                        <Label fx:id="time6" layoutX="1150.0" layoutY="55.0" text="00">
                            <font>
                               <Font size="52.0" />
                            </font>
@@ -385,7 +385,7 @@
                               <Font size="50.0" />
                            </font>
                         </Label>
-                        <Label fx:id="time7" layoutX="1135.0" layoutY="55.0" text="000">
+                        <Label fx:id="time7" layoutX="1150.0" layoutY="55.0" text="00">
                            <font>
                               <Font size="52.0" />
                            </font>
