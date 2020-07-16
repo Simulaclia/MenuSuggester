@@ -6,7 +6,7 @@ import top.TopPage;
 
 public class FoodSearchPageController {
 
-	static String[] narrowDownData; // 絞り込み条件データ
+	static String[] narrowDownData; // 選択食材データ
 
 	@FXML // Topボタン
 	void ReturnTopButton_OnClick() {
