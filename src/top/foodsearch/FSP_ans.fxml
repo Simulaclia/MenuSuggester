@@ -10,33 +10,33 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.foodsearch.FoodSearchPageController">
    <children>
-      <ScrollPane hbarPolicy="NEVER" layoutX="-8.0" layoutY="176.0" prefHeight="1041.0" prefWidth="1602.0" vbarPolicy="ALWAYS">
+      <ScrollPane hbarPolicy="NEVER" layoutX="2.0" layoutY="186.0" prefHeight="1040.0" prefWidth="1600.0" vbarPolicy="ALWAYS">
          <content>
             <VBox prefHeight="2100.0" prefWidth="1600.0">
                <children>
                   <Pane prefHeight="250.0" prefWidth="1600.0">
                      <children>
-                        <Label layoutX="120.0" layoutY="50.0" text="料理名1">
+                        <Label fx:id="CookMenu1" layoutX="120.0" layoutY="50.0" text="料理名1">
                            <font>
                               <Font size="110.0" />
                            </font>
                         </Label>
-                        <Label layoutX="650.0" layoutY="50.0" text="ジャンル">
+                        <Label fx:id="Genre1" layoutX="650.0" layoutY="50.0" text="ジャンル">
                            <font>
                               <Font size="59.0" />
                            </font>
                         </Label>
-                        <Label layoutX="650.0" layoutY="140.0" text="調理法">
+                        <Label fx:id="cooking1" layoutX="650.0" layoutY="140.0" text="調理法">
                            <font>
                               <Font size="59.0" />
                            </font>
                         </Label>
-                        <Label layoutX="1100.0" layoutY="145.0" text="000">
+                        <Label fx:id="calorie1" layoutX="1100.0" layoutY="145.0" text="000">
                            <font>
                               <Font size="52.0" />
                            </font>
                         </Label>
-                        <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
+                        <Button layoutX="1350.0" layoutY="75.0" mnemonicParsing="false" onAction="#bookmark_01_OnClick" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
                            <font>
                               <Font size="23.0" />
                            </font>
@@ -61,7 +61,7 @@
                               <Font size="50.0" />
                            </font>
                         </Label>
-                        <Label layoutX="1135.0" layoutY="55.0" text="000">
+                        <Label fx:id="time1" layoutX="1135.0" layoutY="55.0" text="000">
                            <font>
                               <Font size="52.0" />
                            </font>
@@ -70,22 +70,22 @@
                   </Pane>
                   <Pane layoutX="10.0" layoutY="10.0" prefHeight="250.0" prefWidth="1600.0">
                      <children>
-                        <Label layoutX="120.0" layoutY="50.0" text="料理名2">
+                        <Label fx:id="CookMenu2" layoutX="120.0" layoutY="50.0" text="料理名2">
                            <font>
                               <Font size="110.0" />
                            </font>
                         </Label>
-                        <Label layoutX="650.0" layoutY="50.0" text="ジャンル">
+                        <Label fx:id="Genre2" layoutX="650.0" layoutY="50.0" text="ジャンル">
                            <font>
                               <Font size="59.0" />
                            </font>
                         </Label>
-                        <Label layoutX="650.0" layoutY="140.0" text="調理法">
+                        <Label fx:id="cooking2" layoutX="650.0" layoutY="140.0" text="調理法">
                            <font>
                               <Font size="59.0" />
                            </font>
                         </Label>
-                        <Label layoutX="1100.0" layoutY="145.0" text="000">
+                        <Label fx:id="calorie2" layoutX="1100.0" layoutY="145.0" text="000">
                            <font>
                               <Font size="52.0" />
                            </font>
@@ -115,7 +115,7 @@
                               <Font size="50.0" />
                            </font>
                         </Label>
-                        <Label layoutX="1135.0" layoutY="55.0" text="000">
+                        <Label fx:id="time2" layoutX="1135.0" layoutY="55.0" text="000">
                            <font>
                               <Font size="52.0" />
                            </font>
@@ -124,22 +124,22 @@
                   </Pane>
                   <Pane layoutX="10.0" layoutY="260.0" prefHeight="250.0" prefWidth="1600.0">
                      <children>
-                        <Label layoutX="120.0" layoutY="50.0" text="料理名3">
+                        <Label fx:id="CookMenu3" layoutX="120.0" layoutY="50.0" text="料理名3">
                            <font>
                               <Font size="110.0" />
                            </font>
                         </Label>
-                        <Label layoutX="650.0" layoutY="50.0" text="ジャンル">
+                        <Label fx:id="Genre3" layoutX="650.0" layoutY="50.0" text="ジャンル">
                            <font>
                               <Font size="59.0" />
                            </font>
                         </Label>
-                        <Label layoutX="650.0" layoutY="140.0" text="調理法">
+                        <Label fx:id="cooking3" layoutX="650.0" layoutY="140.0" text="調理法">
                            <font>
                               <Font size="59.0" />
                            </font>
                         </Label>
-                        <Label layoutX="1100.0" layoutY="145.0" text="000">
+                        <Label fx:id="calorie3" layoutX="1100.0" layoutY="145.0" text="000">
                            <font>
                               <Font size="52.0" />
                            </font>
@@ -169,7 +169,7 @@
                               <Font size="50.0" />
                            </font>
                         </Label>
-                        <Label layoutX="1135.0" layoutY="55.0" text="000">
+                        <Label fx:id="time3" layoutX="1135.0" layoutY="55.0" text="000">
                            <font>
                               <Font size="52.0" />
                            </font>
@@ -178,22 +178,22 @@
                   </Pane>
                   <Pane layoutX="10.0" layoutY="510.0" prefHeight="250.0" prefWidth="1600.0">
                      <children>
-                        <Label layoutX="120.0" layoutY="50.0" text="料理名4">
+                        <Label fx:id="CookMenu4" layoutX="120.0" layoutY="50.0" text="料理名4">
                            <font>
                               <Font size="110.0" />
                            </font>
                         </Label>
-                        <Label layoutX="650.0" layoutY="50.0" text="ジャンル">
+                        <Label fx:id="Genre4" layoutX="650.0" layoutY="50.0" text="ジャンル">
                            <font>
                               <Font size="59.0" />
                            </font>
                         </Label>
-                        <Label layoutX="650.0" layoutY="140.0" text="調理法">
+                        <Label fx:id="cooking4" layoutX="650.0" layoutY="140.0" text="調理法">
                            <font>
                               <Font size="59.0" />
                            </font>
                         </Label>
-                        <Label layoutX="1100.0" layoutY="145.0" text="000">
+                        <Label fx:id="calorie4" layoutX="1100.0" layoutY="145.0" text="000">
                            <font>
                               <Font size="52.0" />
                            </font>
@@ -223,7 +223,7 @@
                               <Font size="50.0" />
                            </font>
                         </Label>
-                        <Label layoutX="1135.0" layoutY="55.0" text="000">
+                        <Label fx:id="time4" layoutX="1135.0" layoutY="55.0" text="000">
                            <font>
                               <Font size="52.0" />
                            </font>
@@ -232,22 +232,22 @@
                   </Pane>
                   <Pane layoutX="10.0" layoutY="760.0" prefHeight="250.0" prefWidth="1600.0">
                      <children>
-                        <Label layoutX="120.0" layoutY="50.0" text="料理名5">
+                        <Label fx:id="CookMenu5" layoutX="120.0" layoutY="50.0" text="料理名5">
                            <font>
                               <Font size="110.0" />
                            </font>
                         </Label>
-                        <Label layoutX="650.0" layoutY="50.0" text="ジャンル">
+                        <Label fx:id="Genre5" layoutX="650.0" layoutY="50.0" text="ジャンル">
                            <font>
                               <Font size="59.0" />
                            </font>
                         </Label>
-                        <Label layoutX="650.0" layoutY="140.0" text="調理法">
+                        <Label fx:id="cooking5" layoutX="650.0" layoutY="140.0" text="調理法">
                            <font>
                               <Font size="59.0" />
                            </font>
                         </Label>
-                        <Label layoutX="1100.0" layoutY="145.0" text="000">
+                        <Label fx:id="calorie5" layoutX="1100.0" layoutY="145.0" text="000">
                            <font>
                               <Font size="52.0" />
                            </font>
@@ -277,7 +277,7 @@
                               <Font size="50.0" />
                            </font>
                         </Label>
-                        <Label layoutX="1135.0" layoutY="55.0" text="000">
+                        <Label fx:id="time5" layoutX="1135.0" layoutY="55.0" text="000">
                            <font>
                               <Font size="52.0" />
                            </font>
@@ -286,22 +286,22 @@
                   </Pane>
                   <Pane layoutX="10.0" layoutY="1010.0" prefHeight="250.0" prefWidth="1600.0">
                      <children>
-                        <Label layoutX="120.0" layoutY="50.0" text="料理名6">
+                        <Label fx:id="CookMenu6" layoutX="120.0" layoutY="50.0" text="料理名6">
                            <font>
                               <Font size="110.0" />
                            </font>
                         </Label>
-                        <Label layoutX="650.0" layoutY="50.0" text="ジャンル">
+                        <Label fx:id="Genre6" layoutX="650.0" layoutY="50.0" text="ジャンル">
                            <font>
                               <Font size="59.0" />
                            </font>
                         </Label>
-                        <Label layoutX="650.0" layoutY="140.0" text="調理法">
+                        <Label fx:id="cooking6" layoutX="650.0" layoutY="140.0" text="調理法">
                            <font>
                               <Font size="59.0" />
                            </font>
                         </Label>
-                        <Label layoutX="1100.0" layoutY="145.0" text="000">
+                        <Label fx:id="calorie6" layoutX="1100.0" layoutY="145.0" text="000">
                            <font>
                               <Font size="52.0" />
                            </font>
@@ -331,7 +331,7 @@
                               <Font size="50.0" />
                            </font>
                         </Label>
-                        <Label layoutX="1135.0" layoutY="55.0" text="000">
+                        <Label fx:id="time6" layoutX="1135.0" layoutY="55.0" text="000">
                            <font>
                               <Font size="52.0" />
                            </font>
@@ -340,22 +340,22 @@
                   </Pane>
                   <Pane layoutX="10.0" layoutY="1260.0" prefHeight="250.0" prefWidth="1600.0">
                      <children>
-                        <Label layoutX="120.0" layoutY="50.0" text="料理名7">
+                        <Label fx:id="CookMenu7" layoutX="120.0" layoutY="50.0" text="料理名7">
                            <font>
                               <Font size="110.0" />
                            </font>
                         </Label>
-                        <Label layoutX="650.0" layoutY="50.0" text="ジャンル">
+                        <Label fx:id="Genre7" layoutX="650.0" layoutY="50.0" text="ジャンル">
                            <font>
                               <Font size="59.0" />
                            </font>
                         </Label>
-                        <Label layoutX="650.0" layoutY="140.0" text="調理法">
+                        <Label fx:id="cooking7" layoutX="650.0" layoutY="140.0" text="調理法">
                            <font>
                               <Font size="59.0" />
                            </font>
                         </Label>
-                        <Label layoutX="1100.0" layoutY="145.0" text="000">
+                        <Label fx:id="calorie7" layoutX="1100.0" layoutY="145.0" text="000">
                            <font>
                               <Font size="52.0" />
                            </font>
@@ -385,7 +385,7 @@
                               <Font size="50.0" />
                            </font>
                         </Label>
-                        <Label layoutX="1135.0" layoutY="55.0" text="000">
+                        <Label fx:id="time7" layoutX="1135.0" layoutY="55.0" text="000">
                            <font>
                               <Font size="52.0" />
                            </font>
