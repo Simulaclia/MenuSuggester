@@ -23,9 +23,10 @@ public class FoodSearchPageController {
 		new TopPage().changePage("/top/TopPage.fxml");
 	}
 
-	@FXML // 食材決定ボタン
+	@FXML // 食材決定ボタン→食材検索処理開始へ行き→ansへ
 	void AnsPage_OnClick() {
 		new TopPage().changePage("/top/foodsearch/FSP_ans.fxml");
+
 	}
 
 	@FXML //ansから検索画面へ
@@ -33,11 +34,11 @@ public class FoodSearchPageController {
 		new TopPage().changePage("/top/foodsearch/FoodSearchPage.fxml");
 	}
 
-	@FXML
-	private ComboBox<String> FoodList;
+	@FXML //コンボボックスの型
+	public ComboBox<String> FoodList;
 
-	@FXML
-	void Finitialize() {
+	@FXML //選択食材リスト
+	void initialize() {
 		// コンボボックスに項目を追加
 		FoodList.getItems().add("食材を選択");
 		FoodList.getItems().add("豚肉");
@@ -57,10 +58,10 @@ public class FoodSearchPageController {
 				{ cooking1, cooking2, cooking3, cooking4, cooking5, cooking6, cooking7 },
 				{ time1, time2, time3, time4, time5, time6, time7 },
 				{ calorie1, calorie2, calorie3, calorie4, calorie5, calorie6, calorie7 }};
-	
+
 		ArrayList<ArrayList<String>> Foodsearch = FoodSearchPage.Foodsearch();
 		RandamuSetMenu(Foodsearch, label);
-	
+
 		void RandomSetMenu(ArrayList<ArrayList<String>> seasonMenu, Label[][] label) {
 			for (int i = 0; i <= 6; i++) {
 				int randomValue = rand.nextInt(seasonMenu.size());
