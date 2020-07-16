@@ -134,5 +134,10 @@
          <font>
             <Font size="75.0" />
          </font></Label>
+      <Button layoutX="1162.0" layoutY="74.0" mnemonicParsing="false" onAction="#NarrowDowntButton_OnClick" text="絞り込み">
+         <font>
+            <Font size="52.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

@@ -20,6 +20,10 @@ public class BookmarkPageController {
 	// ブックマークされているレシピ用リスト
 	ArrayList<ArrayList<String>> bookmarkRecipe;
 
+	ArrayList<ArrayList<String>> bookmarkMenu;
+
+	String[] narrowDownData;
+
 	// 現在ページ数
 	int pageCount = 1;
 
@@ -29,9 +33,18 @@ public class BookmarkPageController {
 		bookmarkRecipe = new ArrayList<ArrayList<String>>();
 		Label[][] label = { { menuName1, menuName2, menuName3 }, { cookGenre1, cookGenre2, cookGenre3 },
 				{ genre1, genre2, genre3 }, { time1, time2, time3 }, { cal1, cal2, cal3 } };
-		ArrayList<ArrayList<String>> bookmarkMenu = BookmarkPage.Bookmark(); // ブックマークされているレシピリスト取得
-		buttonHide(bookmarkMenu.size()); // 前へ・次へボタンの表示・非表示処理
-		bookmarkSetMenu(bookmarkMenu, label); // ブックマークをラベルへセットする処理
+
+		narrowDownData = BookmarkNarrowDownPageController.getNarrowDownData();
+		if (narrowDownData == null) {
+			bookmarkMenu = BookmarkPage.Bookmark(); // ブックマークされているレシピリスト取得
+			buttonHide(bookmarkMenu.size()); // 前へ・次へボタンの表示・非表示処理
+			bookmarkSetMenu(bookmarkMenu, label); // ブックマークをラベルへセットする処理
+		} else {
+			bookmarkMenu = BookmarkPage.Bookmark(narrowDownData[0], narrowDownData[1], narrowDownData[2],
+					narrowDownData[3]); // ブックマークされているレシピリスト取得
+			buttonHide(bookmarkMenu.size()); // 前へ・次へボタンの表示・非表示処理
+			bookmarkSetMenu(bookmarkMenu, label); // ブックマークをラベルへセットする処理
+		}
 	}
 
 	// 前へボタンクリック処理
@@ -42,7 +55,6 @@ public class BookmarkPageController {
 		bookmarkRecipe = new ArrayList<ArrayList<String>>();
 		Label[][] label = { { menuName1, menuName2, menuName3 }, { cookGenre1, cookGenre2, cookGenre3 },
 				{ genre1, genre2, genre3 }, { time1, time2, time3 }, { cal1, cal2, cal3 } };
-		ArrayList<ArrayList<String>> bookmarkMenu = BookmarkPage.Bookmark();
 		buttonHide(bookmarkMenu.size());
 		bookmarkSetMenu(bookmarkMenu, label);
 	}
@@ -55,9 +67,13 @@ public class BookmarkPageController {
 		bookmarkRecipe = new ArrayList<ArrayList<String>>();
 		Label[][] label = { { menuName1, menuName2, menuName3 }, { cookGenre1, cookGenre2, cookGenre3 },
 				{ genre1, genre2, genre3 }, { time1, time2, time3 }, { cal1, cal2, cal3 } };
-		ArrayList<ArrayList<String>> bookmarkMenu = BookmarkPage.Bookmark();
 		buttonHide(bookmarkMenu.size());
 		bookmarkSetMenu(bookmarkMenu, label);
+	}
+
+	@FXML
+	void NarrowDowntButton_OnClick() {
+		new TopPage().changePage("/top/bookmark/BookmarkNarrowDownPage.fxml");
 	}
 
 	// お気に入り解除ボタン1クリック処理
@@ -68,7 +84,7 @@ public class BookmarkPageController {
 		bookmarkRecipe = new ArrayList<ArrayList<String>>();
 		Label[][] label = { { menuName1, menuName2, menuName3 }, { cookGenre1, cookGenre2, cookGenre3 },
 				{ genre1, genre2, genre3 }, { time1, time2, time3 }, { cal1, cal2, cal3 } };
-		ArrayList<ArrayList<String>> bookmarkMenu = BookmarkPage.Bookmark();
+		bookmarkMenu = BookmarkPage.Bookmark();
 		buttonHide(bookmarkMenu.size());
 		bookmarkSetMenu(bookmarkMenu, label);
 	}
@@ -81,7 +97,7 @@ public class BookmarkPageController {
 		bookmarkRecipe = new ArrayList<ArrayList<String>>();
 		Label[][] label = { { menuName1, menuName2, menuName3 }, { cookGenre1, cookGenre2, cookGenre3 },
 				{ genre1, genre2, genre3 }, { time1, time2, time3 }, { cal1, cal2, cal3 } };
-		ArrayList<ArrayList<String>> bookmarkMenu = BookmarkPage.Bookmark();
+		bookmarkMenu = BookmarkPage.Bookmark();
 		buttonHide(bookmarkMenu.size());
 		bookmarkSetMenu(bookmarkMenu, label);
 	}
@@ -102,6 +118,7 @@ public class BookmarkPageController {
 	// Topへ戻るボタンクリック処理
 	@FXML
 	void ReturnTopPage_OnClick() {
+		BookmarkNarrowDownPageController.narrowDownData = null;
 		new TopPage().changePage("/top/TopPage.fxml");
 	}
 
