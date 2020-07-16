@@ -2,76 +2,39 @@ package top.foodsearch;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
 import top.TopPage;
 
 public class FoodSearchPageController {
 
-	@FXML
-	private Label CookMenu1, CookMenu2, CookMenu3, CookMenu4, CookMenu5, CookMenu6, CookMenu7,
-			Genre1, Genre2, Genre3, Genre4, Genre5, Genre6, Genre7,
-			cooking1, cooking2, cooking3, cooking4, cooking5, cooking6, cooking7,
-			time1, time2, time3, time4, time5, time6, time7,
-			calorie1, calorie2, calorie3, calorie4, calorie5, calorie6, calorie7;
-
-	//Fsp rand = new Fsp();
-
-	//ArrayList<ArrayList<String>> FoodRecipe;
+	static String[] narrowDownData; // 絞り込み条件データ
 
 	@FXML // Topボタン
 	void ReturnTopButton_OnClick() {
 		new TopPage().changePage("/top/TopPage.fxml");
+
 	}
 
-	@FXML // 食材決定ボタン→食材検索処理開始へ行き→ansへ
+	@FXML // 「食材決定ボタン」食材検索処理開始へ行き→ansへ遷移
 	void AnsPage_OnClick() {
+		narrowDownData = new String[] { FoodList.getValue() }; // 選択食材データ代入
 		new TopPage().changePage("/top/foodsearch/FSP_ans.fxml");
-
-	}
-
-	@FXML //ansから検索画面へ
-	void FoodSerach_onClick() {
-		new TopPage().changePage("/top/foodsearch/FoodSearchPage.fxml");
 	}
 
 	@FXML //コンボボックスの型
-	public ComboBox<String> FoodList;
+	private ComboBox<String> FoodList;
 
 	@FXML //選択食材リスト
 	void initialize() {
 		// コンボボックスに項目を追加
-		FoodList.getItems().add("食材を選択");
-		FoodList.getItems().add("豚肉");
-		FoodList.getItems().add("たまご");
-		FoodList.getItems().add("鶏肉");
-		FoodList.getItems().add("にんじん");
-		FoodList.getItems().add("タケノコ");
-		//コンボボックスの初期値
-		FoodList.getSelectionModel().select(0);
+		FoodList.getItems().addAll("食材を選択", "豚ひき肉", "キャベツ", "きくらげ", "タケノコ", "オイスターソース", "ねぎ", "きゅうり", "卵", "にんじん",
+				"片栗粉", "醤油", "出汁", "味噌", "麺つゆ", "塩", "鰹節", "人参", "卵白", "里芋", "アスパラ", "ピーマン", "小麦粉", "豚バラ", "鶏もも",
+				"しょうゆ", "豚肉", "マヨネーズ", "たまご", "たまねぎ", "ベーコン", "鳥もも肉", "ひき肉", "グリンピース", "バター", "じゃがいも", "鶏肉", "パン粉",
+				"コーン", "デミグラスソース", "パルメザンチーズ", "ケチャップ", "なす", "酢"); // ジャンル設定
+		FoodList.getSelectionModel().select(0); // 初期値
 	}
-	/**
-		@FXML
-		void Fsp() {
-			FoodRecipe = new ArrayList<ArrayList<String>>();
-		Label[][] label = { { CookMenu1, CookMenu2, CookMenu3, CookMenu4, CookMenu5, CookMenu6, CookMenu7 },
-				{ Genre1, Genre2, Genre3, Genre4, Genre5, Genre6, Genre7 },
-				{ cooking1, cooking2, cooking3, cooking4, cooking5, cooking6, cooking7 },
-				{ time1, time2, time3, time4, time5, time6, time7 },
-				{ calorie1, calorie2, calorie3, calorie4, calorie5, calorie6, calorie7 }};
 
-		ArrayList<ArrayList<String>> Foodsearch = FoodSearchPage.Foodsearch();
-		RandamuSetMenu(Foodsearch, label);
-
-		void RandomSetMenu(ArrayList<ArrayList<String>> seasonMenu, Label[][] label) {
-			for (int i = 0; i <= 6; i++) {
-				int randomValue = rand.nextInt(seasonMenu.size());
-				label[0][i].setText(seasonMenu.get(randomValue).get(0)); // 料理名
-				label[1][i].setText(seasonMenu.get(randomValue).get(1)); // 料理国
-				label[2][i].setText(seasonMenu.get(randomValue).get(2)); // 料理ジャンル
-				label[3][i].setText(seasonMenu.get(randomValue).get(4)); // 所要時間
-				label[4][i].setText(seasonMenu.get(randomValue).get(5)); // カロリー
-				randomRecipe.add(seasonMenu.get(randomValue));
-				seasonMenu.remove(randomValue);
-			}
-		}*/
+	// 絞り込み条件データ取得処理
+	static String[] getNarrowDownData() {
+		return narrowDownData;
+	}
 }
