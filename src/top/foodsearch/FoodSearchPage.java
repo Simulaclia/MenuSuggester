@@ -9,7 +9,7 @@ public class FoodSearchPage {
 
 	public static void main(String[] args) {
 
-		System.out.println("食材を入力してください。");
+		//System.out.println("食材を入力してください。");
 
 		//Scanner Search = new Scanner(System.in);
 		//String MainFood = Search.nextLine();
