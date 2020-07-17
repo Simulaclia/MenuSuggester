@@ -32,7 +32,7 @@ public class FSP_ans_Controller {
 		FSPSetMenu(recipeList, label);
 	}
 
-	private void FSPSetMenu(ArrayList<ArrayList<String>> recipeList2, Label[][] label) {
+	void FSPSetMenu(ArrayList<ArrayList<String>> recipeList, Label[][] label) {
 
 	}
 }
