@@ -13,7 +13,7 @@ public class FSP_ans_Controller {
 
 	@FXML //食材選択に戻る
 	void FoodSerach_onClick() {
-		new TopPage().changePage("/top/foodsearch/FoodSearchPage.fxml");
+		new TopPage().changePage("/top/foodsearch/FSP.fxml");
 
 	}
 }
