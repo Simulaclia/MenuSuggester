@@ -6,7 +6,8 @@ import top.TopPage;
 
 public class FSP_Controller {
 
-	static String[] narrowDownData; // 選択食材データ
+	static String[] SearchFoodData; // 選択食材データ
+
 	@FXML // Topボタン
 	void ReturnTopButton_OnClick() {
 		new TopPage().changePage("/top/TopPage.fxml");
@@ -15,7 +16,7 @@ public class FSP_Controller {
 	@FXML // 「食材決定ボタン」食材検索処理開始へ行き→ansへ遷移
 	void AnsPage_OnClick() {
 
-		narrowDownData = new String[] { FoodList.getValue() }; // 選択食材データ代入
+		SearchFoodData = new String[] { FoodList.getValue() }; // 選択食材データ代入
 		new TopPage().changePage("/top/foodsearch/FSP_ans.fxml");
 	}
 
@@ -35,7 +36,7 @@ public class FSP_Controller {
 	}
 
 	// 絞り込み条件データ取得処理
-	static String[] getNarrowDownData() {
-		return narrowDownData;
+	static String[] getSearchFoodData() {
+		return SearchFoodData;
 	}
 }
