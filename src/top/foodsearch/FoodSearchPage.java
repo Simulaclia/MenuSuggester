@@ -4,16 +4,17 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class FoodSearchPage {
 
 	public static void main(String[] args) {
 
-		System.out.println("食材を入力してください。");
+		//System.out.println("食材を入力してください。");
 
-		Scanner Search = new Scanner(System.in);
-		String MainFood = Search.nextLine();
+		//Scanner Search = new Scanner(System.in);
+		//String MainFood = Search.nextLine();
+
+		String[] SearchFoodData = null;
 
 		try {
 			//読み込みファイルのインスタンス生成
@@ -32,7 +33,7 @@ public class FoodSearchPage {
 					tempArrayList.add(tempLi);
 				}
 				//メイン食材絞り込み
-				if (tempArrayList.get(9).equals(MainFood)) {// 合致する食材を検索
+				if (tempArrayList.get(9).equals(SearchFoodData)) {// 合致する食材を検索
 					recipeList.add(tempArrayList);// 合致したレシピを追加
 				}
 			}
