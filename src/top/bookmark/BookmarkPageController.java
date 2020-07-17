@@ -148,7 +148,7 @@ public class BookmarkPageController {
 	// Topへ戻るボタンクリック処理
 	@FXML
 	void ReturnTopPage_OnClick() {
-		BookmarkNarrowDownPageController.narrowDownData = null;
+		BookmarkNarrowDownPageController.resetNarrowDownData();
 		new TopPage().changePage("/top/TopPage.fxml");
 	}
 

@@ -9,7 +9,7 @@ public class BookmarkNarrowDownPageController {
 	@FXML
 	private ComboBox<String> genre, country, cal, price;
 
-	static String[] narrowDownData; // 絞り込み条件データ
+	private static String[] narrowDownData; // 絞り込み条件データ
 
 	@FXML
 	void initialize() {
@@ -48,5 +48,10 @@ public class BookmarkNarrowDownPageController {
 	// 絞り込み条件データ取得処理
 	static String[] getNarrowDownData() {
 		return narrowDownData;
+	}
+
+	// 絞り込み条件初期化処理
+	static void resetNarrowDownData() {
+		narrowDownData = null;
 	}
 }
