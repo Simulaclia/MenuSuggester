@@ -9,6 +9,8 @@ public class FoodSearchPage {
 
 	public static void main(String[] args) {
 
+		String[] MainFood = FSP_Controller.getSearchFoodData();
+
 		try {
 			//読み込みファイルのインスタンス生成
 			FileInputStream fis = new FileInputStream("csv/Recipe.csv");//ファイル名・場所を指定

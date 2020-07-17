@@ -24,4 +24,15 @@ public class FSP_ans_Controller {
 	void FoodSerach_onClick() {
 		new TopPage().changePage("/top/foodsearch/FSP.fxml");
 	}
+
+	@FXML
+	void initialize() {
+		recipeList = new ArrayList<ArrayList<String>>();
+		Label[][] label = { { CookMenu1 }, { Genre1 }, { cooking1 }, { calorie1 }, { time1 } };
+		FSPSetMenu(recipeList, label);
+	}
+
+	private void FSPSetMenu(ArrayList<ArrayList<String>> recipeList2, Label[][] label) {
+
+	}
 }
