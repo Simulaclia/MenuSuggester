@@ -5,13 +5,17 @@ import java.util.ArrayList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import top.TopPage;
+import top.seasonsearch.SeasonSearchPage;
+import top.weeksuggest.WSPN2contoroller;
 
 public class FSP_ans_Controller {
 
 	@FXML
 	private Label CookMenu1, Genre1, cooking1, calorie1, time1;
 
-	ArrayList<ArrayList<String>> recipeList;
+	String[] FSMenu;
+
+	ArrayList<ArrayList<String>> searchMenu;
 
 	String[] MainFood = FSP_Controller.getSearchFoodData();
 
@@ -27,9 +31,8 @@ public class FSP_ans_Controller {
 
 	@FXML //選択食材のレシピを貼り付け
 	void initialize() {
-		ArrayList<ArrayList<String>> SearchFoodRecipe = new ArrayList<ArrayList<String>>();
 		Label[][] label = { { CookMenu1 }, { Genre1 }, { cooking1 }, { calorie1 }, { time1 } };
-		FSPSetMenu(recipeList, label);
+		FSMenu = FoodSearchPage.recipeList();
 	}
 
 	void FSPSetMenu(ArrayList<ArrayList<String>> recipeList, Label[][] label) {

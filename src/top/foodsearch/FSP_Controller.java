@@ -33,7 +33,7 @@ public class FSP_Controller {
 		FoodList.getSelectionModel().select(0); // 初期値
 	}
 
-	public static String[] getSearchFoodData() {
+	static String[] getSearchFoodData() {
 		return SearchFoodData;
 	}
 }
