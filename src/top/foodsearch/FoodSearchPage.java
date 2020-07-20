@@ -9,7 +9,10 @@ public class FoodSearchPage {
 
 	public static void main(String[] args) {
 
+		// 選択食材データ取得
 		String[] MainFood = FSP_Controller.getSearchFoodData();
+		//選択食材出力確認用
+		System.out.println(MainFood);
 
 		try {
 			//読み込みファイルのインスタンス生成

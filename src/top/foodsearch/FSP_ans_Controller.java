@@ -25,9 +25,9 @@ public class FSP_ans_Controller {
 		new TopPage().changePage("/top/foodsearch/FSP.fxml");
 	}
 
-	@FXML
+	@FXML //選択食材のレシピを貼り付け
 	void initialize() {
-		recipeList = new ArrayList<ArrayList<String>>();
+		ArrayList<ArrayList<String>> SearchFoodRecipe = new ArrayList<ArrayList<String>>();
 		Label[][] label = { { CookMenu1 }, { Genre1 }, { cooking1 }, { calorie1 }, { time1 } };
 		FSPSetMenu(recipeList, label);
 	}

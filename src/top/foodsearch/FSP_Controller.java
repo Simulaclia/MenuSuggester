@@ -9,7 +9,7 @@ public class FSP_Controller {
 	@FXML //コンボボックスの型
 	private ComboBox<String> FoodList;//選択食材リスト
 
-	private static String[] SearchFoodData; // 選択食材データ
+	static String[] SearchFoodData; // 選択食材データ
 
 	@FXML // Topボタン
 	void ReturnTopButton_OnClick() {
@@ -33,7 +33,6 @@ public class FSP_Controller {
 		FoodList.getSelectionModel().select(0); // 初期値
 	}
 
-	// 選択食材データ取得
 	public static String[] getSearchFoodData() {
 		return SearchFoodData;
 	}
