@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import top.ResultPageController;
 import top.TopPage;
 
 public class BookmarkPageController {
@@ -23,11 +24,12 @@ public class BookmarkPageController {
 
 	String[] narrowDownData; // 絞り込み条件データ
 
-	int pageCount = 1; // 現在ページ数
+	int pageCount; // 現在ページ数
 
 	// 初期処理
 	@FXML
 	void initialize() {
+		pageCount = 1;
 		bookmarkRecipe = new ArrayList<ArrayList<String>>();
 		Label[][] label = { { menuName1, menuName2, menuName3 }, { cookGenre1, cookGenre2, cookGenre3 },
 				{ genre1, genre2, genre3 }, { time1, time2, time3 }, { cal1, cal2, cal3 } };
@@ -143,6 +145,24 @@ public class BookmarkPageController {
 			buttonHide(bookmarkMenu.size());
 			bookmarkSetMenu(bookmarkMenu, label);
 		}
+	}
+
+	@FXML
+	void menuName1_OnClick() {
+		ResultPageController.setData(bookmarkRecipe.get(0));
+		new TopPage().changePage("/top/ResultPage.fxml");
+	}
+
+	@FXML
+	void menuName2_OnClick() {
+		ResultPageController.setData(bookmarkRecipe.get(1));
+		new TopPage().changePage("/top/ResultPage.fxml");
+	}
+
+	@FXML
+	void menuName3_OnClick() {
+		ResultPageController.setData(bookmarkRecipe.get(2));
+		new TopPage().changePage("/top/ResultPage.fxml");
 	}
 
 	// Topへ戻るボタンクリック処理
