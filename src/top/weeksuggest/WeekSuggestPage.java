@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 public class WeekSuggestPage {
@@ -46,7 +47,7 @@ public class WeekSuggestPage {
 		ArrayList<ArrayList<String>> Western_foodArray = new ArrayList<ArrayList<String>>();
 		ArrayList<ArrayList<String>> ChineseArray = new ArrayList<ArrayList<String>>();
 		//ジャンル(国)分けした後の絞り込み用配列の宣言
-		//ArrayList<String> NarrowDownData = new ArrayList<String>();
+		ArrayList<ArrayList<String>> NarrowDownData = new ArrayList<ArrayList<String>>();
 
 		try {
 			FileInputStream fisRec = new FileInputStream("csv/Recipe.csv");
@@ -72,57 +73,45 @@ public class WeekSuggestPage {
 								|| (Integer.parseInt(tempArrayList.get(3)) <= (Integer.parseInt(price)))) // 価格絞り込み
 				) */
 
-				//ジャンル(国)分け
-				//for() {
+				for (int i = 0; i < tempArrayList.size(); i++) {
+					switch (tempArrayList.get(1)) {
+					case "和食":
+						//和食だけの配列
 
-				switch (tempArrayList.get(1)) {
-				case "和食":
+						Japanese_foodArray.add(tempArrayList);
 
-					Japanese_foodArray.add(tempArrayList);
-				case "洋食":
+					case "洋食":
+						//洋食だけの配列
 
-					Western_foodArray.add(tempArrayList);
-				case "中華":
+						Western_foodArray.add(tempArrayList);
 
-					ChineseArray.add(tempArrayList);
+					case "中華":
+						//中華だけの配列
+
+						ChineseArray.add(tempArrayList);
+
+					}
 				}
 			}
 
-			for (int i = 1; i <= Integer.parseInt(genre1); i++) {
+			for (int i = 0; i <= Integer.parseInt(genre1); i++) {
 				int randomValue = rand.nextInt(Japanese_foodArray.size());
-				NarrowDownList.add(Japanese_foodArray.get(randomValue));
+				Collections.shuffle(Japanese_foodArray);
+				NarrowDownData.add(Japanese_foodArray.get(randomValue));
 			}
-			for (int i = 1; i <= Integer.parseInt(genre2); i++) {
+			for (int i = 0; i <= Integer.parseInt(genre2); i++) {
 				int randomValue = rand.nextInt(Western_foodArray.size());
-				NarrowDownList.add(Western_foodArray.get(randomValue));
+				Collections.shuffle(Western_foodArray);
+				NarrowDownData.add(Western_foodArray.get(randomValue));
 			}
-			for (int i = 1; i <= Integer.parseInt(genre3); i++) {
+			for (int i = 0; i <= Integer.parseInt(genre3); i++) {
 				int randomValue = rand.nextInt(ChineseArray.size());
-				NarrowDownList.add(ChineseArray.get(randomValue));
+				Collections.shuffle(ChineseArray);
+				NarrowDownData.add(ChineseArray.get(randomValue));
 			}
 
-			//}
+			NarrowDownList.addAll(NarrowDownData);
 
-			/*
-				switch (tempArrayList.get(1)) {
-				case "和食":
-					for(int i = 1 ; i <= genre1; i++) {
-			
-					}
-					;
-				case "洋食":
-					for(int i = 1 ; i <= genre2; i++) {
-			
-					}
-			
-					;
-				case "中華":
-					for(int i = 1 ; i <= genre3; i++) {
-			
-					}
-			
-					;
-				}*/
 			brRec.close();
 			return NarrowDownList;
 		} catch (Exception e) {
