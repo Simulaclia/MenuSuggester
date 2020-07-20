@@ -120,6 +120,8 @@ public class WeekSuggestPageContoller {
 			label[4][i].setText(WeekSugeestMenu.get(randomValue).get(5)); // カロリー
 			randomRecipe.add(WeekSugeestMenu.get(randomValue));
 			WeekSugeestMenu.remove(randomValue);
+			randomRecipe.remove(randomValue);
+
 		}
 	}
 }
