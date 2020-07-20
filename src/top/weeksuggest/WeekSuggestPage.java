@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Random;
 
 public class WeekSuggestPage {
@@ -73,47 +72,53 @@ public class WeekSuggestPage {
 								|| (Integer.parseInt(tempArrayList.get(3)) <= (Integer.parseInt(price)))) // 価格絞り込み
 				) */
 
-				for (int i = 0; i < tempArrayList.size(); i++) {
-					switch (tempArrayList.get(1)) {
-					case "和食":
-						//和食だけの配列
+				switch (tempArrayList.get(1)) {
+				case "和食":
+					//和食だけの配列
 
-						Japanese_foodArray.add(tempArrayList);
+					Japanese_foodArray.add(tempArrayList);
 
-					case "洋食":
-						//洋食だけの配列
+					break;
+				case "洋食":
+					//洋食だけの配列
 
-						Western_foodArray.add(tempArrayList);
+					Western_foodArray.add(tempArrayList);
 
-					case "中華":
-						//中華だけの配列
+					break;
+				case "中華":
+					//中華だけの配列
 
-						ChineseArray.add(tempArrayList);
+					ChineseArray.add(tempArrayList);
 
-					}
+					break;
 				}
+
 			}
 
-			for (int i = 0; i <= Integer.parseInt(genre1); i++) {
+			for (int i = 1; i <= Integer.parseInt(genre1); i++) {
 				int randomValue = rand.nextInt(Japanese_foodArray.size());
-				Collections.shuffle(Japanese_foodArray);
+				//Collections.shuffle(Japanese_foodArray);
 				NarrowDownData.add(Japanese_foodArray.get(randomValue));
-			}
-			for (int i = 0; i <= Integer.parseInt(genre2); i++) {
-				int randomValue = rand.nextInt(Western_foodArray.size());
-				Collections.shuffle(Western_foodArray);
-				NarrowDownData.add(Western_foodArray.get(randomValue));
-			}
-			for (int i = 0; i <= Integer.parseInt(genre3); i++) {
-				int randomValue = rand.nextInt(ChineseArray.size());
-				Collections.shuffle(ChineseArray);
-				NarrowDownData.add(ChineseArray.get(randomValue));
+				Japanese_foodArray.remove(randomValue);
 			}
 
-			NarrowDownList.addAll(NarrowDownData);
+			for (int i = 1; i <= Integer.parseInt(genre2); i++) {
+				int randomValue = rand.nextInt(Western_foodArray.size());
+				//Collections.shuffle(Western_foodArray);
+				NarrowDownData.add(Western_foodArray.get(randomValue));
+				Western_foodArray.remove(randomValue);
+			}
+			for (int i = 1; i <= Integer.parseInt(genre3); i++) {
+				int randomValue = rand.nextInt(ChineseArray.size());
+				//Collections.shuffle(ChineseArray);
+				NarrowDownData.add(ChineseArray.get(randomValue));
+				ChineseArray.remove(randomValue);
+			}
+
+			//NarrowDownList.addAll(NarrowDownData);
 
 			brRec.close();
-			return NarrowDownList;
+			return NarrowDownData;
 		} catch (Exception e) {
 			e.printStackTrace();
 			return null;

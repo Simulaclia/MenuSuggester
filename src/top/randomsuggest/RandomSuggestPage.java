@@ -24,19 +24,22 @@ public class RandomSuggestPage {
 		InputStreamReader is = null;
 		BufferedReader br = null;
 
-		//消しておく
-		System.out.println("ジャンルを入力して下さい。");
 		Scanner sc = new Scanner(System.in);
 		String input_text = sc.nextLine();
 
 		String genre = "中華";
+		//追加云々
+
 		try {
+
 			//ファイル名またはパスでcsv取得
 			fi = new FileInputStream("csv/Recipe.csv");
 			is = new InputStreamReader(fi);
 			br = new BufferedReader(is);
 
-			String tempData; // CSVファイル一行読み込みデータ
+			// CSVファイル一行読み込みデータ
+			String tempData;
+
 			ArrayList<ArrayList<String>> recipeList = new ArrayList<ArrayList<String>>(); // 絞り込み後データ
 
 			// レシピCSVファイル絞り込み処理
@@ -62,36 +65,6 @@ public class RandomSuggestPage {
 				}
 				System.out.println();
 			}
-
-			//			//読み込み行
-			//			String line;
-			//			//行数云々
-			//			int i = 0;
-			//			String[] arr = null;
-			//			//一行ずつ
-			//			while ((line = br.readLine()) != null) {
-			//				//先頭行=列名:
-			//				if (i == 0) {
-			//					//arr={料理名,料理国,料理ジャンル,2人前価格,料理所要時間,カロリー,タンパク質量,脂質量,炭水化物量,
-			//					//よく使われる主食材,料理の主食材,主食材,旬の食材,クックパッドの料理名検索リンク};
-			//					arr = line.split(",");
-			//
-			//				} else {
-			//					//内容表示
-			//					System.out.println("-------------------");
-			//					//件数名
-			//					System.out.println("データ" + i + "件目");
-			//					String[] data = line.split(",");
-			//					//中身を順位表示　列数　
-			//					int colno = 0;
-			//					for (String column : arr) {
-			//						System.out.println(column + ":" + data[colno]);
-			//						colno++;
-			//					}
-			//				}
-			//				//行数のインクリメント
-			//				i++;
-			//			}
 
 			sc.close();
 		} catch (Exception e) {
