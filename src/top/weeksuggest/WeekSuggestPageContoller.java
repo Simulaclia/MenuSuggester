@@ -25,9 +25,9 @@ public class WeekSuggestPageContoller {
 
 	Random rand = new Random();
 
-	ArrayList<ArrayList<String>> randomRecipe;
+	ArrayList<ArrayList<String>> randomRecipe;//条件絞り込み後のデータ
 
-	Integer[] deliveryData;
+	String[] deliveryData;//絞り込み条件のデータ
 
 	// トップページに飛ぶ処理
 	@FXML
@@ -93,10 +93,19 @@ public class WeekSuggestPageContoller {
 				{ calorie1, calorie2, calorie3, calorie4, calorie5, calorie6, calorie7 }
 
 		};
-		ArrayList<ArrayList<String>> Weeksuggest = WeekSuggestPage.Weeksuggest();
-		RandomSetMenu(Weeksuggest, label);
+		//		ArrayList<ArrayList<String>> Weeksuggest = WeekSuggestPage.Weeksuggest();
+
 		//絞り込みデータの取得
 		deliveryData = WSPN2contoroller.getdelivery();
+
+		if (deliveryData == null) {
+			randomRecipe = WeekSuggestPage.Weeksuggest();
+			RandomSetMenu(randomRecipe, label);
+		} else {
+			randomRecipe = WeekSuggestPage.Weeksuggest(deliveryData[0], deliveryData[1], deliveryData[2],
+					deliveryData[3]);
+			RandomSetMenu(randomRecipe, label);
+		}
 
 	}
 
@@ -113,5 +122,4 @@ public class WeekSuggestPageContoller {
 			WeekSugeestMenu.remove(randomValue);
 		}
 	}
-
 }
