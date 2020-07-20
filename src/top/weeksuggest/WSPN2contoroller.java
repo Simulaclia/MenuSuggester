@@ -60,7 +60,7 @@ public class WSPN2contoroller {
 		int WACbInt = Integer.parseInt(WACb.getValue());
 		int YOCbInt = Integer.parseInt(YOCb.getValue());
 		int CHUCbInt = Integer.parseInt(CHUCb.getValue());
-		int priceInt = Integer.parseInt(price.getValue());
+		//int priceInt = Integer.parseInt(price.getValue());
 
 		if (WACbInt + YOCbInt + CHUCbInt != 7) {
 			warning.setText("※合計が7品ではありません");

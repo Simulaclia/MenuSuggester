@@ -20,7 +20,7 @@
       </Label>
       <Pane layoutX="30.0" layoutY="162.0" prefHeight="250.0" prefWidth="1600.0">
          <children>
-            <Label fx:id="menuName1" layoutX="71.0" layoutY="69.0">
+            <Label fx:id="menuName1" layoutX="71.0" layoutY="69.0" onMouseClicked="#menuName1_OnClick">
                <font>
                   <Font size="92.0" />
                </font>
@@ -54,7 +54,7 @@
       </Pane>
       <Pane layoutX="-2.0" layoutY="328.0" prefHeight="250.0" prefWidth="1600.0">
          <children>
-            <Label fx:id="menuName2" layoutX="80.0" layoutY="49.0">
+            <Label fx:id="menuName2" layoutX="80.0" layoutY="49.0" onMouseClicked="#menuName2_OnClick">
                <font>
                   <Font size="92.0" />
                </font>
@@ -88,7 +88,7 @@
       </Pane>
       <Pane layoutX="28.0" layoutY="526.0" prefHeight="250.0" prefWidth="1600.0">
          <children>
-            <Label fx:id="menuName3" layoutX="88.0" layoutY="46.0">
+            <Label fx:id="menuName3" layoutX="88.0" layoutY="46.0" onMouseClicked="#menuName3_OnClick">
                <font>
                   <Font size="92.0" />
                </font>

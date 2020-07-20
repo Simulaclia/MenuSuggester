@@ -46,7 +46,7 @@ public class WeekSuggestPage {
 		ArrayList<ArrayList<String>> Western_foodArray = new ArrayList<ArrayList<String>>();
 		ArrayList<ArrayList<String>> ChineseArray = new ArrayList<ArrayList<String>>();
 		//ジャンル(国)分けした後の絞り込み用配列の宣言
-		ArrayList<ArrayList<String>> NarrowDownData = new ArrayList<ArrayList<String>>();
+		//		ArrayList<ArrayList<String>> NarrowDownData = new ArrayList<ArrayList<String>>();
 
 		try {
 			FileInputStream fisRec = new FileInputStream("csv/Recipe.csv");
@@ -77,19 +77,16 @@ public class WeekSuggestPage {
 					//和食だけの配列
 
 					Japanese_foodArray.add(tempArrayList);
-
 					break;
 				case "洋食":
 					//洋食だけの配列
 
 					Western_foodArray.add(tempArrayList);
-
 					break;
 				case "中華":
 					//中華だけの配列
 
 					ChineseArray.add(tempArrayList);
-
 					break;
 				}
 
@@ -97,28 +94,25 @@ public class WeekSuggestPage {
 
 			for (int i = 1; i <= Integer.parseInt(genre1); i++) {
 				int randomValue = rand.nextInt(Japanese_foodArray.size());
-				//Collections.shuffle(Japanese_foodArray);
-				NarrowDownData.add(Japanese_foodArray.get(randomValue));
+				NarrowDownList.add(Japanese_foodArray.get(randomValue));
 				Japanese_foodArray.remove(randomValue);
 			}
 
 			for (int i = 1; i <= Integer.parseInt(genre2); i++) {
 				int randomValue = rand.nextInt(Western_foodArray.size());
-				//Collections.shuffle(Western_foodArray);
-				NarrowDownData.add(Western_foodArray.get(randomValue));
+				NarrowDownList.add(Western_foodArray.get(randomValue));
 				Western_foodArray.remove(randomValue);
 			}
 			for (int i = 1; i <= Integer.parseInt(genre3); i++) {
 				int randomValue = rand.nextInt(ChineseArray.size());
-				//Collections.shuffle(ChineseArray);
-				NarrowDownData.add(ChineseArray.get(randomValue));
+				NarrowDownList.add(ChineseArray.get(randomValue));
 				ChineseArray.remove(randomValue);
 			}
 
 			//NarrowDownList.addAll(NarrowDownData);
 
 			brRec.close();
-			return NarrowDownData;
+			return NarrowDownList;
 		} catch (Exception e) {
 			e.printStackTrace();
 			return null;
