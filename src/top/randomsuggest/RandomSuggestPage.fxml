@@ -64,47 +64,47 @@
             <Font size="36.0" />
          </font>
       </Text>
-      <Label layoutX="337.0" layoutY="463.0" prefHeight="54.0" prefWidth="183.0" text="食材1">
+      <Label fx:id="foodstuff1" layoutX="337.0" layoutY="463.0" prefHeight="54.0" prefWidth="183.0" text="食材1">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label layoutX="15.0" layoutY="677.0" prefHeight="61.0" prefWidth="614.0" text="(ここにURLを表示)" textFill="#00bbe5">
+      <Label fx:id="urllabel" layoutX="15.0" layoutY="677.0" prefHeight="61.0" prefWidth="614.0" text="(ここにURLを表示)" textFill="#00bbe5">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="243.0" layoutY="213.0" prefHeight="70.0" prefWidth="262.0" text="料理名">
+      <Label fx:id="ciusinename" layoutX="243.0" layoutY="213.0" prefHeight="70.0" prefWidth="262.0" text="料理名">
          <font>
             <Font size="64.0" />
          </font>
       </Label>
-      <Label layoutX="121.0" layoutY="350.0" text="料理ジャンル">
+      <Label fx:id="genre" layoutX="121.0" layoutY="350.0" text="料理ジャンル">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label layoutX="429.0" layoutY="348.0" text="料理国">
+      <Label fx:id="country" layoutX="429.0" layoutY="348.0" text="料理国">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label layoutX="880.0" layoutY="347.0" prefHeight="54.0" prefWidth="108.0" text="0" textAlignment="RIGHT">
+      <Label fx:id="price" layoutX="880.0" layoutY="347.0" prefHeight="54.0" prefWidth="108.0" text="0" textAlignment="RIGHT">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label layoutX="1369.0" layoutY="350.0" prefHeight="41.0" prefWidth="62.0" text="    0">
+      <Label fx:id="time" layoutX="1369.0" layoutY="350.0" prefHeight="41.0" prefWidth="62.0" text="    0">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label layoutX="337.0" layoutY="536.0" prefHeight="54.0" prefWidth="183.0" text="食材2">
+      <Label fx:id="foodstuff2" layoutX="337.0" layoutY="536.0" prefHeight="54.0" prefWidth="183.0" text="食材2">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label layoutX="337.0" layoutY="518.0" prefHeight="146.0" prefWidth="183.0" text="食材3">
+      <Label fx:id="foodstuff3" layoutX="337.0" layoutY="498.0" prefHeight="166.0" prefWidth="183.0" text="食材3">
          <font>
             <Font size="36.0" />
          </font>
@@ -112,22 +112,22 @@
             <Insets top="80.0" />
          </padding>
       </Label>
-      <Label layoutX="1334.0" layoutY="463.0" prefHeight="35.0" prefWidth="47.0" text="0" textAlignment="RIGHT">
+      <Label fx:id="cal" layoutX="1334.0" layoutY="463.0" prefHeight="35.0" prefWidth="47.0" text="0" textAlignment="RIGHT">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label layoutX="1381.0" layoutY="539.0" prefHeight="18.0" prefWidth="24.0" text="0">
+      <Label fx:id="pro" layoutX="1381.0" layoutY="539.0" prefHeight="18.0" prefWidth="24.0" text="0">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label layoutX="1295.0" layoutY="617.0" prefHeight="54.0" prefWidth="62.0" text="0">
+      <Label fx:id="lip" layoutX="1295.0" layoutY="617.0" prefHeight="54.0" prefWidth="62.0" text="0">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label layoutX="1371.0" layoutY="687.0" text="0">
+      <Label fx:id="car" layoutX="1371.0" layoutY="687.0" text="0">
          <font>
             <Font size="36.0" />
          </font>
