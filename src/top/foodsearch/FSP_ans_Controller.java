@@ -11,7 +11,8 @@ public class FSP_ans_Controller {
 	@FXML
 	private Label CookMenu1, Genre1, cooking1, calorie1, time1;
 
-	ArrayList<ArrayList<String>> FSRecipe;
+	ArrayList<ArrayList<String>> FSPRecipe;
+	ArrayList<ArrayList<String>> FSPMenu;
 
 	@FXML // Topボタン
 	void ReturnTopButton_OnClick() {
@@ -25,10 +26,10 @@ public class FSP_ans_Controller {
 
 	@FXML //選択食材のレシピを貼り付け
 	void initialize() {
-		FSRecipe = new ArrayList<ArrayList<String>>();
+		FSPRecipe = new ArrayList<ArrayList<String>>();
 		Label[][] label = { { CookMenu1 }, { Genre1 }, { cooking1 }, { calorie1 }, { time1 } };
-		String[] MainFood = FoodSearchPage.recipeList;//レシピを持ってくる
-		FSPSetMenu(FSRecipe, label);
+		FSPMenu = FoodSearchPage.recipeList();//レシピを持ってくる
+		FSPSetMenu(FSPRecipe, label);
 	}
 
 	void FSPSetMenu(ArrayList<ArrayList<String>> recipeList, Label[][] label) {

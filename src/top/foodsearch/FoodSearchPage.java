@@ -7,14 +7,12 @@ import java.util.ArrayList;
 
 public class FoodSearchPage {
 
-	public static String[] recipeList;
-
-	public static ArrayList<ArrayList<String>> FSP() {
+	public static ArrayList<ArrayList<String>> recipeList() {
 
 		// FSP_ans_Conから選択食材データを取得
 		String[] MainFood = FSP_Controller.getSearchFoodData();//例:じゃがいも
 		//選択食材出力確認用
-		//System.out.println(MainFood);
+		System.out.println(MainFood);
 
 		try {
 			//読み込みファイルのインスタンス生成
