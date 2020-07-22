@@ -10,6 +10,16 @@ public class RandomSuggestPageController {
 	private Label ciusinename, genre, country, time, cal, pro,
 			lip, car, foodstuff1, foodstuff2, foodstuff3;
 
+	String[] StrNarrowData; // 絞り込み条件データ
+
+	int[] intNarrowData;
+
+	//初期設定
+	void initialize() {
+		StrNarrowData = RandomNarrowdownController.getStrNarrowDate();
+		intNarrowData = RandomNarrowdownController.getintNarrowDate();// 絞り込み条件取得
+	}
+
 	//ページ遷移設定
 	@FXML
 	void RandomSuggestNarrow_onClick() {
