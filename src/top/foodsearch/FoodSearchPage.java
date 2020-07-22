@@ -10,7 +10,7 @@ public class FoodSearchPage {
 	public static ArrayList<ArrayList<String>> FSP() {
 
 		// FSP_ans_Conから選択食材データを取得
-		String[] MainFood = FSP_Controller.getSearchFoodData();
+		String[] MainFood = FSP_Controller.getSearchFoodData();//例:じゃがいも
 		//選択食材出力確認用
 		System.out.println(MainFood);
 
@@ -30,7 +30,7 @@ public class FoodSearchPage {
 					tempArrayList.add(tempLi);
 				}
 				//選択食材絞り込み
-				if (tempArrayList.get(9).equals(MainFood)) { // 合致する食材を検索
+				if (tempArrayList.get(9).equals(MainFood)) { // 合致する食材を検索・//例:じゃがいも=じゃがいも
 					recipeList.add(tempArrayList);// 合致したレシピを追加
 				}
 			}

@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import top.TopPage;
-import top.seasonsearch.SeasonSearchPage;
-import top.weeksuggest.WSPN2contoroller;
 
 public class FSP_ans_Controller {
 
@@ -32,7 +30,6 @@ public class FSP_ans_Controller {
 	@FXML //選択食材のレシピを貼り付け
 	void initialize() {
 		Label[][] label = { { CookMenu1 }, { Genre1 }, { cooking1 }, { calorie1 }, { time1 } };
-		FSMenu = FoodSearchPage.recipeList();
 	}
 
 	void FSPSetMenu(ArrayList<ArrayList<String>> recipeList, Label[][] label) {
