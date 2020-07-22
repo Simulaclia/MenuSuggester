@@ -9,7 +9,7 @@ public class FSP_Controller {
 	@FXML //コンボボックスの型
 	private ComboBox<String> FoodList;//選択食材リスト
 
-	static String[] SearchFoodData; // 選択食材データ
+	public static String[] SearchFoodData; // 選択食材データ
 
 	@FXML // Topボタン
 	void ReturnTopButton_OnClick() {
