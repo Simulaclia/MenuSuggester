@@ -25,7 +25,7 @@ public class WeekSuggestPageContoller {
 
 	Random rand = new Random();
 
-	ArrayList<ArrayList<String>> randomRecipe;//条件絞り込み後のデータ
+	ArrayList<ArrayList<String>> randomRecipe;
 
 	String[] deliveryData;//絞り込み条件のデータ
 
@@ -93,18 +93,18 @@ public class WeekSuggestPageContoller {
 				{ calorie1, calorie2, calorie3, calorie4, calorie5, calorie6, calorie7 }
 
 		};
-		//		ArrayList<ArrayList<String>> Weeksuggest = WeekSuggestPage.Weeksuggest();
+		ArrayList<ArrayList<String>> weekSuggestRandom = WeekSuggestPage.Weeksuggest();
 
 		//絞り込みデータの取得
 		deliveryData = WSPN2contoroller.getdelivery();
 
 		if (deliveryData == null) {
-			randomRecipe = WeekSuggestPage.Weeksuggest();
-			RandomSetMenu(randomRecipe, label);
+			weekSuggestRandom = WeekSuggestPage.Weeksuggest();
+			RandomSetMenu(weekSuggestRandom, label);
 		} else {
-			randomRecipe = WeekSuggestPage.Weeksuggest(deliveryData[0], deliveryData[1], deliveryData[2],
+			weekSuggestRandom = WeekSuggestPage.Weeksuggest(deliveryData[0], deliveryData[1], deliveryData[2],
 					deliveryData[3]);
-			RandomSetMenu(randomRecipe, label);
+			RandomSetMenu(weekSuggestRandom, label);
 		}
 	}
 
@@ -112,7 +112,7 @@ public class WeekSuggestPageContoller {
 	void RandomSetMenu(ArrayList<ArrayList<String>> WeekSuggestMenu, Label[][] label) {
 		for (int i = 0; i <= 6; i++) {
 			int randomValue = rand.nextInt(WeekSuggestMenu.size());
-			//Collections.shuffle(WeekSuggestMenu);
+
 			label[0][i].setText(WeekSuggestMenu.get(randomValue).get(0)); // 料理名
 			label[1][i].setText(WeekSuggestMenu.get(randomValue).get(1)); // 料理国
 			label[2][i].setText(WeekSuggestMenu.get(randomValue).get(2)); // 料理ジャンル
@@ -121,6 +121,7 @@ public class WeekSuggestPageContoller {
 			randomRecipe.add(WeekSuggestMenu.get(randomValue));
 			System.out.println(WeekSuggestMenu.size());
 			WeekSuggestMenu.remove(randomValue);
+
 		}
 	}
 }
