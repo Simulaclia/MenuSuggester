@@ -106,22 +106,21 @@ public class WeekSuggestPageContoller {
 					deliveryData[3]);
 			RandomSetMenu(randomRecipe, label);
 		}
-
 	}
 
 	// ランダムでラベルにセット
-	void RandomSetMenu(ArrayList<ArrayList<String>> WeekSugeestMenu, Label[][] label) {
+	void RandomSetMenu(ArrayList<ArrayList<String>> WeekSuggestMenu, Label[][] label) {
 		for (int i = 0; i <= 6; i++) {
-			int randomValue = rand.nextInt(WeekSugeestMenu.size());
-			label[0][i].setText(WeekSugeestMenu.get(randomValue).get(0)); // 料理名
-			label[1][i].setText(WeekSugeestMenu.get(randomValue).get(1)); // 料理国
-			label[2][i].setText(WeekSugeestMenu.get(randomValue).get(2)); // 料理ジャンル
-			label[3][i].setText(WeekSugeestMenu.get(randomValue).get(4)); // 所要時間
-			label[4][i].setText(WeekSugeestMenu.get(randomValue).get(5)); // カロリー
-			randomRecipe.add(WeekSugeestMenu.get(randomValue));
-			WeekSugeestMenu.remove(randomValue);
-			randomRecipe.remove(randomValue);
-
+			int randomValue = rand.nextInt(WeekSuggestMenu.size());
+			//Collections.shuffle(WeekSuggestMenu);
+			label[0][i].setText(WeekSuggestMenu.get(randomValue).get(0)); // 料理名
+			label[1][i].setText(WeekSuggestMenu.get(randomValue).get(1)); // 料理国
+			label[2][i].setText(WeekSuggestMenu.get(randomValue).get(2)); // 料理ジャンル
+			label[3][i].setText(WeekSuggestMenu.get(randomValue).get(4)); // 所要時間
+			label[4][i].setText(WeekSuggestMenu.get(randomValue).get(5)); // カロリー
+			randomRecipe.add(WeekSuggestMenu.get(randomValue));
+			System.out.println(WeekSuggestMenu.size());
+			WeekSuggestMenu.remove(randomValue);
 		}
 	}
 }

@@ -95,17 +95,20 @@ public class WeekSuggestPage {
 			for (int i = 1; i <= Integer.parseInt(genre1); i++) {
 				int randomValue = rand.nextInt(Japanese_foodArray.size());
 				NarrowDownList.add(Japanese_foodArray.get(randomValue));
+				System.out.println(Japanese_foodArray.get(randomValue).get(0));
 				Japanese_foodArray.remove(randomValue);
 			}
 
 			for (int i = 1; i <= Integer.parseInt(genre2); i++) {
 				int randomValue = rand.nextInt(Western_foodArray.size());
 				NarrowDownList.add(Western_foodArray.get(randomValue));
+				System.out.println(Western_foodArray.get(randomValue).get(0));
 				Western_foodArray.remove(randomValue);
 			}
 			for (int i = 1; i <= Integer.parseInt(genre3); i++) {
 				int randomValue = rand.nextInt(ChineseArray.size());
 				NarrowDownList.add(ChineseArray.get(randomValue));
+				System.out.println(ChineseArray.get(randomValue).get(0));
 				ChineseArray.remove(randomValue);
 			}
 
