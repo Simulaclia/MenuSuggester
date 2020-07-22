@@ -119,7 +119,7 @@ public class WeekSuggestPageContoller {
 			label[3][i].setText(WeekSuggestMenu.get(randomValue).get(4)); // 所要時間
 			label[4][i].setText(WeekSuggestMenu.get(randomValue).get(5)); // カロリー
 			randomRecipe.add(WeekSuggestMenu.get(randomValue));
-			System.out.println(WeekSuggestMenu.size());
+			//System.out.println(WeekSuggestMenu.size());
 			WeekSuggestMenu.remove(randomValue);
 
 		}

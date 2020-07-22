@@ -32,14 +32,12 @@ public class WSPN2contoroller {
 		//中華
 		CHUCb.getItems().addAll("0", "1", "2", "3", "4", "5", "6", "7");
 		//値段（仮定）
-		price.getItems().addAll("2500", "3000", "3500", "4000", "4500", "5000", "5500", "6000", "6500", "7000", "7500",
-				"8000", "8500", "9000",
-				"9500", "10000");
+		price.getItems().addAll("3500", "4000", "4500", "5000", "5500", "6000");
 
 		WACb.setValue("0");
 		YOCb.setValue("0");
 		CHUCb.setValue("0");
-		price.setValue("2500");
+		price.setValue("3500");
 
 	}
 
