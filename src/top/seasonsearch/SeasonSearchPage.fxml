@@ -12,7 +12,7 @@
             <Font size="42.0" />
          </font>
       </Button>
-      <Label fx:id="menuName1" layoutX="38.0" layoutY="226.0" text="料理名">
+      <Label fx:id="menuName1" layoutX="38.0" layoutY="226.0" onMouseClicked="#menuName1_OnClick" text="料理名">
          <font>
             <Font size="96.0" />
          </font>
@@ -42,7 +42,7 @@
             <Font size="55.0" />
          </font>
       </Label>
-      <Label fx:id="menuName2" layoutX="38.0" layoutY="422.0" text="料理名">
+      <Label fx:id="menuName2" layoutX="38.0" layoutY="422.0" onMouseClicked="#menuName2_OnClick" text="料理名">
          <font>
             <Font size="96.0" />
          </font>
@@ -72,7 +72,7 @@
             <Font size="55.0" />
          </font>
       </Label>
-      <Label fx:id="menuName3" layoutX="29.0" layoutY="626.0" text="料理名">
+      <Label fx:id="menuName3" layoutX="29.0" layoutY="626.0" onMouseClicked="#menuName3_OnClick" text="料理名">
          <font>
             <Font size="96.0" />
          </font>

@@ -2,10 +2,10 @@ package top.seasonsearch;
 
 import java.util.ArrayList;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import top.ResultPageController;
 import top.TopPage;
 import top.bookmark.BookmarkPage;
 
@@ -79,9 +79,27 @@ public class SeasonSearchPageController {
 		BookmarkPage.AddBookmark(bookmarkRecipe.get(2));
 	}
 
+	@FXML
+	void menuName1_OnClick() {
+		ResultPageController.setData(bookmarkRecipe.get(0), "/top/seasonsearch/SeasonSearchPage.fxml");
+		new TopPage().changePage("/top/ResultPage.fxml");
+	}
+
+	@FXML
+	void menuName2_OnClick() {
+		ResultPageController.setData(bookmarkRecipe.get(1), "/top/seasonsearch/SeasonSearchPage.fxml");
+		new TopPage().changePage("/top/ResultPage.fxml");
+	}
+
+	@FXML
+	void menuName3_OnClick() {
+		ResultPageController.setData(bookmarkRecipe.get(2), "/top/seasonsearch/SeasonSearchPage.fxml");
+		new TopPage().changePage("/top/ResultPage.fxml");
+	}
+
 	// Topに戻るボタンクリック時
 	@FXML
-	void ReturnTopButton_OnClick(ActionEvent evt) {
+	void ReturnTopButton_OnClick() {
 		new TopPage().changePage("/top/TopPage.fxml");
 	}
 
