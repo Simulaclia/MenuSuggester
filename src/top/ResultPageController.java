@@ -20,6 +20,8 @@ public class ResultPageController {
 
 	static ArrayList<String> resultMenu;
 
+	static String backPage;
+
 	URI URL;
 
 	Desktop desktop = Desktop.isDesktopSupported() ? Desktop.getDesktop() : null;
@@ -39,7 +41,7 @@ public class ResultPageController {
 
 	@FXML
 	void ReturnPageButton_OnClick() {
-		new TopPage().changePage("/top/bookmark/BookmarkPage.fxml");
+		new TopPage().changePage(backPage);
 	}
 
 	@FXML
@@ -53,8 +55,9 @@ public class ResultPageController {
 		}
 	}
 
-	public static void setData(ArrayList<String> resultRecipe) {
+	public static void setData(ArrayList<String> resultRecipe, String page) {
 		resultMenu = resultRecipe;
+		backPage = page;
 	}
 
 }
