@@ -8,136 +8,136 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.bookmark.BookmarkPageController">
    <children>
-      <Button layoutX="64.0" layoutY="68.0" mnemonicParsing="false" onAction="#ReturnTopPage_OnClick" text="Top">
+      <Button layoutX="70.0" layoutY="25.0" mnemonicParsing="false" onAction="#ReturnTopPage_OnClick" text="Topへ戻る">
          <font>
-            <Font size="69.0" />
+            <Font size="50.0" />
          </font>
       </Button>
-      <Label fx:id="noBookmarkText" layoutX="696.0" layoutY="79.0">
+      <Button layoutX="1200.0" layoutY="25.0" mnemonicParsing="false" onAction="#NarrowDowntButton_OnClick" text="絞り込み">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Button>
+      <Label fx:id="noBookmarkText" layoutX="50.0" layoutY="450.0">
          <font>
             <Font size="96.0" />
          </font>
       </Label>
-      <Pane layoutX="30.0" layoutY="162.0" prefHeight="250.0" prefWidth="1600.0">
+      <Pane layoutX="30.0" layoutY="100.0" prefHeight="250.0" prefWidth="1600.0">
          <children>
-            <Label fx:id="menuName1" layoutX="71.0" layoutY="69.0" onMouseClicked="#menuName1_OnClick">
+            <Label fx:id="menuName1" layoutX="10.0" layoutY="70.0" onMouseClicked="#menuName1_OnClick">
                <font>
-                  <Font size="92.0" />
+                  <Font size="75.0" />
                </font>
             </Label>
-            <Label fx:id="genre1" layoutX="377.0" layoutY="41.0">
+            <Label fx:id="genre1" layoutX="600.0" layoutY="65.0">
                <font>
                   <Font size="50.0" />
                </font>
             </Label>
-            <Label fx:id="cookGenre1" layoutX="383.0" layoutY="134.0">
+            <Label fx:id="cookGenre1" layoutX="600.0" layoutY="115.0">
                <font>
-                  <Font size="56.0" />
+                  <Font size="50.0" />
                </font>
             </Label>
-            <Label fx:id="time1" layoutX="730.0" layoutY="28.0">
+            <Label fx:id="time1" layoutX="800.0" layoutY="65.0">
                <font>
-                  <Font size="56.0" />
+                  <Font size="50.0" />
                </font>
             </Label>
-            <Label fx:id="cal1" layoutX="786.0" layoutY="156.0">
+            <Label fx:id="cal1" layoutX="800.0" layoutY="115.0">
                <font>
-                  <Font size="73.0" />
+                  <Font size="50.0" />
                </font>
             </Label>
-            <Button fx:id="deleteBookmarkButton1" layoutX="1052.0" layoutY="59.0" mnemonicParsing="false" onAction="#DeleteBookmark1_OnClick" text="ブックマーク削除">
+            <Button fx:id="deleteBookmarkButton1" layoutX="1050.0" layoutY="70.0" mnemonicParsing="false" onAction="#DeleteBookmark1_OnClick" text="ブックマーク削除">
                <font>
                   <Font size="58.0" />
                </font>
             </Button>
          </children>
       </Pane>
-      <Pane layoutX="-2.0" layoutY="328.0" prefHeight="250.0" prefWidth="1600.0">
+      <Pane layoutX="30.0" layoutY="300.0" prefHeight="250.0" prefWidth="1600.0">
          <children>
-            <Label fx:id="menuName2" layoutX="80.0" layoutY="49.0" onMouseClicked="#menuName2_OnClick">
+            <Label fx:id="menuName2" layoutX="10.0" layoutY="70.0" onMouseClicked="#menuName2_OnClick">
                <font>
-                  <Font size="92.0" />
+                  <Font size="75.0" />
                </font>
             </Label>
-            <Label fx:id="genre2" layoutX="648.0" layoutY="30.0">
+            <Label fx:id="genre2" layoutX="600.0" layoutY="65.0">
                <font>
                   <Font size="50.0" />
                </font>
             </Label>
-            <Label fx:id="cookGenre2" layoutX="616.0" layoutY="145.0">
+            <Label fx:id="cookGenre2" layoutX="600.0" layoutY="115.0">
                <font>
-                  <Font size="56.0" />
+                  <Font size="50.0" />
                </font>
             </Label>
-            <Label fx:id="cal2" layoutX="816.0" layoutY="112.0">
+            <Label fx:id="time2" layoutX="800.0" layoutY="65.0">
                <font>
-                  <Font size="73.0" />
+                  <Font size="50.0" />
                </font>
             </Label>
-            <Label fx:id="time2" layoutX="868.0" layoutY="36.0">
+            <Label fx:id="cal2" layoutX="800.0" layoutY="115.0">
                <font>
-                  <Font size="56.0" />
+                  <Font size="50.0" />
                </font>
             </Label>
-            <Button fx:id="deleteBookmarkButton2" layoutX="1089.0" layoutY="85.0" mnemonicParsing="false" onAction="#DeleteBookmark2_OnClick" text="ブックマーク削除">
+            <Button fx:id="deleteBookmarkButton2" layoutX="1050.0" layoutY="70.0" mnemonicParsing="false" onAction="#DeleteBookmark2_OnClick" text="ブックマーク削除">
                <font>
                   <Font size="58.0" />
                </font>
             </Button>
          </children>
       </Pane>
-      <Pane layoutX="28.0" layoutY="526.0" prefHeight="250.0" prefWidth="1600.0">
+      <Pane layoutX="30.0" layoutY="500.0" prefHeight="250.0" prefWidth="1600.0">
          <children>
-            <Label fx:id="menuName3" layoutX="88.0" layoutY="46.0" onMouseClicked="#menuName3_OnClick">
+            <Label fx:id="menuName3" layoutX="10.0" layoutY="70.0" onMouseClicked="#menuName3_OnClick">
                <font>
-                  <Font size="92.0" />
+                  <Font size="75.0" />
                </font>
             </Label>
-            <Label fx:id="genre3" layoutX="637.0" layoutY="33.0">
+            <Label fx:id="genre3" layoutX="600.0" layoutY="65.0">
                <font>
                   <Font size="50.0" />
                </font>
             </Label>
-            <Label fx:id="cookGenre3" layoutX="640.0" layoutY="145.0">
+            <Label fx:id="cookGenre3" layoutX="600.0" layoutY="115.0">
                <font>
-                  <Font size="56.0" />
+                  <Font size="50.0" />
                </font>
             </Label>
-            <Label fx:id="time3" layoutX="877.0" layoutY="35.0">
+            <Label fx:id="time3" layoutX="800.0" layoutY="65.0">
                <font>
-                  <Font size="56.0" />
+                  <Font size="50.0" />
                </font>
             </Label>
-            <Label fx:id="cal3" layoutX="912.0" layoutY="113.0">
+            <Label fx:id="cal3" layoutX="800.0" layoutY="115.0">
                <font>
-                  <Font size="73.0" />
+                  <Font size="50.0" />
                </font>
             </Label>
-            <Button fx:id="deleteBookmarkButton3" layoutX="1040.0" layoutY="66.0" mnemonicParsing="false" onAction="#DeleteBookmark3_OnClick" text="ブックマーク削除">
+            <Button fx:id="deleteBookmarkButton3" layoutX="1050.0" layoutY="70.0" mnemonicParsing="false" onAction="#DeleteBookmark3_OnClick" text="ブックマーク削除">
                <font>
                   <Font size="58.0" />
                </font>
             </Button>
          </children>
       </Pane>
-      <Button fx:id="backButton" layoutX="290.0" layoutY="732.0" mnemonicParsing="false" onAction="#backButton_OnClick" text="前へ">
+      <Button fx:id="backButton" layoutX="300.0" layoutY="750.0" mnemonicParsing="false" onAction="#backButton_OnClick" text="前へ">
          <font>
             <Font size="52.0" />
          </font>
       </Button>
-      <Button fx:id="nextButton" layoutX="1062.0" layoutY="740.0" mnemonicParsing="false" onAction="#nextButton_OnClick" text="次へ">
+      <Button fx:id="nextButton" layoutX="1050.0" layoutY="750.0" mnemonicParsing="false" onAction="#nextButton_OnClick" text="次へ">
          <font>
             <Font size="52.0" />
          </font>
       </Button>
-      <Label fx:id="pageNum" layoutX="500.0" layoutY="732.0">
+      <Label fx:id="pageNum" alignment="CENTER" contentDisplay="CENTER" layoutX="500.0" layoutY="750.0" textAlignment="CENTER">
          <font>
             <Font size="75.0" />
          </font></Label>
-      <Button layoutX="1162.0" layoutY="74.0" mnemonicParsing="false" onAction="#NarrowDowntButton_OnClick" text="絞り込み">
-         <font>
-            <Font size="52.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>

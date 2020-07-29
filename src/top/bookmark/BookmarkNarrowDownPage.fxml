@@ -6,57 +6,56 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.bookmark.BookmarkNarrowDownPageController">
    <children>
-      <Button layoutX="113.0" layoutY="87.0" mnemonicParsing="false" onAction="#ReturnBookmarkPage_OnClick" prefHeight="95.0" prefWidth="450.0" text="ブックマークに戻る">
+      <Button layoutX="70.0" layoutY="70.0" mnemonicParsing="false" onAction="#ReturnBookmarkPage_OnClick" prefHeight="95.0" prefWidth="450.0" text="ブックマークに戻る">
          <font>
-            <Font size="42.0" />
+            <Font size="50.0" />
          </font>
       </Button>
-      <Label layoutX="860.0" layoutY="230.0" text="二人前価格">
+      <Label layoutX="1000.0" layoutY="244.0" text="二人前価格">
          <font>
-            <Font size="79.0" />
+            <Font size="75.0" />
          </font>
       </Label>
-      <Button layoutX="400.0" layoutY="730.0" mnemonicParsing="false" onAction="#resetButton_OnClick" text="リセット">
+      <Button layoutX="400.0" layoutY="750.0" mnemonicParsing="false" onAction="#resetButton_OnClick" text="リセット">
          <font>
-            <Font size="60.0" />
+            <Font size="50.0" />
          </font>
       </Button>
-      <Button layoutX="1000.0" layoutY="730.0" mnemonicParsing="false" onAction="#enterButton_OnClick" text="決定">
+      <Button layoutX="1000.0" layoutY="750.0" mnemonicParsing="false" onAction="#enterButton_OnClick" text="決定">
          <font>
-            <Font size="60.0" />
+            <Font size="50.0" />
          </font>
       </Button>
-      <ComboBox fx:id="genre" layoutX="460.0" layoutY="380.0" prefHeight="70.0" prefWidth="110.0" />
-      <ComboBox fx:id="country" layoutX="460.0" layoutY="490.0" prefHeight="70.0" prefWidth="110.0" />
-      <ComboBox fx:id="cal" layoutX="459.0" layoutY="609.0" prefHeight="70.0" prefWidth="110.0" />
-      <Label layoutX="325.0" layoutY="375.0" text="ジャンル">
+      <ComboBox fx:id="genre" layoutX="450.0" layoutY="300.0" prefHeight="70.0" prefWidth="110.0" />
+      <ComboBox fx:id="country" layoutX="450.0" layoutY="450.0" prefHeight="70.0" prefWidth="110.0" />
+      <ComboBox fx:id="cal" layoutX="450.0" layoutY="600.0" prefHeight="70.0" prefWidth="110.0" />
+      <Label layoutX="150.0" layoutY="300.0" text="ジャンル">
          <font>
-            <Font size="55.0" />
+            <Font size="50.0" />
          </font>
       </Label>
-      <Label layoutX="325.0" layoutY="485.0" text="料理国">
+      <Label layoutX="150.0" layoutY="450.0" text="料理国">
          <font>
-            <Font size="55.0" />
+            <Font size="50.0" />
          </font>
       </Label>
-      <Label layoutX="325.0" layoutY="595.0" text="カロリー">
+      <Label layoutX="150.0" layoutY="600.0" text="カロリー">
          <font>
-            <Font size="55.0" />
+            <Font size="50.0" />
          </font>
       </Label>
-      <Label layoutX="590.0" layoutY="600.0" text="kcal以下">
+      <Label layoutX="600.0" layoutY="600.0" text="kcal以下">
          <font>
-            <Font size="55.0" />
+            <Font size="50.0" />
          </font>
       </Label>
-      <Label layoutX="1240.0" layoutY="440.0" text="円以下">
+      <Label layoutX="1300.0" layoutY="450.0" text="円以下">
          <font>
-            <Font size="65.0" />
+            <Font size="50.0" />
          </font>
       </Label>
-      <ComboBox fx:id="price" layoutX="925.0" layoutY="450.0" prefHeight="80.0" prefWidth="300.0" />
+      <ComboBox fx:id="price" layoutX="950.0" layoutY="450.0" prefHeight="80.0" prefWidth="300.0" />
    </children>
 </AnchorPane>
