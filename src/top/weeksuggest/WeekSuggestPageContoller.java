@@ -6,6 +6,7 @@ import java.util.Random;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import top.ResultPageController;
 import top.TopPage;
 import top.bookmark.BookmarkPage;
 
@@ -75,6 +76,48 @@ public class WeekSuggestPageContoller {
 	@FXML
 	void bookmark_07_OnClick() {
 		BookmarkPage.AddBookmark(randomRecipe.get(6));
+	}
+
+	@FXML
+	void foodMenu_On_Click1() {
+		ResultPageController.setData(randomRecipe.get(0), "/top/weeksuggest/WSPage.fxml");
+		new TopPage().changePage("/top/ResultPage.fxml");
+	}
+
+	@FXML
+	void foodMenu_On_Click2() {
+		ResultPageController.setData(randomRecipe.get(1), "/top/weeksuggest/WSPage.fxml");
+		new TopPage().changePage("/top/ResultPage.fxml");
+	}
+
+	@FXML
+	void foodMenu_On_Click3() {
+		ResultPageController.setData(randomRecipe.get(2), "/top/weeksuggest/WSPage.fxml");
+		new TopPage().changePage("/top/ResultPage.fxml");
+	}
+
+	@FXML
+	void foodMenu_On_Click4() {
+		ResultPageController.setData(randomRecipe.get(3), "/top/weeksuggest/WSPage.fxml");
+		new TopPage().changePage("/top/ResultPage.fxml");
+	}
+
+	@FXML
+	void foodMenu_On_Click5() {
+		ResultPageController.setData(randomRecipe.get(4), "/top/weeksuggest/WSPage.fxml");
+		new TopPage().changePage("/top/ResultPage.fxml");
+	}
+
+	@FXML
+	void foodMenu_On_Click6() {
+		ResultPageController.setData(randomRecipe.get(5), "/top/weeksuggest/WSPage.fxml");
+		new TopPage().changePage("/top/ResultPage.fxml");
+	}
+
+	@FXML
+	void foodMenu_On_Click7() {
+		ResultPageController.setData(randomRecipe.get(6), "/top/weeksuggest/WSPage.fxml");
+		new TopPage().changePage("/top/ResultPage.fxml");
 	}
 
 	@FXML
