@@ -30,13 +30,13 @@ public class FSP_ans_Controller {
 	@FXML //選択食材のレシピを貼り付け
 	void initialize() {
 		FSPRecipe = new ArrayList<ArrayList<String>>();
-		Label[][] label = { { CookMenu1 }, { Genre1 }, { cooking1 }, { calorie1 }, { time1 } };
+		Label[][] label = { { CookMenu1 }, { cooking1 }, { Genre1 }, { time1 }, { calorie1 } };
 		FSPMenu = FoodSearchPage.recipeList();//レシピを持ってくる
 		FSPSetMenu(FSPRecipe, label);
 	}
 
 	void FSPSetMenu(ArrayList<ArrayList<String>> recipeList, Label[][] label) {
-		for (int i = 0; i <= 1; i++) {
+		for (int i = 0; i <= 5; i++) {
 			int randomValue = rand.nextInt(recipeList.size());
 
 			label[0][i].setText(recipeList.get(randomValue).get(0)); // 料理名
