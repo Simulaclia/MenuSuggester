@@ -6,7 +6,7 @@ public class SampleCode {
 
 		String[] MainFood = FSP_Controller.getSearchFoodData();
 
-		System.out.println(MainFood[0]);
+		System.out.println(MainFood);
 
 	}
 
