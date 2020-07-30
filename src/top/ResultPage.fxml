@@ -8,14 +8,14 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.ResultPageController">
    <children>
-      <Button layoutX="190.0" layoutY="50.0" mnemonicParsing="false" onAction="#ReturnPageButton_OnClick" text="前に戻る">
+      <Button layoutX="94.0" layoutY="54.0" mnemonicParsing="false" onAction="#ReturnPageButton_OnClick" text="前に戻る">
          <font>
             <Font size="57.0" />
          </font>
       </Button>
-      <Label fx:id="menu" layoutX="214.0" layoutY="280.0" text="料理名">
+      <Label fx:id="menu" layoutX="122.0" layoutY="232.0" text="ミートソーススパゲティ">
          <font>
-            <Font size="83.0" />
+            <Font size="75.0" />
          </font>
       </Label>
       <Hyperlink fx:id="url" layoutX="214.0" layoutY="503.0" onAction="#url_OnClick" text="URL">
