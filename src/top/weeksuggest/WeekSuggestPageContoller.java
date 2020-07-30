@@ -25,10 +25,11 @@ public class WeekSuggestPageContoller {
 			calorie1, calorie2, calorie3, calorie4, calorie5, calorie6, calorie7;
 
 	Random rand = new Random();
-
+	//ブックマーク用の配列
 	ArrayList<ArrayList<String>> randomRecipe;
-
-	String[] deliveryData;//絞り込み条件のデータ
+	//絞り込み条件のデータ
+	String[] deliveryData;
+	//リンク先に飛んだ際のランダムに表示した物を一時的に保存しておく配列
 
 	// トップページに飛ぶ処理
 	@FXML
@@ -42,7 +43,7 @@ public class WeekSuggestPageContoller {
 		new TopPage().changePage("/top/weeksuggest/WSPNarrow_down2.fxml");
 	}
 
-	// ブックマークボタンの処理
+	// ブックマークボタンを押した時の処理
 	@FXML
 	void bookmark_01_OnClick() {
 		BookmarkPage.AddBookmark(randomRecipe.get(0));
@@ -78,10 +79,12 @@ public class WeekSuggestPageContoller {
 		BookmarkPage.AddBookmark(randomRecipe.get(6));
 	}
 
+	//クックパッドへのリンク先の表示
 	@FXML
 	void foodMenu_On_Click1() {
 		ResultPageController.setData(randomRecipe.get(0), "/top/weeksuggest/WSPage.fxml");
 		new TopPage().changePage("/top/ResultPage.fxml");
+
 	}
 
 	@FXML
@@ -140,7 +143,7 @@ public class WeekSuggestPageContoller {
 
 		//絞り込みデータの取得
 		deliveryData = WSPN2contoroller.getdelivery();
-
+		//絞り込みデータがあるかないかの処理
 		if (deliveryData == null) {
 			weekSuggestRandom = WeekSuggestPage.Weeksuggest();
 			RandomSetMenu(weekSuggestRandom, label);
