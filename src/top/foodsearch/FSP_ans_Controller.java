@@ -31,7 +31,7 @@ public class FSP_ans_Controller {
 	void initialize() {
 		FSPRecipe = new ArrayList<ArrayList<String>>();
 		Label[][] label = { { CookMenu1 }, { cooking1 }, { Genre1 }, { time1 }, { calorie1 } };
-		FSPMenu = FoodSearchPage.recipeList();//レシピを持ってくる
+		FSPMenu = FoodSearchPage.FoodSearch();//レシピを持ってくる
 		FSPSetMenu(FSPRecipe, label);
 	}
 

@@ -18,7 +18,7 @@ public class FSP_Controller {
 
 	@FXML // 「食材決定ボタン」食材検索処理開始へ行き→ansへ遷移
 	void AnsPage_OnClick() {
-		SearchFoodData = new String[] { FoodList.getValue() }; // 選択食材データ代入
+		SearchFoodData = new String[] { "豚肉" }; // 選択食材データ代入
 		new TopPage().changePage("/top/foodsearch/FSP_ans.fxml");
 	}
 
@@ -31,6 +31,8 @@ public class FSP_Controller {
 				"しょうゆ", "豚肉", "マヨネーズ", "たまご", "たまねぎ", "ベーコン", "鳥もも肉", "ひき肉", "グリンピース", "バター", "鶏肉", "パン粉",
 				"コーン", "デミグラスソース", "パルメザンチーズ", "ケチャップ", "なす", "酢"); // 選択食材ども
 		FoodList.getSelectionModel().select(0); // 初期値
+
+		System.out.println(SearchFoodData);
 	}
 
 	static String[] getSearchFoodData() {
