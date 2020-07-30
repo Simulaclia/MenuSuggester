@@ -1,6 +1,7 @@
 package top.foodsearch;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -10,6 +11,8 @@ public class FSP_ans_Controller {
 
 	@FXML
 	private Label CookMenu1, Genre1, cooking1, calorie1, time1;
+
+	Random rand = new Random();
 
 	ArrayList<ArrayList<String>> FSPRecipe;
 	ArrayList<ArrayList<String>> FSPMenu;
@@ -33,6 +36,15 @@ public class FSP_ans_Controller {
 	}
 
 	void FSPSetMenu(ArrayList<ArrayList<String>> recipeList, Label[][] label) {
+		for (int i = 0; i <= 1; i++) {
+			int randomValue = rand.nextInt(recipeList.size());
+
+			label[0][i].setText(recipeList.get(randomValue).get(0)); // 料理名
+			label[1][i].setText(recipeList.get(randomValue).get(1)); // 料理国
+			label[2][i].setText(recipeList.get(randomValue).get(2)); // 料理ジャンル
+			label[3][i].setText(recipeList.get(randomValue).get(3)); // 所要時間
+			label[4][i].setText(recipeList.get(randomValue).get(4)); // カロリー
+		}
 
 	}
 }
