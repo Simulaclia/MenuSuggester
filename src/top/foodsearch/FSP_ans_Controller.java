@@ -45,6 +45,5 @@ public class FSP_ans_Controller {
 			label[3][i].setText(recipeList.get(randomValue).get(3)); // 所要時間
 			label[4][i].setText(recipeList.get(randomValue).get(4)); // カロリー
 		}
-
 	}
 }
