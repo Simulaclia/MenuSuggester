@@ -13,7 +13,7 @@ import javafx.scene.control.Label;
 public class ResultPageController {
 
 	@FXML
-	Label menu;
+	Label menu, genre, food1, food2, food3, country, price, time, cal, protein, lipid, carbohydrate;
 
 	@FXML
 	Hyperlink url;
@@ -29,6 +29,17 @@ public class ResultPageController {
 	@FXML
 	void initialize() {
 		menu.setText(resultMenu.get(0));
+		country.setText(resultMenu.get(1));
+		genre.setText(resultMenu.get(2));
+		price.setText(resultMenu.get(3));
+		time.setText(resultMenu.get(4));
+		cal.setText(resultMenu.get(5));
+		protein.setText(resultMenu.get(6));
+		lipid.setText(resultMenu.get(7));
+		carbohydrate.setText(resultMenu.get(8));
+		food1.setText(resultMenu.get(9));
+		food2.setText(resultMenu.get(10));
+		food3.setText(resultMenu.get(11));
 		url.setText(resultMenu.get(0) + "へのクックパッドリンク");
 
 		try {
