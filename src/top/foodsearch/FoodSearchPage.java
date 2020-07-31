@@ -29,7 +29,7 @@ public class FoodSearchPage {
 					tempArrayList.add(tempLi);
 				}
 				//選択食材絞り込み
-				if (tempArrayList.get(9).equals(MainFood)) { // 食材を比較・//例:じゃがいも=じゃがいも
+				if (tempArrayList.get(9).equals(MainFood[0])) { // 食材を比較・//例:じゃがいも=じゃがいも
 					recipeList.add(tempArrayList);// 合致したレシピを追加
 				}
 			}
