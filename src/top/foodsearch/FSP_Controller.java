@@ -9,7 +9,7 @@ public class FSP_Controller {
 	@FXML //コンボボックスの型
 	private ComboBox<String> FoodList;//選択食材リスト
 
-	public static String[] SearchFoodData; // 選択食材データ
+	private static String[] SearchFoodData; // 選択食材データ
 
 	@FXML // Topボタン
 	void ReturnTopButton_OnClick() {
@@ -18,7 +18,7 @@ public class FSP_Controller {
 
 	@FXML // 「食材決定ボタン」食材検索処理開始へ行き→ansへ遷移
 	void AnsPage_OnClick() {
-		SearchFoodData = new String[] { "豚肉" }; // 選択食材データ代入
+		SearchFoodData = new String[] { FoodList.getValue() }; // 選択食材データ代入
 		new TopPage().changePage("/top/foodsearch/FSP_ans.fxml");
 	}
 
@@ -34,8 +34,7 @@ public class FSP_Controller {
 
 	}
 
-	static String[] SearchFoodData() {
-		System.out.println(SearchFoodData);
+	static String[] getSearchFoodData() {
 		return SearchFoodData;
 	}
 }
