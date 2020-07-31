@@ -32,10 +32,10 @@ public class FSP_Controller {
 				"コーン", "デミグラスソース", "パルメザンチーズ", "ケチャップ", "なす", "酢"); // 選択食材ども
 		FoodList.getSelectionModel().select(0); // 初期値
 
-		System.out.println(SearchFoodData);
 	}
 
-	static String[] getSearchFoodData() {
+	static String[] SearchFoodData() {
+		System.out.println(SearchFoodData);
 		return SearchFoodData;
 	}
 }

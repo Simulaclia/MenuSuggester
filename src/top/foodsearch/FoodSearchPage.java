@@ -10,7 +10,8 @@ public class FoodSearchPage {
 	public static ArrayList<ArrayList<String>> FoodSearch() {
 
 		// FSP_ans_Conから選択食材データを取得
-		String[] MainFood = FSP_Controller.getSearchFoodData();//例:じゃがいも
+		String[] MainFood = FSP_Controller.SearchFoodData();//例:じゃがいも
+		System.out.println(MainFood);
 
 		try {
 			//読み込みファイルのインスタンス生成
@@ -32,6 +33,13 @@ public class FoodSearchPage {
 					recipeList.add(tempArrayList);// 合致したレシピを追加
 				}
 			}
+			// 絞り込み後データ表示(仮設)
+			/*for (ArrayList<String> recipe : recipeList) {
+				for (String data : recipe) {
+					System.out.print(data + "\t");
+				}
+				System.out.println();
+			}*/
 			br.close();
 			return recipeList;
 		} catch (Exception e) {
