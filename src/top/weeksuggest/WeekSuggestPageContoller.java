@@ -30,6 +30,7 @@ public class WeekSuggestPageContoller {
 	//絞り込み条件のデータ
 	String[] deliveryData;
 	//リンク先に飛んだ際のランダムに表示した物を一時的に保存しておく配列
+	ArrayList<ArrayList<String>> temporaryfood = new ArrayList<ArrayList<String>>();
 
 	// トップページに飛ぶ処理
 	@FXML
@@ -82,6 +83,9 @@ public class WeekSuggestPageContoller {
 	//クックパッドへのリンク先の表示
 	@FXML
 	void foodMenu_On_Click1() {
+		for (int i = 0; i <= randomRecipe.size() - 1; i++) {
+			temporaryfood.add(randomRecipe.get(i));
+		}
 		ResultPageController.setData(randomRecipe.get(0), "/top/weeksuggest/WSPage.fxml");
 		new TopPage().changePage("/top/ResultPage.fxml");
 
@@ -89,38 +93,61 @@ public class WeekSuggestPageContoller {
 
 	@FXML
 	void foodMenu_On_Click2() {
+		for (int i = 0; i <= randomRecipe.size() - 1; i++) {
+			temporaryfood.add(randomRecipe.get(i));
+		}
 		ResultPageController.setData(randomRecipe.get(1), "/top/weeksuggest/WSPage.fxml");
 		new TopPage().changePage("/top/ResultPage.fxml");
+
 	}
 
 	@FXML
 	void foodMenu_On_Click3() {
+		for (int i = 0; i <= randomRecipe.size() - 1; i++) {
+			temporaryfood.add(randomRecipe.get(i));
+		}
 		ResultPageController.setData(randomRecipe.get(2), "/top/weeksuggest/WSPage.fxml");
 		new TopPage().changePage("/top/ResultPage.fxml");
 	}
 
 	@FXML
 	void foodMenu_On_Click4() {
+		for (int i = 0; i <= randomRecipe.size() - 1; i++) {
+			temporaryfood.add(randomRecipe.get(i));
+		}
 		ResultPageController.setData(randomRecipe.get(3), "/top/weeksuggest/WSPage.fxml");
 		new TopPage().changePage("/top/ResultPage.fxml");
+
 	}
 
 	@FXML
 	void foodMenu_On_Click5() {
+		for (int i = 0; i <= randomRecipe.size() - 1; i++) {
+			temporaryfood.add(randomRecipe.get(i));
+		}
 		ResultPageController.setData(randomRecipe.get(4), "/top/weeksuggest/WSPage.fxml");
 		new TopPage().changePage("/top/ResultPage.fxml");
+
 	}
 
 	@FXML
 	void foodMenu_On_Click6() {
+		for (int i = 0; i <= randomRecipe.size() - 1; i++) {
+			temporaryfood.add(randomRecipe.get(i));
+		}
 		ResultPageController.setData(randomRecipe.get(5), "/top/weeksuggest/WSPage.fxml");
-		new TopPage().changePage("/top/ResultPage.fxml");
+		new TopPage().changePage("/top/Resfc ultPage.fxml");
+
 	}
 
 	@FXML
 	void foodMenu_On_Click7() {
+		for (int i = 0; i <= randomRecipe.size() - 1; i++) {
+			temporaryfood.add(randomRecipe.get(i));
+		}
 		ResultPageController.setData(randomRecipe.get(6), "/top/weeksuggest/WSPage.fxml");
 		new TopPage().changePage("/top/ResultPage.fxml");
+
 	}
 
 	@FXML
@@ -140,9 +167,23 @@ public class WeekSuggestPageContoller {
 
 		};
 		ArrayList<ArrayList<String>> weekSuggestRandom = WeekSuggestPage.Weeksuggest();
-
+		//System.out.println(temporaryfood.get(0));
 		//絞り込みデータの取得
 		deliveryData = WSPN2contoroller.getdelivery();
+		//リンク先を表示したときの一時配列にデータが入っているかの判定
+		//		if (temporaryfood != null) {
+		//			for (int i = 0; i <= 6; i++) {
+		//
+		//				label[0][i].setText(temporaryfood.get(i).get(0)); // 料理名
+		//				label[1][i].setText(temporaryfood.get(i).get(1)); // 料理国
+		//				label[2][i].setText(temporaryfood.get(i).get(2)); // 料理ジャンル
+		//				label[3][i].setText(temporaryfood.get(i).get(4)); // 所要時間
+		//				label[4][i].setText(temporaryfood.get(i).get(5)); // カロリー
+		//				randomRecipe.add(temporaryfood.get(i));
+		//				//temporaryfood.remove(0);
+		//				//System.exit(0);
+		//			}
+		//		}
 		//絞り込みデータがあるかないかの処理
 		if (deliveryData == null) {
 			weekSuggestRandom = WeekSuggestPage.Weeksuggest();
@@ -152,10 +193,12 @@ public class WeekSuggestPageContoller {
 					deliveryData[3]);
 			RandomSetMenu(weekSuggestRandom, label);
 		}
+
 	}
 
-	// ランダムでラベルにセット
 	void RandomSetMenu(ArrayList<ArrayList<String>> WeekSuggestMenu, Label[][] label) {
+
+		// ランダムでラベルにセット
 		for (int i = 0; i <= 6; i++) {
 			int randomValue = rand.nextInt(WeekSuggestMenu.size());
 
@@ -167,7 +210,8 @@ public class WeekSuggestPageContoller {
 			randomRecipe.add(WeekSuggestMenu.get(randomValue));
 			//System.out.println(WeekSuggestMenu.size());
 			WeekSuggestMenu.remove(randomValue);
-
 		}
+
 	}
+
 }
