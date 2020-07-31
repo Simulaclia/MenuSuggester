@@ -10,7 +10,7 @@ public class FoodSearchPage {
 	public static ArrayList<ArrayList<String>> FoodSearch() {
 
 		// FSP_ans_Conから選択食材データを取得
-		String[] MainFood = FSP_Controller.SearchFoodData();//例:じゃがいも
+		String[] MainFood = FSP_Controller.getSearchFoodData();//例:じゃがいも
 		System.out.println(MainFood);
 
 		try {
