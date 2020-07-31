@@ -40,7 +40,7 @@ public class FSP_ans_Controller {
 		label[0][0].setText(recipeList.get(randomValue).get(0)); // 料理名
 		label[1][0].setText(recipeList.get(randomValue).get(1)); // 料理国
 		label[2][0].setText(recipeList.get(randomValue).get(2)); // 料理ジャンル
-		label[3][0].setText(recipeList.get(randomValue).get(3)); // 所要時間
-		label[4][0].setText(recipeList.get(randomValue).get(4)); // カロリー
+		label[4][0].setText(recipeList.get(randomValue).get(3)); // 所要時間
+		label[3][0].setText(recipeList.get(randomValue).get(4)); // カロリー
 	}
 }
