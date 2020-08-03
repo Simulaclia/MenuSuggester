@@ -25,6 +25,6 @@ public class TopPageController {
 
 	@FXML
 	void Bookmark_onClick() {
-		new TopPage().changePage("/top/bookmark/BookmarkPage.fxml");
+		new TopPage().changePage("/top/bookmark/BookmarkPage.fxml", "/top/bookmark/BookmarkPage.css");
 	}
 }
