@@ -61,7 +61,7 @@
                               <Font size="50.0" />
                            </font>
                         </Label>
-                        <Label fx:id="time1" alignment="CENTER_RIGHT" layoutX="1150.0" layoutY="55.0" prefHeight="75.0" prefWidth="80.0" text="00">
+                        <Label fx:id="time1" alignment="CENTER_RIGHT" layoutX="1135.0" layoutY="55.0" prefHeight="75.0" prefWidth="95.0" text="00">
                            <font>
                               <Font size="52.0" />
                            </font>
@@ -115,7 +115,7 @@
                               <Font size="50.0" />
                            </font>
                         </Label>
-                        <Label fx:id="time2" alignment="CENTER_RIGHT" layoutX="1150.0" layoutY="55.0" prefHeight="75.0" prefWidth="80.0" text="00">
+                        <Label fx:id="time2" alignment="CENTER_RIGHT" layoutX="1135.0" layoutY="55.0" prefHeight="75.0" prefWidth="95.0" text="00">
                            <font>
                               <Font size="52.0" />
                            </font>
@@ -169,7 +169,7 @@
                               <Font size="50.0" />
                            </font>
                         </Label>
-                        <Label fx:id="time3" alignment="CENTER_RIGHT" layoutX="1150.0" layoutY="55.0" prefHeight="75.0" prefWidth="80.0" text="00">
+                        <Label fx:id="time3" alignment="CENTER_RIGHT" layoutX="1135.0" layoutY="55.0" prefHeight="75.0" prefWidth="95.0" text="00">
                            <font>
                               <Font size="52.0" />
                            </font>
@@ -223,7 +223,7 @@
                               <Font size="50.0" />
                            </font>
                         </Label>
-                        <Label fx:id="time4" alignment="CENTER_RIGHT" layoutX="1150.0" layoutY="55.0" prefHeight="75.0" prefWidth="80.0" text="00">
+                        <Label fx:id="time4" alignment="CENTER_RIGHT" layoutX="1135.0" layoutY="55.0" prefHeight="75.0" prefWidth="95.0" text="00">
                            <font>
                               <Font size="52.0" />
                            </font>
@@ -277,7 +277,7 @@
                               <Font size="50.0" />
                            </font>
                         </Label>
-                        <Label fx:id="time5" alignment="CENTER_RIGHT" layoutX="1150.0" layoutY="55.0" prefHeight="75.0" prefWidth="80.0" text="00">
+                        <Label fx:id="time5" alignment="CENTER_RIGHT" layoutX="1135.0" layoutY="55.0" prefHeight="75.0" prefWidth="95.0" text="00">
                            <font>
                               <Font size="52.0" />
                            </font>
@@ -331,7 +331,7 @@
                               <Font size="50.0" />
                            </font>
                         </Label>
-                        <Label fx:id="time6" alignment="CENTER_RIGHT" layoutX="1150.0" layoutY="55.0" prefHeight="75.0" prefWidth="80.0" text="00">
+                        <Label fx:id="time6" alignment="CENTER_RIGHT" layoutX="1135.0" layoutY="55.0" prefHeight="75.0" prefWidth="95.0" text="00">
                            <font>
                               <Font size="52.0" />
                            </font>
@@ -385,7 +385,7 @@
                               <Font size="50.0" />
                            </font>
                         </Label>
-                        <Label fx:id="time7" alignment="CENTER_RIGHT" layoutX="1150.0" layoutY="55.0" prefHeight="75.0" prefWidth="80.0" text="00">
+                        <Label fx:id="time7" alignment="CENTER_RIGHT" layoutX="1135.0" layoutY="55.0" prefHeight="75.0" prefWidth="95.0" text="00">
                            <font>
                               <Font size="52.0" />
                            </font>
