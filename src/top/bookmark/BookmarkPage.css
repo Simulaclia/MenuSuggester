@@ -9,5 +9,9 @@
 
 .label{
 	-fx-font-family: "keifont";
-	-fx-background-color: lightblue;
+}
+
+#menuName1, #menuName2, #menuName3{
+	-fx-underline: true;
+	-fx-text-fill: blue;
 }
