@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
+import top.bookmark.BookmarkPage;
 
 public class ResultPageController {
 
@@ -64,6 +65,11 @@ public class ResultPageController {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		}
+	}
+
+	@FXML
+	void addBookmark_OnClick() {
+		BookmarkPage.AddBookmark(resultMenu);
 	}
 
 	public static void setData(ArrayList<String> resultRecipe, String page) {

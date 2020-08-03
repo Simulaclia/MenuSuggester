@@ -114,5 +114,10 @@
             <Font size="50.0" />
          </font>
       </Hyperlink>
+      <Button layoutX="948.0" layoutY="761.0" mnemonicParsing="false" onAction="#addBookmark_OnClick" text="お気に入りに追加">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
