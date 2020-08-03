@@ -37,7 +37,7 @@ public class WeekSuggestPageContoller {
 	// トップページに飛ぶ処理
 	@FXML
 	void ReturnTopButton_OnClick(ActionEvent evt) {
-		deliveryData = null;
+        deliveryData = null;
 		new TopPage().changePage("/top/TopPage.fxml");
 	}
 
@@ -188,7 +188,7 @@ public class WeekSuggestPageContoller {
 		} else {
 			ArrayList<ArrayList<String>> weekSuggestRandom = WeekSuggestPage.Weeksuggest();
 			deliveryData = WSPN2contoroller.getdelivery();
-			if (deliveryData.length == 0) {
+			if (deliveryData == null) {
 
 				weekSuggestRandom = WeekSuggestPage.Weeksuggest();
 				RandomSetMenu(weekSuggestRandom, label);

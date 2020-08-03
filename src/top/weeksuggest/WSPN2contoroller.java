@@ -50,7 +50,7 @@ public class WSPN2contoroller {
 
 	}
 
-	static String[] delivery;//絞り込みデータ受け渡し用の配列
+	static String[] delivery ;//絞り込みデータ受け渡し用の配列
 
 	@FXML
 	void decision_OnClick(ActionEvent evt) {
