@@ -80,14 +80,6 @@ public class WeekSuggestPage {
 					tempArrayList.add(tempLi);
 				}
 				// 絞り込み処理
-				/*
-				 * if ((tempArrayList.get(1).equals(genre1) || genre1.equals("選択なし")) //
-				 * ジャンル絞り込み && (tempArrayList.get(1).equals(genre2) || genre2.equals("選択なし")) //
-				 * 料理国絞り込み && (genre3.equals("選択なし") || (Integer.parseInt(tempArrayList.get(5))
-				 * <= (Integer.parseInt(genre3)))) // カロリー絞り込み && (price.equals("選択なし") ||
-				 * (Integer.parseInt(tempArrayList.get(3)) <= (Integer.parseInt(price)))) //
-				 * 価格絞り込み )
-				 */
 
 				switch (tempArrayList.get(1)) {
 				case "和食":
@@ -112,7 +104,7 @@ public class WeekSuggestPage {
 			for (int i = 1; i <= Integer.parseInt(genre1); i++) {
 				int randomValue = rand.nextInt(Japanese_foodArray.size());
 				int k = Integer.parseInt(price) / 7;
-				System.out.println(Japanese_foodArray.get(randomValue).get(3));
+				//System.out.println(Japanese_foodArray.get(randomValue).get(3));
 				if (k < Integer.parseInt(Japanese_foodArray.get(randomValue).get(3))) {
 					i--;
 					continue;
@@ -126,7 +118,7 @@ public class WeekSuggestPage {
 			for (int i = 1; i <= Integer.parseInt(genre2); i++) {
 				int randomValue = rand.nextInt(Western_foodArray.size());
 				int k = Integer.parseInt(price) / 7;
-				System.out.println(Western_foodArray.get(randomValue).get(3));
+				//System.out.println(Western_foodArray.get(randomValue).get(3));
 				if (k < Integer.parseInt(Western_foodArray.get(randomValue).get(3))) {
 					i--;
 					continue;
@@ -139,7 +131,7 @@ public class WeekSuggestPage {
 			for (int i = 1; i <= Integer.parseInt(genre3); i++) {
 				int randomValue = rand.nextInt(ChineseArray.size());
 				int k = Integer.parseInt(price) / 7;
-				System.out.println(ChineseArray.get(randomValue).get(3));
+				//System.out.println(ChineseArray.get(randomValue).get(3));
 				if (k < Integer.parseInt(ChineseArray.get(randomValue).get(3))) {
 					i--;
 					continue;
@@ -149,6 +141,9 @@ public class WeekSuggestPage {
 				ChineseArray.remove(randomValue);
 
 			}
+			genre1 = "0";
+			genre2 = "0";
+			genre3 = "0";
 
 			// NarrowDownList.addAll(NarrowDownData);
 

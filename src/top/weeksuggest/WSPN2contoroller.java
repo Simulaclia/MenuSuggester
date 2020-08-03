@@ -32,12 +32,12 @@ public class WSPN2contoroller {
 		//中華
 		CHUCb.getItems().addAll("0", "1", "2", "3", "4", "5", "6", "7");
 		//値段（仮定）
-		price.getItems().addAll("2500", "3000", "3500", "4000", "4500", "5000", "5500", "6000");
+		price.getItems().addAll("3000", "3500", "4000", "4500", "5000", "5500", "6000");
 
 		WACb.setValue("0");
 		YOCb.setValue("0");
 		CHUCb.setValue("0");
-		price.setValue("2500");
+		price.setValue("3000");
 
 	}
 
@@ -46,7 +46,7 @@ public class WSPN2contoroller {
 		WACb.setValue("0");
 		YOCb.setValue("0");
 		CHUCb.setValue("0");
-		price.setValue("2500");
+		price.setValue("3000");
 
 	}
 
@@ -70,6 +70,7 @@ public class WSPN2contoroller {
 
 	public static String[] getdelivery() {
 		return delivery;
+
 	}
 
 }
