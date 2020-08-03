@@ -188,6 +188,7 @@ public class WeekSuggestPageContoller {
 		} else {
 			ArrayList<ArrayList<String>> weekSuggestRandom = WeekSuggestPage.Weeksuggest();
 			deliveryData = WSPN2contoroller.getdelivery();
+
 			if (deliveryData == null || deliveryData.length == 0) {
 				weekSuggestRandom = WeekSuggestPage.Weeksuggest();
 				RandomSetMenu(weekSuggestRandom, label);

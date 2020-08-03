@@ -104,7 +104,7 @@ public class WeekSuggestPage {
 			for (int i = 1; i <= Integer.parseInt(genre1); i++) {
 				int randomValue = rand.nextInt(Japanese_foodArray.size());
 				int k = Integer.parseInt(price) / 7;
-				// System.out.println(Japanese_foodArray.get(randomValue).get(3));
+				//System.out.println(Japanese_foodArray.get(randomValue).get(3));
 				if (k < Integer.parseInt(Japanese_foodArray.get(randomValue).get(3))) {
 					i--;
 					continue;
@@ -118,7 +118,7 @@ public class WeekSuggestPage {
 			for (int i = 1; i <= Integer.parseInt(genre2); i++) {
 				int randomValue = rand.nextInt(Western_foodArray.size());
 				int k = Integer.parseInt(price) / 7;
-				// System.out.println(Western_foodArray.get(randomValue).get(3));
+				//System.out.println(Western_foodArray.get(randomValue).get(3));
 				if (k < Integer.parseInt(Western_foodArray.get(randomValue).get(3))) {
 					i--;
 					continue;
@@ -131,7 +131,7 @@ public class WeekSuggestPage {
 			for (int i = 1; i <= Integer.parseInt(genre3); i++) {
 				int randomValue = rand.nextInt(ChineseArray.size());
 				int k = Integer.parseInt(price) / 7;
-				// System.out.println(ChineseArray.get(randomValue).get(3));
+				//System.out.println(ChineseArray.get(randomValue).get(3));
 				if (k < Integer.parseInt(ChineseArray.get(randomValue).get(3))) {
 					i--;
 					continue;
@@ -148,7 +148,6 @@ public class WeekSuggestPage {
 			// NarrowDownList.addAll(NarrowDownData);
 
 			brRec.close();
-			WSPN2contoroller.deletedelivery();
 			return NarrowDownList;
 		} catch (Exception e) {
 			e.printStackTrace();
