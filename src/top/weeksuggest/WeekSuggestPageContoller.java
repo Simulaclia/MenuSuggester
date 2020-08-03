@@ -37,12 +37,14 @@ public class WeekSuggestPageContoller {
 	// トップページに飛ぶ処理
 	@FXML
 	void ReturnTopButton_OnClick(ActionEvent evt) {
+		deliveryData = null;
 		new TopPage().changePage("/top/TopPage.fxml");
 	}
 
 	// 絞り込み機能に飛ぶ処理
 	@FXML
 	void nextPage_OnClick(ActionEvent evt) {
+
 		new TopPage().changePage("/top/weeksuggest/WSPNarrow_down2.fxml");
 	}
 
@@ -178,20 +180,23 @@ public class WeekSuggestPageContoller {
 
 		};
 
-		System.out.println(temporaryfood.size());
+		//System.out.println(temporaryfood.size());
+
 		if (WeekSuggestPage.Gettemporaryfood().size() != 0) {
 			SetMenu(temporaryfood, label);
 			WeekSuggestPage.Cleartemporaryfood();
 		} else {
 			ArrayList<ArrayList<String>> weekSuggestRandom = WeekSuggestPage.Weeksuggest();
 			deliveryData = WSPN2contoroller.getdelivery();
-			if (deliveryData == null) {
+			if (deliveryData.length == 0) {
+
 				weekSuggestRandom = WeekSuggestPage.Weeksuggest();
 				RandomSetMenu(weekSuggestRandom, label);
 			} else {
 				weekSuggestRandom = WeekSuggestPage.Weeksuggest(deliveryData[0], deliveryData[1], deliveryData[2],
 						deliveryData[3]);
 				RandomSetMenu(weekSuggestRandom, label);
+
 			}
 		}
 
@@ -211,6 +216,7 @@ public class WeekSuggestPageContoller {
 			randomRecipe.add(WeekSuggestMenu.get(randomValue));
 			// System.out.println(WeekSuggestMenu.size());
 			WeekSuggestMenu.remove(randomValue);
+
 		}
 
 	}
