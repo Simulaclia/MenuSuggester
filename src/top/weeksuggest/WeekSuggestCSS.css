@@ -1,0 +1,17 @@
+@font-face {
+        font-family: keifont;
+        src: url("../../../font/keifont.ttf");
+}
+
+.root{
+    -fx-background-color: #FFF8E1;
+}
+
+.label{
+     -fx-font-family: "keifont";
+}
+
+#CookMenu1,#CookMenu2,#CookMenu3,#CookMenu4,#CookMenu5,#CookMenu6,#CookMenu7 {
+   -fx-underline: true;
+   -fx-text-fill: blue;
+}

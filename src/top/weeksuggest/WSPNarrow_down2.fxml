@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.weeksuggest.WSPN2contoroller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" stylesheets="@WSN.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.weeksuggest.WSPN2contoroller">
    <children>
       <Button fx:id="backPage_button" layoutX="113.0" layoutY="87.0" mnemonicParsing="false" onAction="#backPage_button_OnClick" prefHeight="95.0" prefWidth="450.0" text="一週間ランダムに戻る">
          <font>
@@ -33,9 +33,9 @@
             <Font size="60.0" />
          </font>
       </Button>
-      <ComboBox fx:id="WACb" layoutX="460.0" layoutY="380.0" prefHeight="70.0" prefWidth="110.0" />
-      <ComboBox fx:id="YOCb" layoutX="460.0" layoutY="490.0" prefHeight="70.0" prefWidth="110.0" />
-      <ComboBox fx:id="CHUCb" layoutX="460.0" layoutY="600.0" prefHeight="70.0" prefWidth="110.0" />
+      <ComboBox fx:id="WACb" layoutX="460.0" layoutY="370.0" prefHeight="70.0" prefWidth="110.0" stylesheets="@WSN.css" />
+      <ComboBox fx:id="YOCb" layoutX="460.0" layoutY="480.0" prefHeight="70.0" prefWidth="110.0" />
+      <ComboBox fx:id="CHUCb" layoutX="460.0" layoutY="590.0" prefHeight="70.0" prefWidth="110.0" />
       <Label layoutX="325.0" layoutY="375.0" text="和食">
          <font>
             <Font size="55.0" />
@@ -66,7 +66,7 @@
             <Font size="55.0" />
          </font>
       </Label>
-      <Label layoutX="1240.0" layoutY="440.0" text="円以下">
+      <Label layoutX="1240.0" layoutY="455.0" text="円以下">
          <font>
             <Font size="65.0" />
          </font>
