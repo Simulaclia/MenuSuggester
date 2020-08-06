@@ -59,9 +59,6 @@ public class WeekSuggestPage {
 		ArrayList<ArrayList<String>> Japanese_foodArray = new ArrayList<ArrayList<String>>();
 		ArrayList<ArrayList<String>> Western_foodArray = new ArrayList<ArrayList<String>>();
 		ArrayList<ArrayList<String>> ChineseArray = new ArrayList<ArrayList<String>>();
-		// ジャンル(国)分けした後の絞り込み用配列の宣言
-		// ArrayList<ArrayList<String>> NarrowDownData = new
-		// ArrayList<ArrayList<String>>();
 
 		try {
 			FileInputStream fisRec = new FileInputStream("csv/Recipe.csv");
@@ -104,40 +101,35 @@ public class WeekSuggestPage {
 			for (int i = 1; i <= Integer.parseInt(genre1); i++) {
 				int randomValue = rand.nextInt(Japanese_foodArray.size());
 				int k = Integer.parseInt(price) / 7;
-				// System.out.println(Japanese_foodArray.get(randomValue).get(3));
+
 				if (k < Integer.parseInt(Japanese_foodArray.get(randomValue).get(3))) {
 					i--;
 					continue;
 				}
 				NarrowDownList.add(Japanese_foodArray.get(randomValue));
-				// System.out.println(Japanese_foodArray.get(randomValue).get(0));
-
 				Japanese_foodArray.remove(randomValue);
 
 			}
 			for (int i = 1; i <= Integer.parseInt(genre2); i++) {
 				int randomValue = rand.nextInt(Western_foodArray.size());
 				int k = Integer.parseInt(price) / 7;
-				// System.out.println(Western_foodArray.get(randomValue).get(3));
+
 				if (k < Integer.parseInt(Western_foodArray.get(randomValue).get(3))) {
 					i--;
 					continue;
 				}
 				NarrowDownList.add(Western_foodArray.get(randomValue));
-				// System.out.println(Western_foodArray.get(randomValue).get(0));
 				Western_foodArray.remove(randomValue);
 
 			}
 			for (int i = 1; i <= Integer.parseInt(genre3); i++) {
 				int randomValue = rand.nextInt(ChineseArray.size());
 				int k = Integer.parseInt(price) / 7;
-				// System.out.println(ChineseArray.get(randomValue).get(3));
 				if (k < Integer.parseInt(ChineseArray.get(randomValue).get(3))) {
 					i--;
 					continue;
 				}
 				NarrowDownList.add(ChineseArray.get(randomValue));
-				// System.out.println(ChineseArray.get(randomValue).get(0));
 				ChineseArray.remove(randomValue);
 
 			}

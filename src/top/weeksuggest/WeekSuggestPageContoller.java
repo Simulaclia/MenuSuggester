@@ -12,14 +12,6 @@ import top.bookmark.BookmarkPage;
 
 public class WeekSuggestPageContoller {
 
-	// ラベルの取得
-	// private Label CookMenu1, CookMenu2, CookMenu3, CookMenu4, CookMenu5,
-	// CookMenu6, CookMenu7, Genre1, Genre2, Genre3,
-	// Genre4, Genre5, Genre6, Genre7, cooking1, cooking2, cooking3, cooking4,
-	// cooking5, cooking6, cooking7, time1,
-	// time2, time3, time4, time5, time6, time7, calorie1, calorie2, calorie3,
-	// calorie4, calorie5, calorie6,
-	// calorie7, WACb, YOCb, CHUCb;
 	@FXML
 	private Label CookMenu1, CookMenu2, CookMenu3, CookMenu4, CookMenu5, CookMenu6, CookMenu7, Genre1, Genre2, Genre3,
 			Genre4, Genre5, Genre6, Genre7, cooking1, cooking2, cooking3, cooking4, cooking5, cooking6, cooking7, time1,
@@ -214,7 +206,6 @@ public class WeekSuggestPageContoller {
 			label[3][i].setText(WeekSuggestMenu.get(randomValue).get(4)); // 所要時間
 			label[4][i].setText(WeekSuggestMenu.get(randomValue).get(5)); // カロリー
 			randomRecipe.add(WeekSuggestMenu.get(randomValue));
-			// System.out.println(WeekSuggestMenu.size());
 			WeekSuggestMenu.remove(randomValue);
 
 		}
