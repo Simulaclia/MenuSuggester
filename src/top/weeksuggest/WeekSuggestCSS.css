@@ -15,3 +15,7 @@
    -fx-underline: true;
    -fx-text-fill: blue;
 }
+#VBox1{
+	-fx-background-color: #FFF8E1;
+}
+
