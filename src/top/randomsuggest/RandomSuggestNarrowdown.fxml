@@ -23,11 +23,6 @@
             <Font size="36.0" />
          </font>
       </Text>
-      <Text layoutX="973.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="プリセット:">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Text>
       <Text layoutX="423.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ジャンル:">
          <font>
             <Font size="48.0" />
@@ -63,11 +58,10 @@
             <Font size="48.0" />
          </font>
       </Button>
-      <ComboBox fx:id="genrecombo" layoutX="581.0" layoutY="245.0" prefHeight="48.0" prefWidth="125.0" promptText="和食" style="-fx-textsize: 48;" />
-      <ComboBox fx:id="price" layoutX="564.0" layoutY="369.0" prefHeight="64.0" prefWidth="145.0" promptText="500" />
-      <ComboBox fx:id="cookingcombo" layoutX="1201.0" layoutY="375.0" prefHeight="48.0" prefWidth="172.0" promptText="揚げ物" />
-      <ComboBox fx:id="time" layoutX="1331.0" layoutY="490.0" prefHeight="48.0" prefWidth="150.0" promptText="40" />
-      <ComboBox fx:id="kcal" layoutX="464.0" layoutY="504.0" prefHeight="48.0" prefWidth="162.0" promptText="300" />
-      <ComboBox layoutX="1158.0" layoutY="245.0" prefHeight="48.0" prefWidth="162.0" promptText="選択無し" />
+      <ComboBox fx:id="genrecombo" layoutX="581.0" layoutY="245.0" prefHeight="48.0" prefWidth="125.0" style="-fx-textsize: 48;" />
+      <ComboBox fx:id="price" layoutX="564.0" layoutY="369.0" prefHeight="64.0" prefWidth="145.0" />
+      <ComboBox fx:id="cookingcombo" layoutX="1201.0" layoutY="375.0" prefHeight="48.0" prefWidth="172.0" />
+      <ComboBox fx:id="time" layoutX="1331.0" layoutY="490.0" prefHeight="48.0" prefWidth="150.0" />
+      <ComboBox fx:id="kcal" layoutX="464.0" layoutY="504.0" prefHeight="48.0" prefWidth="162.0" />
    </children>
 </AnchorPane>
