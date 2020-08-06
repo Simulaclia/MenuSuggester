@@ -133,11 +133,10 @@ public class SeasonSearchPageController {
 			label[5][0].setText(seasonMenu.get(((pageCount - 1) * 3)).get(12));
 
 			bookmarkRecipe.add(seasonMenu.get(((pageCount - 1) * 3)));
-			if (BookmarkPage.checkBookmark(bookmarkRecipe.get(0))) {
-				addBookmarkButton1.setText("お気に入り削除");
-			} else {
-				addBookmarkButton1.setText("お気に入り追加");
-			}
+
+			Button[] button = { addBookmarkButton1 };
+			BookmarkPage.setBookmarkText(button, bookmarkRecipe);
+
 		} else if (seasonMenu.size() - ((pageCount - 1) * 3) == 2) {
 			addBookmarkButton3.setVisible(false);
 			int j = 0;
@@ -152,16 +151,10 @@ public class SeasonSearchPageController {
 				bookmarkRecipe.add(seasonMenu.get(i));
 				j++;
 			}
-			if (BookmarkPage.checkBookmark(bookmarkRecipe.get(0))) {
-				addBookmarkButton1.setText("お気に入り削除");
-			} else {
-				addBookmarkButton1.setText("お気に入り追加");
-			}
-			if (BookmarkPage.checkBookmark(bookmarkRecipe.get(1))) {
-				addBookmarkButton2.setText("お気に入り削除");
-			} else {
-				addBookmarkButton2.setText("お気に入り追加");
-			}
+
+			Button[] button = { addBookmarkButton1, addBookmarkButton2 };
+			BookmarkPage.setBookmarkText(button, bookmarkRecipe);
+
 		} else if (seasonMenu.size() - ((pageCount - 1) * 3) >= 3) {
 			int j = 0;
 			for (int i = ((pageCount - 1) * 3); i <= ((pageCount - 1) * 3) + 2; i++) {
@@ -175,21 +168,9 @@ public class SeasonSearchPageController {
 				bookmarkRecipe.add(seasonMenu.get(i));
 				j++;
 			}
-			if (BookmarkPage.checkBookmark(bookmarkRecipe.get(0))) {
-				addBookmarkButton1.setText("お気に入り削除");
-			} else {
-				addBookmarkButton1.setText("お気に入り追加");
-			}
-			if (BookmarkPage.checkBookmark(bookmarkRecipe.get(1))) {
-				addBookmarkButton2.setText("お気に入り削除");
-			} else {
-				addBookmarkButton2.setText("お気に入り追加");
-			}
-			if (BookmarkPage.checkBookmark(bookmarkRecipe.get(2))) {
-				addBookmarkButton3.setText("お気に入り削除");
-			} else {
-				addBookmarkButton3.setText("お気に入り追加");
-			}
+
+			Button[] button = { addBookmarkButton1, addBookmarkButton2, addBookmarkButton3 };
+			BookmarkPage.setBookmarkText(button, bookmarkRecipe);
 		}
 	}
 
@@ -208,4 +189,5 @@ public class SeasonSearchPageController {
 			nextButton.setVisible(true);
 		}
 	}
+
 }

@@ -299,4 +299,14 @@ public class BookmarkPage {
 		}
 	}
 
+	public static void setBookmarkText(Button[] button, ArrayList<ArrayList<String>> bookmarkRecipe) {
+		for (int i = 0; i <= bookmarkRecipe.size() - 1; i++) {
+			if (BookmarkPage.checkBookmark(bookmarkRecipe.get(i))) {
+				button[i].setText("お気に入り削除");
+			} else {
+				button[i].setText("お気に入り追加");
+			}
+		}
+	}
+
 }
