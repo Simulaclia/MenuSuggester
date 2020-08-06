@@ -5,6 +5,7 @@ import java.util.Random;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import top.ResultPageController;
 import top.TopPage;
 import top.bookmark.BookmarkPage;
 
@@ -34,6 +35,12 @@ public class FSP_ans_Controller {
 		FSPMenu = FoodSearchPage.FoodSearch();//レシピを持ってくる
 		//System.out.println(FSPMenu + "\t");
 		FSPSetMenu(FSPMenu, label);
+	}
+
+	@FXML
+	void CookMenu1_OnClic() {
+		ResultPageController.setData(fspRecipe.get(0), "/top/foodsearch/FSP_ans.fxml");
+		new TopPage().changePage("/top/ResultPage.fxml");
 	}
 
 	@FXML

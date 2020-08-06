@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.foodsearch.FSP_ans_Controller">
    <children>
       <Button layoutX="225.0" layoutY="45.0" mnemonicParsing="false" onAction="#ReturnTopButton_OnClick" prefHeight="100.0" prefWidth="330.0" text="Topへ戻る">
@@ -21,7 +20,7 @@
       </Button>
       <Pane layoutX="18.0" layoutY="284.0" prefHeight="467.0" prefWidth="1595.0">
          <children>
-            <Label fx:id="CookMenu1" layoutX="99.0" layoutY="164.0" text="料理名1">
+            <Label fx:id="CookMenu1" layoutX="99.0" layoutY="164.0" onMouseClicked="#CookMenu1_OnClic" text="料理名1">
                <font>
                   <Font size="110.0" />
                </font>
@@ -41,7 +40,7 @@
                   <Font size="52.0" />
                </font>
             </Label>
-            <Button fx:id="addBookmark_OnClick" layoutX="1350.0" layoutY="161.0" mnemonicParsing="false" onAction="#addBookmark_OnClick" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
+            <Button fx:id="addBookmark" layoutX="1350.0" layoutY="161.0" mnemonicParsing="false" onAction="#addBookmark_OnClick" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
                <font>
                   <Font size="23.0" />
                </font>
