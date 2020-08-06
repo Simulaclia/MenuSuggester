@@ -6,12 +6,14 @@ import java.util.Random;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import top.TopPage;
+import top.bookmark.BookmarkPage;
 
 public class FSP_ans_Controller {
 
 	@FXML
 	private Label CookMenu1, Genre1, cooking1, calorie1, time1;
 
+	ArrayList<ArrayList<String>> FSPRecipe;
 	ArrayList<ArrayList<String>> FSPMenu;
 	Random rand = new Random();
 
@@ -27,10 +29,16 @@ public class FSP_ans_Controller {
 
 	@FXML //選択食材のレシピを貼り付け
 	void initialize() {
+		FSPRecipe = new ArrayList<ArrayList<String>>();
 		Label[][] label = { { CookMenu1 }, { cooking1 }, { Genre1 }, { time1 }, { calorie1 } };
 		FSPMenu = FoodSearchPage.FoodSearch();//レシピを持ってくる
 		//System.out.println(FSPMenu + "\t");
 		FSPSetMenu(FSPMenu, label);
+	}
+
+	@FXML
+	void addBookmark_OnClick() {
+		BookmarkPage.AddBookmark(FSPRecipe.get(0));
 	}
 
 	void FSPSetMenu(ArrayList<ArrayList<String>> recipeList, Label[][] label) {

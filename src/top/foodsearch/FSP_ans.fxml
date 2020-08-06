@@ -40,7 +40,7 @@
                   <Font size="52.0" />
                </font>
             </Label>
-            <Button layoutX="1350.0" layoutY="161.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
+            <Button fx:id="addBookmark_OnClick" layoutX="1350.0" layoutY="161.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
                <font>
                   <Font size="23.0" />
                </font>
