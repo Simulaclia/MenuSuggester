@@ -96,6 +96,7 @@ public class BookmarkPage {
 	// }
 	// }
 
+	// ブックマーク追加処理(上書き)
 	public static void AddBookmark(ArrayList<String> recipe) {
 		DeleteBookmark(recipe); // 重複しているブックマークの場合は元ブックマークを削除
 		try {
@@ -151,14 +152,14 @@ public class BookmarkPage {
 		}
 	}
 
+	// ブックマーク追加処理(削除)
 	public static void AddBookmark(ArrayList<String> recipe, Button button) {
+		// レシピ重複チェック
 		if (checkBookmark(recipe)) {
 			DeleteBookmark(recipe);
-			button.setText("お気に入り追加");
-			System.out.println(recipe);
+			button.setText("お気に入り追加"); // ボタンラベル表記変更
 		} else {
 			button.setText("お気に入り削除");
-
 			try {
 				FileInputStream fisRec = new FileInputStream("csv/Bookmark.csv");
 				InputStreamReader isrRec = new InputStreamReader(fisRec);
@@ -278,7 +279,6 @@ public class BookmarkPage {
 			BufferedReader brRec = new BufferedReader(isrRec);
 
 			String tempData;
-			ArrayList<ArrayList<String>> bookmarkList = new ArrayList<ArrayList<String>>(); // 削除後レシピリスト代入用
 
 			while ((tempData = brRec.readLine()) != null) {
 				String[] tempList = tempData.split(",");
@@ -287,6 +287,7 @@ public class BookmarkPage {
 					tempArrayList.add(tempLi);
 				}
 				if (recipe.get(0).equals(tempArrayList.get(0)) && recipe.get(8).equals(tempArrayList.get(8))) {
+					brRec.close();
 					return true;
 				}
 			}
@@ -297,4 +298,5 @@ public class BookmarkPage {
 			return false;
 		}
 	}
+
 }
