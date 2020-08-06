@@ -137,8 +137,6 @@ public class WeekSuggestPage {
 			genre2 = "0";
 			genre3 = "0";
 
-			// NarrowDownList.addAll(NarrowDownData);
-
 			brRec.close();
 			WSPN2contoroller.deletedelivery();
 			return NarrowDownList;
