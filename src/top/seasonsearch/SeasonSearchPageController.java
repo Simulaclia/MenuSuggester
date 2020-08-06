@@ -65,18 +65,18 @@ public class SeasonSearchPageController {
 
 	@FXML
 	void addBookmark1_OnClick() {
-		BookmarkPage.AddBookmark(bookmarkRecipe.get(0));
+		BookmarkPage.AddBookmark(bookmarkRecipe.get(0), addBookmarkButton1);
 	}
 
 	@FXML
 	void addBookmark2_OnClick() {
-		BookmarkPage.AddBookmark(bookmarkRecipe.get(1));
+		BookmarkPage.AddBookmark(bookmarkRecipe.get(1), addBookmarkButton2);
 
 	}
 
 	@FXML
 	void addBookmark3_OnClick() {
-		BookmarkPage.AddBookmark(bookmarkRecipe.get(2));
+		BookmarkPage.AddBookmark(bookmarkRecipe.get(2), addBookmarkButton3);
 	}
 
 	@FXML
@@ -133,6 +133,11 @@ public class SeasonSearchPageController {
 			label[5][0].setText(seasonMenu.get(((pageCount - 1) * 3)).get(12));
 
 			bookmarkRecipe.add(seasonMenu.get(((pageCount - 1) * 3)));
+			if (BookmarkPage.checkBookmark(bookmarkRecipe.get(0))) {
+				addBookmarkButton1.setText("お気に入り削除");
+			} else {
+				addBookmarkButton1.setText("お気に入り追加");
+			}
 		} else if (seasonMenu.size() - ((pageCount - 1) * 3) == 2) {
 			addBookmarkButton3.setVisible(false);
 			int j = 0;
@@ -147,6 +152,16 @@ public class SeasonSearchPageController {
 				bookmarkRecipe.add(seasonMenu.get(i));
 				j++;
 			}
+			if (BookmarkPage.checkBookmark(bookmarkRecipe.get(0))) {
+				addBookmarkButton1.setText("お気に入り削除");
+			} else {
+				addBookmarkButton1.setText("お気に入り追加");
+			}
+			if (BookmarkPage.checkBookmark(bookmarkRecipe.get(1))) {
+				addBookmarkButton2.setText("お気に入り削除");
+			} else {
+				addBookmarkButton2.setText("お気に入り追加");
+			}
 		} else if (seasonMenu.size() - ((pageCount - 1) * 3) >= 3) {
 			int j = 0;
 			for (int i = ((pageCount - 1) * 3); i <= ((pageCount - 1) * 3) + 2; i++) {
@@ -159,6 +174,21 @@ public class SeasonSearchPageController {
 
 				bookmarkRecipe.add(seasonMenu.get(i));
 				j++;
+			}
+			if (BookmarkPage.checkBookmark(bookmarkRecipe.get(0))) {
+				addBookmarkButton1.setText("お気に入り削除");
+			} else {
+				addBookmarkButton1.setText("お気に入り追加");
+			}
+			if (BookmarkPage.checkBookmark(bookmarkRecipe.get(1))) {
+				addBookmarkButton2.setText("お気に入り削除");
+			} else {
+				addBookmarkButton2.setText("お気に入り追加");
+			}
+			if (BookmarkPage.checkBookmark(bookmarkRecipe.get(2))) {
+				addBookmarkButton3.setText("お気に入り削除");
+			} else {
+				addBookmarkButton3.setText("お気に入り追加");
 			}
 		}
 	}
