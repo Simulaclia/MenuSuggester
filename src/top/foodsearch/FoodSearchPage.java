@@ -11,7 +11,7 @@ public class FoodSearchPage {
 
 		// FSP_ans_Conから選択食材データを取得
 		String[] MainFood = FSP_Controller.getSearchFoodData();//例:じゃがいも
-		System.out.println(MainFood);
+		//System.out.println(MainFood);
 
 		try {
 			//読み込みファイルのインスタンス生成
