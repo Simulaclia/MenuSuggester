@@ -73,21 +73,76 @@ public class BookmarkPage {
 	}
 
 	// ブックマーク追加処理
+	// public static void AddBookmark(ArrayList<String> recipe) {
+	// DeleteBookmark(recipe); // 重複しているブックマークの場合は元ブックマークを削除
+	// try {
+	// int count = 1;
+	// // Bookmark.csvに追記
+	// File file = new File("csv/Bookmark.csv");
+	// FileWriter filewriter = new FileWriter(file, true);
+	// // リスト内レシピをcsv形式に書き込み
+	// for (String str : recipe) {
+	// // 各データにコンマを加えて書き込み
+	// if (count <= recipe.size() - 1)
+	// filewriter.write(str + ",");
+	// count++;
+	// }
+	// filewriter.write(recipe.get(recipe.size() - 1) + "\n"); // 改行を加えて書き込み
+	// filewriter.close();
+	// } catch (IOException e) {
+	// e.printStackTrace();
+	// }
+	// }
+
 	public static void AddBookmark(ArrayList<String> recipe) {
 		DeleteBookmark(recipe); // 重複しているブックマークの場合は元ブックマークを削除
 		try {
-			int count = 1;
-			// Bookmark.csvに追記
+			FileInputStream fisRec = new FileInputStream("csv/Bookmark.csv");
+			InputStreamReader isrRec = new InputStreamReader(fisRec);
+			BufferedReader brRec = new BufferedReader(isrRec);
+
+			String tempData;
+			ArrayList<ArrayList<String>> bookmarkList = new ArrayList<ArrayList<String>>();
+
+			while ((tempData = brRec.readLine()) != null) {
+				String[] tempList = tempData.split(",");
+				ArrayList<String> tempArrayList = new ArrayList<String>();
+				for (String tempLi : tempList) {
+					tempArrayList.add(tempLi);
+				}
+				bookmarkList.add(tempArrayList);
+			}
+
+			brRec.close();
+
+			// Bookmark.csv初期化
+			File deleteFile = new File("csv/Bookmark.csv");
+			FileWriter deleteFilewriter = new FileWriter(deleteFile, false);
+			deleteFilewriter.write("");
+			deleteFilewriter.close();
+
 			File file = new File("csv/Bookmark.csv");
 			FileWriter filewriter = new FileWriter(file, true);
-			// リスト内レシピをcsv形式に書き込み
+
+			int count = 1;
 			for (String str : recipe) {
 				// 各データにコンマを加えて書き込み
 				if (count <= recipe.size() - 1)
 					filewriter.write(str + ",");
 				count++;
 			}
-			filewriter.write(recipe.get(recipe.size() - 1) + "\n"); // 改行を加えて書き込み
+			filewriter.write(recipe.get(recipe.size() - 1) + "\n");
+
+			for (ArrayList<String> list : bookmarkList) {
+				count = 1;
+				for (String str : list) {
+					// 各データにコンマを加えて書き込み
+					if (count <= list.size() - 1)
+						filewriter.write(str + ",");
+					count++;
+				}
+				filewriter.write(list.get(list.size() - 1) + "\n");
+			}
 			filewriter.close();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -126,15 +181,26 @@ public class BookmarkPage {
 			// 削除対象があった場合
 			if (change) {
 				// Bookmark.csv初期化
+				File deleteFile = new File("csv/Bookmark.csv");
+				FileWriter deleteFilewriter = new FileWriter(deleteFile, false);
+				deleteFilewriter.write("");
+				deleteFilewriter.close();
+
 				File file = new File("csv/Bookmark.csv");
-				FileWriter filewriter = new FileWriter(file, false);
-				filewriter.write("");
-				filewriter.close();
+				FileWriter filewriter = new FileWriter(file, true);
 
 				// 対象外レシピの追加処理実行
 				for (ArrayList<String> list : bookmarkList) {
-					AddBookmark(list);
+					int count = 1;
+					for (String str : list) {
+						// 各データにコンマを加えて書き込み
+						if (count <= list.size() - 1)
+							filewriter.write(str + ",");
+						count++;
+					}
+					filewriter.write(list.get(list.size() - 1) + "\n");
 				}
+				filewriter.close();
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
