@@ -1,0 +1,21 @@
+@font-face {
+        font-family: keifont;
+        src: url("../../../font/keifont.ttf");
+}
+
+.root{
+    -fx-background-color: #FFF8E1;
+}
+
+.label{
+     -fx-font-family: "keifont";
+}
+#WACb,#YOCb,#CHUCb{
+	-fx-font-size: 25px;
+}
+#price{
+	-fx-font-size: 35px;
+}
+
+
+
