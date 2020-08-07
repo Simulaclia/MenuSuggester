@@ -18,5 +18,23 @@
 #VBox1{
 	-fx-background-color: #FFF8E1;
 }
+#ReturnTopButton{
+	-fx-font-family: "keifont";
+}
+#nextPage_button{
+	-fx-font-family: "keifont";
+	-fx-font-size: 3.5em;
+}
+#ReturnTopButton:hover{
+	-fx-font-size: 3.5em;
+}
+#nextPage_button:hover{
+	-fx-font-size: 3.5em;
+}
+
+#BookmarkButton1,#BookmarkButton2,#BookmarkButton3,#BookmarkButton4,#BookmarkButton5,#BookmarkButton6,#BookmarkButton7{
+	-fx-font-family: "keifont";
+	-fx-font-size: 1.8em;
+}
 
 

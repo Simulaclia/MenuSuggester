@@ -1,3 +1,17 @@
 .root{
 	-fx-background-color: #FFF8E1;
 }
+
+@font-face {
+        font-family: keifont;
+        src: url("../../../font/keifont.ttf");
+}
+
+#RandumSuggest,#WeekSuggest,#FoodSerach,#SeasonSearch,#Bookmark{
+	-fx-font-family: "keifont";
+	-fx-font-size: 5em;
+	-fx-margin-top: 5px;
+}
+
+
+

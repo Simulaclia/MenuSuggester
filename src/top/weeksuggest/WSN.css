@@ -12,9 +12,18 @@
 }
 #WACb,#YOCb,#CHUCb{
 	-fx-font-size: 25px;
+	-fx-font-family: "keifont";
 }
 #price{
 	-fx-font-size: 35px;
+	-fx-font-family: "keifont";
+}
+#backPage_button{
+	-fx-font-family: "keifont";
+	-fx-font-size: 38px;
+}
+#ResetButton,#EnterButton{
+	-fx-font-family: "keifont";
 }
 
 
