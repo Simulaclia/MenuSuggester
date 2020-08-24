@@ -24,7 +24,7 @@ public class TopPage extends Application {
 		try {
 			AnchorPane topPage = (AnchorPane) FXMLLoader.load(getClass().getResource(fxml)); // TopPage.fxml表示
 			Scene scene = new Scene(topPage);
-//			scene.getStylesheets().add(getClass().getResource(css).toExternalForm()); // CSS指定
+			scene.getStylesheets().add(getClass().getResource("Default.css").toExternalForm()); // CSS指定
 			stage.setScene(scene);
 		} catch (Exception e) {
 			e.printStackTrace();
