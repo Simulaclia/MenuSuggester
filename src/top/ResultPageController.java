@@ -21,7 +21,9 @@ public class ResultPageController {
 
 	static ArrayList<String> resultMenu;
 
-	static String backPage;
+	static String backPage, backPageCss;
+
+	static boolean hasCss = false;
 
 	URI URL;
 
@@ -53,7 +55,11 @@ public class ResultPageController {
 
 	@FXML
 	void ReturnPageButton_OnClick() {
-		new TopPage().changePage(backPage);
+		if (hasCss) {
+			new TopPage().changePage(backPage, backPageCss);
+		} else {
+			new TopPage().changePage(backPage);
+		}
 	}
 
 	@FXML
@@ -75,6 +81,13 @@ public class ResultPageController {
 	public static void setData(ArrayList<String> resultRecipe, String page) {
 		resultMenu = resultRecipe;
 		backPage = page;
+	}
+
+	public static void setData(ArrayList<String> resultRecipe, String page, String css) {
+		resultMenu = resultRecipe;
+		backPage = page;
+		backPageCss = css;
+		hasCss = true;
 	}
 
 }

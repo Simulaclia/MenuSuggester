@@ -149,19 +149,22 @@ public class BookmarkPageController {
 
 	@FXML
 	void menuName1_OnClick() {
-		ResultPageController.setData(bookmarkRecipe.get(0), "/top/bookmark/BookmarkPage.fxml");
+		ResultPageController.setData(bookmarkRecipe.get(0), "/top/bookmark/BookmarkPage.fxml",
+				"/top/bookmark/BookmarkPage.css");
 		new TopPage().changePage("/top/ResultPage.fxml");
 	}
 
 	@FXML
 	void menuName2_OnClick() {
-		ResultPageController.setData(bookmarkRecipe.get(1), "/top/bookmark/BookmarkPage.fxml");
+		ResultPageController.setData(bookmarkRecipe.get(1), "/top/bookmark/BookmarkPage.fxml",
+				"/top/bookmark/BookmarkPage.css");
 		new TopPage().changePage("/top/ResultPage.fxml");
 	}
 
 	@FXML
 	void menuName3_OnClick() {
-		ResultPageController.setData(bookmarkRecipe.get(2), "/top/bookmark/BookmarkPage.fxml");
+		ResultPageController.setData(bookmarkRecipe.get(2), "/top/bookmark/BookmarkPage.fxml",
+				"/top/bookmark/BookmarkPage.css");
 		new TopPage().changePage("/top/ResultPage.fxml");
 	}
 
