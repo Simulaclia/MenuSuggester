@@ -1,0 +1,21 @@
+@font-face {
+       font-family: keifont;
+       src: url("../../../font/keifont.ttf");
+}
+
+.root{
+	-fx-background-color: #FFF8E1;
+}
+
+/*
+.label{
+	-fx-font-family: "keifont";
+}
+* 
+*/
+
+
+#menuName1, #menuName2, #menuName3{
+	-fx-underline: true;
+	-fx-text-fill: blue;
+}

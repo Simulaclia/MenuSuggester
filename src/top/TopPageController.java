@@ -20,7 +20,7 @@ public class TopPageController {
 
 	@FXML
 	void SeasonSearch_onClick() {
-		new TopPage().changePage("/top/seasonsearch/SeasonSearchPage.fxml");
+		new TopPage().changePage("/top/seasonsearch/SeasonSearchPage.fxml", "/top/seasonsearch/SeasonSearchPage.css");
 	}
 
 	@FXML
