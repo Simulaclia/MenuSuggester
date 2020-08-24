@@ -81,19 +81,22 @@ public class SeasonSearchPageController {
 
 	@FXML
 	void menuName1_OnClick() {
-		ResultPageController.setData(bookmarkRecipe.get(0), "/top/seasonsearch/SeasonSearchPage.fxml");
+		ResultPageController.setData(bookmarkRecipe.get(0), "/top/seasonsearch/SeasonSearchPage.fxml",
+				"/top/seasonsearch/SeasonSearchPage.css");
 		new TopPage().changePage("/top/ResultPage.fxml");
 	}
 
 	@FXML
 	void menuName2_OnClick() {
-		ResultPageController.setData(bookmarkRecipe.get(1), "/top/seasonsearch/SeasonSearchPage.fxml");
+		ResultPageController.setData(bookmarkRecipe.get(1), "/top/seasonsearch/SeasonSearchPage.fxml",
+				"/top/seasonsearch/SeasonSearchPage.css");
 		new TopPage().changePage("/top/ResultPage.fxml");
 	}
 
 	@FXML
 	void menuName3_OnClick() {
-		ResultPageController.setData(bookmarkRecipe.get(2), "/top/seasonsearch/SeasonSearchPage.fxml");
+		ResultPageController.setData(bookmarkRecipe.get(2), "/top/seasonsearch/SeasonSearchPage.fxml",
+				"/top/seasonsearch/SeasonSearchPage.css");
 		new TopPage().changePage("/top/ResultPage.fxml");
 	}
 
