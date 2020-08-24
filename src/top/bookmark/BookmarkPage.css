@@ -7,9 +7,11 @@
 	-fx-background-color: #FFF8E1;
 }
 
+/*
 .label{
 	-fx-font-family: "keifont";
 }
+*/
 
 #menuName1, #menuName2, #menuName3{
 	-fx-underline: true;

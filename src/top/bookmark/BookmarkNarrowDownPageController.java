@@ -36,13 +36,13 @@ public class BookmarkNarrowDownPageController {
 	@FXML
 	void enterButton_OnClick() {
 		narrowDownData = new String[] { genre.getValue(), country.getValue(), cal.getValue(), price.getValue() }; // 絞り込み条件データ代入
-		new TopPage().changePage("/top/bookmark/BookmarkPage.fxml");
+		new TopPage().changePage("/top/bookmark/BookmarkPage.fxml", "/top/bookmark/BookmarkPage.css");
 	}
 
 	// ブックマークページに戻るボタンクリック処理
 	@FXML
 	void ReturnBookmarkPage_OnClick() {
-		new TopPage().changePage("/top/bookmark/BookmarkPage.fxml");
+		new TopPage().changePage("/top/bookmark/BookmarkPage.fxml", "/top/bookmark/BookmarkPage.css");
 	}
 
 	// 絞り込み条件データ取得処理
