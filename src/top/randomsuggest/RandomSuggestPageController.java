@@ -36,7 +36,7 @@ public class RandomSuggestPageController {
 			ArrayList<ArrayList<String>> tempDate = RandomSuggestPage.Randomsuggest(StrNarrowData[0], StrNarrowData[1],
 					StrNarrowData[2], StrNarrowData[3], StrNarrowData[4]);
 			if (tempDate.size() == 0) {
-				noResultLabel.setText("条件に合致する結果はありません");
+
 			} else {
 				RandomSetMenu(tempDate, Label1);
 			}

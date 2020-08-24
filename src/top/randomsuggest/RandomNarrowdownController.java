@@ -2,6 +2,8 @@ package top.randomsuggest;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.text.Text;
 import top.TopPage;
 
 public class RandomNarrowdownController {
@@ -16,6 +18,12 @@ public class RandomNarrowdownController {
 
 	@FXML // comboboxの取得
 	public ComboBox<String> genrecombo, cookingcombo, price, kcal, time;
+
+	@FXML //Labelの処理
+	private Label noResultLabel, noResultLabel2;
+
+	@FXML
+	private Text genre_txt;
 
 	@FXML // 初期値設定(combobox)
 	public void initialize() {
@@ -47,6 +55,9 @@ public class RandomNarrowdownController {
 		price.getSelectionModel().select(0);
 		kcal.getSelectionModel().select(0);
 		time.getSelectionModel().select(0);
+
+		noResultLabel.setText("");
+		noResultLabel2.setText("");
 	}
 
 	@FXML // 決定の処理 取得+その値を返す処理+ページ遷移
@@ -55,7 +66,18 @@ public class RandomNarrowdownController {
 		StrNarrowDate = new String[] { genrecombo.getValue(), cookingcombo.getValue(), price.getValue(),
 				kcal.getValue(), time.getValue() };
 
-		new TopPage().changePage("/top/randomsuggest/RandomSuggestPage.fxml");
+		if (RandomSuggestPage.Randomsuggest(genrecombo.getValue(), cookingcombo.getValue(),
+				price.getValue(), kcal.getValue(), time.getValue()).size() == 0) {
+
+			//移動せず、条件に合致する結果がなかった事を伝える
+			//あと絞り込み条件とかの表示も消す処理も
+			noResultLabel.setText("条件に合う料理がありませんでした");
+			noResultLabel2.setText("←リセットボタンを押して下さい。");
+
+		} else {
+			new TopPage().changePage("/top/randomsuggest/RandomSuggestPage.fxml");
+		}
+
 	}
 
 	@FXML // ページ遷移
@@ -72,6 +94,7 @@ public class RandomNarrowdownController {
 	// 絞り込み条件初期化処理
 	static void resetStrNarrowDate() {
 		StrNarrowDate = null;
+
 	}
 
 }

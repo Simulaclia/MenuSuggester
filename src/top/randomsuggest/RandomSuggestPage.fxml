@@ -18,17 +18,12 @@
             <Font size="36.0" />
          </font>
       </Button>
-      <Text fill="#6aff42" layoutX="647.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ランダム献立提案(仮)" textAlignment="CENTER" wrappingWidth="304.53668189048767">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </Text>
       <Button fx:id="favoritebutton" layoutX="647.0" layoutY="739.0" mnemonicParsing="false" onAction="#addBookmark_OnClick" prefHeight="115.0" prefWidth="305.0" text="お気に入りに追加" textAlignment="CENTER">
          <font>
             <Font size="36.0" />
          </font>
       </Button>
-      <Text layoutX="629.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2人前価格:           円">
+      <Text layoutX="629.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2人前価格:            円" wrappingWidth="437.714111328125">
          <font>
             <Font size="48.0" />
          </font>
@@ -38,22 +33,22 @@
             <Font size="48.0" />
          </font>
       </Text>
-      <Text layoutX="1147.0" layoutY="658.0" strokeType="OUTSIDE" strokeWidth="0.0" text="脂質:        g" wrappingWidth="253.845703125">
+      <Text layoutX="1144.0" layoutY="655.0" strokeType="OUTSIDE" strokeWidth="0.0" text="脂質:           g" wrappingWidth="283.9999755859375">
          <font>
             <Font size="48.0" />
          </font>
       </Text>
-      <Text layoutX="1147.0" layoutY="582.0" strokeType="OUTSIDE" strokeWidth="0.0" text="タンパク質:        g">
+      <Text layoutX="1144.0" layoutY="579.0" strokeType="OUTSIDE" strokeWidth="0.0" text="タンパク質:         g" wrappingWidth="374.8854980468752">
          <font>
             <Font size="48.0" />
          </font>
       </Text>
-      <Text layoutX="1147.0" layoutY="502.0" strokeType="OUTSIDE" strokeWidth="0.0" text="カロリー:        kcal">
+      <Text layoutX="1144.0" layoutY="502.0" strokeType="OUTSIDE" strokeWidth="0.0" text="カロリー:          kcal" wrappingWidth="374.8854980468752">
          <font>
             <Font size="48.0" />
          </font>
       </Text>
-      <Text layoutX="1144.0" layoutY="733.0" strokeType="OUTSIDE" strokeWidth="0.0" text="炭水化物:        g" wrappingWidth="338.4609375">
+      <Text layoutX="1137.0" layoutY="730.0" strokeType="OUTSIDE" strokeWidth="0.0" text="炭水化物:         g" wrappingWidth="366.4609375">
          <font>
             <Font size="48.0" />
          </font>
@@ -63,17 +58,17 @@
             <Font size="48.0" />
          </font>
       </Text>
-      <Label fx:id="foodstuff1" layoutX="349.0" layoutY="450.0" prefHeight="54.0" prefWidth="183.0" text="食材1">
+      <Label fx:id="foodstuff1" layoutX="349.0" layoutY="450.0" prefHeight="70.0" prefWidth="375.0" text="食材1">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label fx:id="urllabel" layoutX="15.0" layoutY="677.0" prefHeight="61.0" prefWidth="614.0" text="(ここにURLを表示)" textFill="#00bbe5">
+      <Label fx:id="urllabel" layoutX="15.0" layoutY="677.0" prefHeight="62.0" prefWidth="631.0" text="(ここにURLを表示)" textFill="#00bbe5">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label fx:id="ciusinename" layoutX="243.0" layoutY="198.0" prefHeight="94.0" prefWidth="385.0" text="料理名">
+      <Label fx:id="ciusinename" layoutX="203.0" layoutY="194.0" prefHeight="94.0" prefWidth="637.0" text="料理名">
          <font>
             <Font size="64.0" />
          </font>
@@ -88,42 +83,42 @@
             <Font size="48.0" />
          </font>
       </Label>
-      <Label fx:id="price" layoutX="953.0" layoutY="333.0" prefHeight="54.0" prefWidth="108.0" text="0" textAlignment="RIGHT">
+      <Label fx:id="price" layoutX="910.0" layoutY="333.0" prefHeight="70.0" prefWidth="122.0" text="0" textAlignment="RIGHT">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label fx:id="time" layoutX="1371.0" layoutY="333.0" prefHeight="70.0" prefWidth="91.0" text="    0">
+      <Label fx:id="time" layoutX="1382.0" layoutY="333.0" prefHeight="70.0" prefWidth="91.0" text="0">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label fx:id="foodstuff2" layoutX="349.0" layoutY="536.0" prefHeight="54.0" prefWidth="183.0" text="食材2">
+      <Label fx:id="foodstuff2" layoutX="349.0" layoutY="536.0" prefHeight="70.0" prefWidth="375.0" text="食材2">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label fx:id="cal" layoutX="1357.0" layoutY="447.0" prefHeight="35.0" prefWidth="47.0" text="0" textAlignment="RIGHT">
+      <Label fx:id="cal" layoutX="1307.0" layoutY="447.0" prefHeight="70.0" prefWidth="98.0" text="0" textAlignment="RIGHT">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label fx:id="pro" layoutX="1417.0" layoutY="536.0" prefHeight="18.0" prefWidth="24.0" text="0">
+      <Label fx:id="pro" layoutX="1356.0" layoutY="527.0" prefHeight="70.0" prefWidth="114.0" text="0">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label fx:id="lip" layoutX="1316.0" layoutY="616.0" prefHeight="54.0" prefWidth="62.0" text="0">
+      <Label fx:id="lip" layoutX="1267.0" layoutY="603.0" prefHeight="70.0" prefWidth="106.0" text="0">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label fx:id="car" layoutX="1404.0" layoutY="686.0" text="0">
+      <Label fx:id="car" layoutX="1346.0" layoutY="678.0" prefHeight="70.0" prefWidth="114.0" text="0">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label fx:id="foodstuff3" layoutX="345.0" layoutY="616.0" text="食材3">
+      <Label fx:id="foodstuff3" layoutX="345.0" layoutY="616.0" prefHeight="70.0" prefWidth="375.0" text="食材3">
          <font>
             <Font size="48.0" />
          </font>

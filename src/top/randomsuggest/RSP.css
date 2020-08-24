@@ -1,0 +1,15 @@
+.root{
+	-fx-background-color: #FFF8E1;
+}
+
+@font-face {
+        font-family: keifont;
+        src: url("../../../font/keifont.ttf");
+}
+#foodstuff1,#foodstuff2{
+	-fx-font-family: "keifont";
+}
+
+/*#topbutton,#refinementbutton{
+	-fx-font-family: "keifont";
+}*/
