@@ -20,9 +20,9 @@ public class fspResultPageController {
 	@FXML
 	Hyperlink url;
 
-	static ArrayList<String> resultMenu;
+	static ArrayList<String> fspresultMenu;
 
-	static String backPage;
+	static String topPage;
 
 	URI URL;
 
@@ -30,22 +30,22 @@ public class fspResultPageController {
 
 	@FXML
 	void initialize() {
-		menu.setText(resultMenu.get(0));
-		country.setText(resultMenu.get(1));
-		genre.setText(resultMenu.get(2));
-		price.setText(resultMenu.get(3));
-		time.setText(resultMenu.get(4));
-		cal.setText(resultMenu.get(5));
-		protein.setText(resultMenu.get(6));
-		lipid.setText(resultMenu.get(7));
-		carbohydrate.setText(resultMenu.get(8));
-		food1.setText(resultMenu.get(9));
-		food2.setText(resultMenu.get(10));
-		food3.setText(resultMenu.get(11));
-		url.setText(resultMenu.get(0) + "へのクックパッドリンク");
+		menu.setText(fspresultMenu.get(0));
+		country.setText(fspresultMenu.get(1));
+		genre.setText(fspresultMenu.get(2));
+		price.setText(fspresultMenu.get(3));
+		time.setText(fspresultMenu.get(4));
+		cal.setText(fspresultMenu.get(5));
+		protein.setText(fspresultMenu.get(6));
+		lipid.setText(fspresultMenu.get(7));
+		carbohydrate.setText(fspresultMenu.get(8));
+		food1.setText(fspresultMenu.get(9));
+		food2.setText(fspresultMenu.get(10));
+		food3.setText(fspresultMenu.get(11));
+		url.setText(fspresultMenu.get(0) + "へのクックパッドリンク");
 
 		try {
-			URL = new URI(resultMenu.get(13));
+			URL = new URI(fspresultMenu.get(13));
 		} catch (URISyntaxException e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
@@ -54,7 +54,7 @@ public class fspResultPageController {
 
 	@FXML
 	void ReturnTopPageButton_OnClick() {
-		new TopPage().changePage("/top/TopPage.fxml");
+		new TopPage().changePage("topPage");
 	}
 
 	@FXML
@@ -70,12 +70,12 @@ public class fspResultPageController {
 
 	@FXML
 	void addBookmark_OnClick() {
-		BookmarkPage.AddBookmark(resultMenu);
+		BookmarkPage.AddBookmark(fspresultMenu);
 	}
 
 	public static void setData(ArrayList<String> resultRecipe, String page) {
-		resultMenu = resultRecipe;
-		backPage = page;
+		fspresultMenu = resultRecipe;
+		topPage = page;
 	}
 
 }
