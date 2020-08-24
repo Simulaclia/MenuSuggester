@@ -10,8 +10,10 @@
 #RandumSuggest,#WeekSuggest,#FoodSerach,#SeasonSearch,#Bookmark{
 	-fx-font-family: "keifont";
 	-fx-font-size: 5em;
-	-fx-margin-top: 5px;
 }
+#Title,#Title2{
+	-fx-font-family: "keifont";
 
+}
 
 
