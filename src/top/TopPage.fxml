@@ -67,27 +67,27 @@
       </VBox>
       <ImageView fitHeight="226.0" fitWidth="328.0" layoutX="849.0" layoutY="182.0">
          <image>
-            <Image url="@../../../../../Users/Funami/Downloads/food_curryruce.png" />
+            <Image url="@../../image/food_curryruce.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="273.0" fitWidth="308.0" layoutX="812.0" layoutY="493.0">
          <image>
-            <Image url="@../../../../../Users/Funami/Downloads/food_dam_curry.png" />
+            <Image url="@../../image/food_dam_curry.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="256.0" fitWidth="272.0" layoutX="1171.0" layoutY="305.0">
          <image>
-            <Image url="@../../../../../Users/Funami/Downloads/food_india_meals.png" />
+            <Image url="@../../image/food_india_meals.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="264.0" fitWidth="293.0" layoutX="1253.0" layoutY="58.0">
          <image>
-            <Image url="@../../../../../Users/Funami/Downloads/food_keema_curry_top_egg.png" />
+            <Image url="@../../image/food_keema_curry_top_egg.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="292.0" fitWidth="292.0" layoutX="1257.0" layoutY="569.0">
          <image>
-            <Image url="@../../../../../Users/Funami/Downloads/food_retoruto_curry_rice.png" />
+            <Image url="@../../image/food_retoruto_curry_rice.png" />
          </image>
       </ImageView>
 	</children>
