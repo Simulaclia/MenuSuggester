@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.foodsearch.FSP_ans_Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" stylesheets="@FSP.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.foodsearch.FSP_ans_Controller">
    <children>
       <Button layoutX="225.0" layoutY="45.0" mnemonicParsing="false" onAction="#ReturnTopButton_OnClick" prefHeight="100.0" prefWidth="330.0" text="Topへ戻る">
          <font>
@@ -40,7 +40,7 @@
                   <Font size="23.0" />
                </font>
             </Button>
-            <Label layoutX="562.0" layoutY="297.0" text="所要時間：">
+            <Label fx:id="needTime" layoutX="562.0" layoutY="297.0" text="所要時間：">
                <font>
                   <Font size="50.0" />
                </font>

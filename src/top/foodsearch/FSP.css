@@ -1,4 +1,17 @@
-@charset "UTF-8";
+@font-face {
+        font-family: keifont;
+        src: url("../../../font/keifont.ttf");
+}
+
 .root{
 	-fx-background-color: #FFF8E1;
+}
+
+#CookMenu1{
+	-fx-font-family: "keifont";
+
+}
+#cooking1,#needTime{
+	-fx-font-family: "keifont";
+	-fx-font-size: 5em;
 }
