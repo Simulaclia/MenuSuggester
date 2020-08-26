@@ -6,10 +6,22 @@
         font-family: keifont;
         src: url("../../../font/keifont.ttf");
 }
-#foodstuff1,#foodstuff2{
+
+.label{
+    -fx-font-family: "keifont";
+}
+.Text{
+    -fx-font-family: "keifont";
+}
+
+.button{
 	-fx-font-family: "keifont";
 }
 
-/*#topbutton,#refinementbutton{
+.button:hover{
 	-fx-font-family: "keifont";
-}*/
+}
+
+.button:pressed{
+	-fx-font-family: "keifont";
+}
