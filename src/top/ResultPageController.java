@@ -43,7 +43,7 @@ public class ResultPageController {
 		food1.setText(resultMenu.get(9));
 		food2.setText(resultMenu.get(10));
 		food3.setText(resultMenu.get(11));
-		url.setText(resultMenu.get(0) + "へのクックパッドリンク");
+		url.setText(resultMenu.get(0) + "へのレシピリンク");
 
 		try {
 			URL = new URI(resultMenu.get(13));
