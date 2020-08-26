@@ -1,0 +1,26 @@
+
+@font-face {
+        font-family: keifont;
+        src: url("../../font/keifont.ttf");
+}
+
+.root{
+	-fx-background-color: #FFF8E1;
+}
+
+#BackBuuton{
+	-fx-font-family: "keifont";
+	-fx-font-size: 3.5em;
+}
+#Foodstuff{
+	-fx-font-family: "keifont";
+}
+
+#FoodList{
+	-fx-font-family: "keifont";
+	-fx-font-size: 3.5em;
+}
+#SuggestButton{
+	-fx-font-family: "keifont";
+	-fx-font-size: 6em;
+}

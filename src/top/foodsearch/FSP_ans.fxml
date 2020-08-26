@@ -6,66 +6,66 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" stylesheets="@FSP.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.foodsearch.FSP_ans_Controller">
+<AnchorPane fx:id="back" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" stylesheets="@FSP.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.foodsearch.FSP_ans_Controller">
    <children>
-      <Button layoutX="225.0" layoutY="45.0" mnemonicParsing="false" onAction="#ReturnTopButton_OnClick" prefHeight="100.0" prefWidth="330.0" text="Topへ戻る">
+      <Button fx:id="BackButton" layoutX="225.0" layoutY="45.0" mnemonicParsing="false" onAction="#ReturnTopButton_OnClick" prefHeight="100.0" prefWidth="330.0" text="Topへ戻る">
          <font>
             <Font size="42.0" />
          </font>
       </Button>
-      <Button layoutX="1026.0" layoutY="46.0" mnemonicParsing="false" onAction="#FoodSerach_onClick" prefHeight="100.0" prefWidth="330.0" text="食材を選択">
+      <Button fx:id="NarrowDownButton" layoutX="1026.0" layoutY="46.0" mnemonicParsing="false" onAction="#FoodSerach_onClick" prefHeight="100.0" prefWidth="330.0" text="食材を選択">
          <font>
             <Font size="42.0" />
          </font>
       </Button>
       <Pane layoutX="-13.0" layoutY="348.0" prefHeight="467.0" prefWidth="1595.0">
          <children>
-            <Label fx:id="Genre1" layoutX="236.0" layoutY="381.0" text="ジャンル">
+            <Label fx:id="Genre1" alignment="CENTER" layoutX="240.0" layoutY="390.0" text="ジャンル">
                <font>
-                  <Font size="59.0" />
+                  <Font size="60.0" />
                </font>
             </Label>
-            <Label fx:id="cooking1" layoutX="243.0" layoutY="295.0" text="調理法">
+            <Label fx:id="cooking1" alignment="CENTER" layoutX="260.0" layoutY="300.0" text="調理法">
                <font>
-                  <Font size="59.0" />
+                  <Font size="60.0" />
                </font>
             </Label>
-            <Label fx:id="calorie1" layoutX="797.0" layoutY="389.0" prefHeight="75.0" prefWidth="108.0" text="000">
+            <Label fx:id="calorie1" alignment="CENTER_RIGHT" layoutX="965.0" layoutY="385.0" prefHeight="75.0" prefWidth="150.0" text="000">
                <font>
                   <Font size="52.0" />
                </font>
             </Label>
-            <Button fx:id="addBookmark" layoutX="1139.0" layoutY="314.0" mnemonicParsing="false" onAction="#addBookmark_OnClick" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
+            <Button fx:id="addBookmark" layoutX="1300.0" layoutY="320.0" mnemonicParsing="false" onAction="#addBookmark_OnClick" prefHeight="100.0" prefWidth="180.0" text="お気に入り追加">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Label fx:id="needTime" layoutX="562.0" layoutY="297.0" text="所要時間：">
+            <Label fx:id="needTime" alignment="CENTER" layoutX="670.0" layoutY="300.0" text="所要時間：">
                <font>
                   <Font size="50.0" />
                </font>
             </Label>
-            <Label layoutX="578.0" layoutY="385.0" text="カロリー：">
+            <Label fx:id="calorie" alignment="CENTER" layoutX="692.0" layoutY="385.0" text="カロリー：">
                <font>
                   <Font size="50.0" />
                </font>
             </Label>
-            <Label layoutX="924.0" layoutY="304.0" text="分">
+            <Label fx:id="Minute" alignment="CENTER" layoutX="1125.0" layoutY="304.0" text="分">
                <font>
                   <Font size="50.0" />
                </font>
             </Label>
-            <Label layoutX="906.0" layoutY="388.0" text="kcal">
+            <Label fx:id="calorie2" alignment="CENTER" layoutX="1120.0" layoutY="388.0" text="kcal">
                <font>
                   <Font size="50.0" />
                </font>
             </Label>
-            <Label fx:id="time1" layoutX="808.0" layoutY="300.0" text="000">
+            <Label fx:id="time1" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="1005.0" layoutY="300.0" text="000">
                <font>
                   <Font size="52.0" />
                </font>
             </Label>
-            <Label fx:id="CookMenu1" layoutX="523.0" layoutY="-78.0" onMouseClicked="#CookMenu1_OnClic" text="料理名1">
+            <Label fx:id="CookMenu1" alignment="CENTER" contentDisplay="CENTER" layoutX="170.0" layoutY="-50.0" onMouseClicked="#CookMenu1_OnClic" prefWidth="1300.0" text="料理名1">
                <font>
                   <Font size="110.0" />
                </font>
