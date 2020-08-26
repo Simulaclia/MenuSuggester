@@ -1,4 +1,28 @@
-@charset "UTF-8";
+@font-face {
+        font-family: keifont;
+        src: url("../../../font/keifont.ttf");
+}
+
 .root{
 	-fx-background-color: #FFF8E1;
+}
+
+#CookMenu1{
+	-fx-font-family: "keifont";
+	-fx-underline:true;
+	-fx-text-fill:blue;
+	-fx-cursor: pointer;
+}
+#cooking1,#needTime,#Genre1,#calorie,#time1,#calorie1,#calorie2,#Minute{
+	-fx-font-family: "keifont";
+	-fx-font-size: 5em;
+}
+#BackButton,#NarrowDownButton{
+	-fx-font-family: "keifont";
+	-fx-font-size: 3.5em;
+
+}
+#addBookmark{
+	-fx-font-family: "keifont";
+	-fx-font-size: 1.8em;
 }

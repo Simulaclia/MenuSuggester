@@ -13,6 +13,7 @@ public class TopPage extends Application {
 	public void start(Stage stage) {
 		TopPage.stage = stage;
 		changePage("TopPage.fxml", "TopPage.css"); // ページ変更
+		stage.setTitle("Menu Suggester");
 		stage.show(); // ページ表示
 	}
 

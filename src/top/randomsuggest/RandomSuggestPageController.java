@@ -1,9 +1,14 @@
 package top.randomsuggest;
 
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Random;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import top.TopPage;
 import top.bookmark.BookmarkPage;
@@ -19,6 +24,13 @@ public class RandomSuggestPageController {
 
 	Random rand = new Random();
 	ArrayList<String> randomRecipe;
+
+	@FXML
+	Hyperlink url;
+
+	Desktop desktop = Desktop.isDesktopSupported() ? Desktop.getDesktop() : null;
+
+	URI URL;
 	// 初期設定
 
 	@FXML
@@ -74,6 +86,17 @@ public class RandomSuggestPageController {
 		BookmarkPage.AddBookmark(randomRecipe);
 	}
 
+	@FXML
+	void url_OnClick() {
+
+		try {
+			desktop.browse(URL);
+		} catch (IOException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
+	}
+
 	void RandomSetMenu(ArrayList<ArrayList<String>> RandomSuggestMenu, Label[] label) {
 		int randomValue = rand.nextInt(RandomSuggestMenu.size());
 		// 料理名,料理国,料理ジャンル,2人前価格,料理所要時間,カロリー,
@@ -92,7 +115,15 @@ public class RandomSuggestPageController {
 		label[10].setText(RandomSuggestMenu.get(randomValue).get(10)); // 料理の主食材
 		label[11].setText(RandomSuggestMenu.get(randomValue).get(11)); // 主食材
 		// label[12].setText(RandomSuggestMenu.get(randomValue).get(12)); // 旬の食材
-		label[12].setText(RandomSuggestMenu.get(randomValue).get(13)); // 料理名検索リンク
+
+		url.setText(RandomSuggestMenu.get(randomValue).get(0) + "へのレシピリンク");
+
+		try {
+			URL = new URI(RandomSuggestMenu.get(randomValue).get(13));
+		} catch (URISyntaxException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
 
 		randomRecipe = RandomSuggestMenu.get(randomValue);
 		// System.out.println(WeekSuggestMenu.size());

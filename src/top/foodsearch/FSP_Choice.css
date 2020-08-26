@@ -1,3 +1,4 @@
+
 @font-face {
         font-family: keifont;
         src: url("../../font/keifont.ttf");
@@ -7,14 +8,19 @@
 	-fx-background-color: #FFF8E1;
 }
 
-
-#RandumSuggest,#WeekSuggest,#FoodSerach,#SeasonSearch,#Bookmark{
+#BackBuuton{
 	-fx-font-family: "keifont";
-	-fx-font-size: 5em;
+	-fx-font-size: 3.5em;
 }
-#Title,#Title2{
+#Foodstuff{
 	-fx-font-family: "keifont";
-
 }
 
-
+#FoodList{
+	-fx-font-family: "keifont";
+	-fx-font-size: 3.5em;
+}
+#SuggestButton{
+	-fx-font-family: "keifont";
+	-fx-font-size: 6em;
+}
