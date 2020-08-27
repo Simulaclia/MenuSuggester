@@ -18,7 +18,7 @@ public class RandomSuggestPageController {
 	// ラベル取得 pro=タンパク質 lip=脂質 car=炭水化物 foodstuff=食材
 	@FXML
 	private Label ciusinename, genre, country, price, time, cal, pro, lip, car, foodstuff1, foodstuff2, foodstuff3,
-			urllabel, noResultLabel;
+			noResultLabel;
 
 	String[] StrNarrowData; // 絞り込み条件データ
 
@@ -36,7 +36,7 @@ public class RandomSuggestPageController {
 	@FXML
 	void initialize() {
 		Label[] Label1 = { ciusinename, country, genre, price, time, cal, pro, lip, car, foodstuff1, foodstuff2,
-				foodstuff3, urllabel };
+				foodstuff3 };
 
 		randomRecipe = new ArrayList<String>();
 		// 絞り込み条件取得
