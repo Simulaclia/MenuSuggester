@@ -10,7 +10,7 @@
 .label{
     -fx-font-family: "keifont";
 }
-#genre,#country{
+.Text{
     -fx-font-family: "keifont";
 }
 
@@ -18,11 +18,3 @@
 -fx-font-size: 35px;
 	-fx-font-family: "keifont";
 }
-
-/* .button:hover{
-	-fx-font-family: "keifont";
-}
-
-.button:pressed{
-	-fx-font-family: "keifont";
-}*/
