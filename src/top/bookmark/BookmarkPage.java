@@ -1,11 +1,13 @@
 package top.bookmark;
 
 import java.io.BufferedReader;
-import java.io.File;
+import java.io.BufferedWriter;
 import java.io.FileInputStream;
-import java.io.FileWriter;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import javafx.scene.control.Button;
@@ -17,7 +19,7 @@ public class BookmarkPage {
 		try {
 			// Bookmark.csvファイル読み込み
 			FileInputStream fisRec = new FileInputStream("csv/Bookmark.csv");
-			InputStreamReader isrRec = new InputStreamReader(fisRec);
+			InputStreamReader isrRec = new InputStreamReader(fisRec, "UTF-8");
 			BufferedReader brRec = new BufferedReader(isrRec);
 
 			String tempData;
@@ -44,7 +46,7 @@ public class BookmarkPage {
 	public static ArrayList<ArrayList<String>> Bookmark(String genre, String country, String cal, String price) {
 		try {
 			FileInputStream fisRec = new FileInputStream("csv/Bookmark.csv");
-			InputStreamReader isrRec = new InputStreamReader(fisRec);
+			InputStreamReader isrRec = new InputStreamReader(fisRec, "UTF-8");
 			BufferedReader brRec = new BufferedReader(isrRec);
 
 			String tempData;
@@ -101,7 +103,7 @@ public class BookmarkPage {
 		DeleteBookmark(recipe); // 重複しているブックマークの場合は元ブックマークを削除
 		try {
 			FileInputStream fisRec = new FileInputStream("csv/Bookmark.csv");
-			InputStreamReader isrRec = new InputStreamReader(fisRec);
+			InputStreamReader isrRec = new InputStreamReader(fisRec, "UTF-8");
 			BufferedReader brRec = new BufferedReader(isrRec);
 
 			String tempData;
@@ -119,34 +121,35 @@ public class BookmarkPage {
 			brRec.close();
 
 			// Bookmark.csv初期化
-			File deleteFile = new File("csv/Bookmark.csv");
-			FileWriter deleteFilewriter = new FileWriter(deleteFile, false);
-			deleteFilewriter.write("");
-			deleteFilewriter.close();
+			PrintWriter deletePrintWriter = new PrintWriter(new BufferedWriter(
+					new OutputStreamWriter(new FileOutputStream("csv/Bookmark.csv", false), "UTF-8")));
 
-			File file = new File("csv/Bookmark.csv");
-			FileWriter filewriter = new FileWriter(file, true);
+			deletePrintWriter.print("");
+			deletePrintWriter.close();
+
+			PrintWriter printWriter = new PrintWriter(new BufferedWriter(
+					new OutputStreamWriter(new FileOutputStream("csv/Bookmark.csv", true), "UTF-8")));
 
 			int count = 1;
 			for (String str : recipe) {
 				// 各データにコンマを加えて書き込み
 				if (count <= recipe.size() - 1)
-					filewriter.write(str + ",");
+					printWriter.print(str + ",");
 				count++;
 			}
-			filewriter.write(recipe.get(recipe.size() - 1) + "\n");
+			printWriter.print(recipe.get(recipe.size() - 1) + "\n");
 
 			for (ArrayList<String> list : bookmarkList) {
 				count = 1;
 				for (String str : list) {
 					// 各データにコンマを加えて書き込み
 					if (count <= list.size() - 1)
-						filewriter.write(str + ",");
+						printWriter.print(str + ",");
 					count++;
 				}
-				filewriter.write(list.get(list.size() - 1) + "\n");
+				printWriter.print(list.get(list.size() - 1) + "\n");
 			}
-			filewriter.close();
+			printWriter.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -162,7 +165,7 @@ public class BookmarkPage {
 			button.setText("お気に入り削除");
 			try {
 				FileInputStream fisRec = new FileInputStream("csv/Bookmark.csv");
-				InputStreamReader isrRec = new InputStreamReader(fisRec);
+				InputStreamReader isrRec = new InputStreamReader(fisRec, "UTF-8");
 				BufferedReader brRec = new BufferedReader(isrRec);
 
 				String tempData;
@@ -180,34 +183,35 @@ public class BookmarkPage {
 				brRec.close();
 
 				// Bookmark.csv初期化
-				File deleteFile = new File("csv/Bookmark.csv");
-				FileWriter deleteFilewriter = new FileWriter(deleteFile, false);
-				deleteFilewriter.write("");
-				deleteFilewriter.close();
+				PrintWriter deletePrintWriter = new PrintWriter(new BufferedWriter(
+						new OutputStreamWriter(new FileOutputStream("csv/Bookmark.csv", false), "UTF-8")));
 
-				File file = new File("csv/Bookmark.csv");
-				FileWriter filewriter = new FileWriter(file, true);
+				deletePrintWriter.print("");
+				deletePrintWriter.close();
+
+				PrintWriter printWriter = new PrintWriter(new BufferedWriter(
+						new OutputStreamWriter(new FileOutputStream("csv/Bookmark.csv", true), "UTF-8")));
 
 				int count = 1;
 				for (String str : recipe) {
 					// 各データにコンマを加えて書き込み
 					if (count <= recipe.size() - 1)
-						filewriter.write(str + ",");
+						printWriter.print(str + ",");
 					count++;
 				}
-				filewriter.write(recipe.get(recipe.size() - 1) + "\n");
+				printWriter.print(recipe.get(recipe.size() - 1) + "\n");
 
 				for (ArrayList<String> list : bookmarkList) {
 					count = 1;
 					for (String str : list) {
 						// 各データにコンマを加えて書き込み
 						if (count <= list.size() - 1)
-							filewriter.write(str + ",");
+							printWriter.print(str + ",");
 						count++;
 					}
-					filewriter.write(list.get(list.size() - 1) + "\n");
+					printWriter.print(list.get(list.size() - 1) + "\n");
 				}
-				filewriter.close();
+				printWriter.close();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -220,7 +224,7 @@ public class BookmarkPage {
 		try {
 			// Bookmark.csvファイル読み込み
 			FileInputStream fisRec = new FileInputStream("csv/Bookmark.csv");
-			InputStreamReader isrRec = new InputStreamReader(fisRec);
+			InputStreamReader isrRec = new InputStreamReader(fisRec, "UTF-8");
 			BufferedReader brRec = new BufferedReader(isrRec);
 
 			String tempData;
@@ -246,13 +250,14 @@ public class BookmarkPage {
 			// 削除対象があった場合
 			if (change) {
 				// Bookmark.csv初期化
-				File deleteFile = new File("csv/Bookmark.csv");
-				FileWriter deleteFilewriter = new FileWriter(deleteFile, false);
-				deleteFilewriter.write("");
-				deleteFilewriter.close();
+				PrintWriter deletePrintWriter = new PrintWriter(new BufferedWriter(
+						new OutputStreamWriter(new FileOutputStream("csv/Bookmark.csv", false), "UTF-8")));
 
-				File file = new File("csv/Bookmark.csv");
-				FileWriter filewriter = new FileWriter(file, true);
+				deletePrintWriter.print("");
+				deletePrintWriter.close();
+
+				PrintWriter printWriter = new PrintWriter(new BufferedWriter(
+						new OutputStreamWriter(new FileOutputStream("csv/Bookmark.csv", true), "UTF-8")));
 
 				// 対象外レシピの追加処理実行
 				for (ArrayList<String> list : bookmarkList) {
@@ -260,12 +265,12 @@ public class BookmarkPage {
 					for (String str : list) {
 						// 各データにコンマを加えて書き込み
 						if (count <= list.size() - 1)
-							filewriter.write(str + ",");
+							printWriter.print(str + ",");
 						count++;
 					}
-					filewriter.write(list.get(list.size() - 1) + "\n");
+					printWriter.print(list.get(list.size() - 1) + "\n");
 				}
-				filewriter.close();
+				printWriter.close();
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -275,7 +280,7 @@ public class BookmarkPage {
 	public static boolean checkBookmark(ArrayList<String> recipe) {
 		try {
 			FileInputStream fisRec = new FileInputStream("csv/Bookmark.csv");
-			InputStreamReader isrRec = new InputStreamReader(fisRec);
+			InputStreamReader isrRec = new InputStreamReader(fisRec, "UTF-8");
 			BufferedReader brRec = new BufferedReader(isrRec);
 
 			String tempData;

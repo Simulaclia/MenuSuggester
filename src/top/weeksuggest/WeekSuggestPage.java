@@ -28,7 +28,7 @@ public class WeekSuggestPage {
 		try {
 			// レシピCSVファイル読み込み処理
 			FileInputStream fisRec = new FileInputStream("csv/Recipe.csv");
-			InputStreamReader isrRec = new InputStreamReader(fisRec);
+			InputStreamReader isrRec = new InputStreamReader(fisRec, "UTF-8");
 			BufferedReader brRec = new BufferedReader(isrRec);
 			String tempData; // レシピCSVファイル一行読み込みデータ
 			ArrayList<ArrayList<String>> recipeList = new ArrayList<ArrayList<String>>(); // レシピCSVファイル絞り込み後データ
@@ -62,7 +62,7 @@ public class WeekSuggestPage {
 
 		try {
 			FileInputStream fisRec = new FileInputStream("csv/Recipe.csv");
-			InputStreamReader isrRec = new InputStreamReader(fisRec);
+			InputStreamReader isrRec = new InputStreamReader(fisRec, "UTF-8");
 			BufferedReader brRec = new BufferedReader(isrRec);
 
 			String tempData;

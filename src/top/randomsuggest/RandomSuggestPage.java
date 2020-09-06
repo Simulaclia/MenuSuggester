@@ -36,7 +36,7 @@ public class RandomSuggestPage {
 			// ファイル名またはパスでcsv取得
 
 			FileInputStream fi = new FileInputStream("csv/Recipe.csv");
-			InputStreamReader is = new InputStreamReader(fi);
+			InputStreamReader is = new InputStreamReader(fi, "UTF-8");
 			BufferedReader br = new BufferedReader(is);
 
 			// CSVファイル一行読み込みデータ
@@ -86,7 +86,7 @@ public class RandomSuggestPage {
 		try {
 
 			FileInputStream fi = new FileInputStream("csv/Recipe.csv");
-			InputStreamReader is = new InputStreamReader(fi);
+			InputStreamReader is = new InputStreamReader(fi, "UTF-8");
 			BufferedReader br = new BufferedReader(is);
 
 			String tempData;

@@ -13,14 +13,14 @@ public class SeasonSearchPage {
 		try {
 			// レシピCSVファイル読み込み処理
 			FileInputStream fisRec = new FileInputStream("csv/Recipe.csv");
-			InputStreamReader isrRec = new InputStreamReader(fisRec);
+			InputStreamReader isrRec = new InputStreamReader(fisRec, "UTF-8");
 			BufferedReader brRec = new BufferedReader(isrRec);
 			String tempData; // レシピCSVファイル一行読み込みデータ
 			ArrayList<ArrayList<String>> recipeList = new ArrayList<ArrayList<String>>(); // レシピCSVファイル絞り込み後データ
 
 			// 旬食材CSVファイル読み込み処理
 			FileInputStream fisFoo = new FileInputStream("csv/FoodSeason.csv");
-			InputStreamReader isrFoo = new InputStreamReader(fisFoo);
+			InputStreamReader isrFoo = new InputStreamReader(fisFoo, "UTF-8");
 			BufferedReader brFoo = new BufferedReader(isrFoo);
 			String tempSeasonFoodData; // CSVファイル一行読み込みデータ
 			ArrayList<String> seasonFoodArrayList = new ArrayList<String>(); // 旬食材CSVファイル絞り込み後データ
