@@ -7,19 +7,22 @@
 	-fx-background-color: #FFF8E1;
 }
 
-.label, .button{
+.label, .button, .hyperlink{
 	-fx-font-family: "keifont";
 }
 
-#topButton, #backButton, #nextButton{
+.button{
 	-fx-font-size: 50px;
 }
 
-#addBookmarkButton1, #addBookmarkButton2, #addBookmarkButton3{
-	-fx-font-size: 20px;
+.hyperlink{
+	-fx-font-size: 40px;
+	-fx-text-fill: #03A9F4;
+	-fx-underline: true;
 }
 
-#menuName1, #menuName2, #menuName3{
-	-fx-underline: true;
+.hyperlink:visited{
+	-fx-font-size: 40px;
 	-fx-text-fill: #03A9F4;
+	-fx-underline: true;
 }

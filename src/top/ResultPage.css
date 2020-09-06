@@ -1,0 +1,28 @@
+@font-face {
+        font-family: keifont;
+        src: url("../../font/keifont.ttf");
+}
+
+.root{
+	-fx-background-color: #FFF8E1;
+}
+
+.label, .button, .hyperlink{
+	-fx-font-family: "keifont";
+}
+
+.button{
+	-fx-font-size: 50px;
+}
+
+.hyperlink{
+	-fx-font-size: 40px;
+	-fx-text-fill: #03A9F4;
+	-fx-underline: true;
+}
+
+.hyperlink:visited{
+	-fx-font-size: 40px;
+	-fx-text-fill: #03A9F4;
+	-fx-underline: true;
+}

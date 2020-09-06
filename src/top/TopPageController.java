@@ -20,11 +20,11 @@ public class TopPageController {
 
 	@FXML
 	void SeasonSearch_onClick() {
-		new TopPage().changePage("/top/seasonsearch/SeasonSearchPage.fxml", "/top/seasonsearch/SeasonSearchPage.css");
+		new TopPage().changePage("/top/seasonsearch/SeasonSearchPage.fxml");
 	}
 
 	@FXML
 	void Bookmark_onClick() {
-		new TopPage().changePage("/top/bookmark/BookmarkPage.fxml", "/top/bookmark/BookmarkPage.css");
+		new TopPage().changePage("/top/bookmark/BookmarkPage.fxml");
 	}
 }

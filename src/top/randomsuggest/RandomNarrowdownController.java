@@ -69,7 +69,7 @@ public class RandomNarrowdownController {
 			// 移動せず、条件に合致する結果がなかった事を伝える
 			// あと絞り込み条件とかの表示も消す処理も
 			noResultLabel.setText("条件に合う料理がありませんでした");
-			noResultLabel2.setText("←リセットボタンを押して下さい。");
+			noResultLabel2.setText("条件を変えて再度決定してください");
 
 		} else {
 			StrNarrowDate = new String[] { genrecombo.getValue(), cookingcombo.getValue(), price.getValue(),

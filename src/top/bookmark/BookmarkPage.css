@@ -7,13 +7,19 @@
 	-fx-background-color: #FFF8E1;
 }
 
-/*
-.label{
+.label, .button{
 	-fx-font-family: "keifont";
 }
-*/
+
+.button{
+	-fx-font-size: 50px;
+}
+
+#deleteBookmarkButton1, #deleteBookmarkButton2, #deleteBookmarkButton3{
+	-fx-font-size: 30px;
+}
 
 #menuName1, #menuName2, #menuName3{
+	-fx-text-fill: #03A9F4;
 	-fx-underline: true;
-	-fx-text-fill: blue;
 }

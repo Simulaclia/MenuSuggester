@@ -7,24 +7,30 @@
     -fx-background-color: #FFF8E1;
 }
 
-.label{
-     -fx-font-family: "keifont";
-}
-
-#CookMenu1,#CookMenu2,#CookMenu3,#CookMenu4,#CookMenu5,#CookMenu6,#CookMenu7 {
-   -fx-underline: true;
-   -fx-text-fill: blue;
-}
 #VBox1{
 	-fx-background-color: #FFF8E1;
 }
+
+.label{
+     -fx-font-family: "keifont";
+     -fx-font-size: 50px;
+}
+
+#CookMenu1,#CookMenu2,#CookMenu3,#CookMenu4,#CookMenu5,#CookMenu6,#CookMenu7 {
+	-fx-font-size: 60px;
+	-fx-underline: true;
+	-fx-text-fill: #03A9F4;
+}
+
 #ReturnTopButton{
 	-fx-font-family: "keifont";
 }
+
 #nextPage_button{
 	-fx-font-family: "keifont";
 	-fx-font-size: 3.5em;
 }
+
 #ReturnTopButton:hover{
 	-fx-font-size: 3.5em;
 }
@@ -36,5 +42,3 @@
 	-fx-font-family: "keifont";
 	-fx-font-size: 1.8em;
 }
-
-

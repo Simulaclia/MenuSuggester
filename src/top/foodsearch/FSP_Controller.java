@@ -6,8 +6,8 @@ import top.TopPage;
 
 public class FSP_Controller {
 
-	@FXML //コンボボックスの型
-	private ComboBox<String> FoodList;//選択食材リスト
+	@FXML // コンボボックスの型
+	private ComboBox<String> FoodList;// 選択食材リスト
 
 	private static String[] SearchFoodData; // 選択食材データ
 
@@ -22,13 +22,11 @@ public class FSP_Controller {
 		new TopPage().changePage("/top/foodsearch/FSP_ans.fxml");
 	}
 
-	@FXML //選択食材リスト
+	@FXML // 選択食材リスト
 	void initialize() {
 		// リストに食材を追加
-		FoodList.getItems().addAll("食材を選択", "豚肉", "牛肉", "鶏肉", "じゃがいも", "大根", "タケノコ", "かぼちゃ", "大豆",
-				"キャベツ", "トマト", "にんじん", "コーン", "白菜", "ナス", "卵", "鯖", "鰆", "鮭", "鰹", "貝", "海老", "ナス", "タコ", "イカ", "カレイ",
-				"↓以下裏メニュー", "リズミカルに読もう！", "ハマチ", "中トロ", "甘エビロール", "サーモン", "ハンバーグ", "いなり", "サラダ", "サーモン炙り", "　パァフェ⤵",
-				"　　　いわし⤴", "　　　　パァフェ⤵", "　　　　　　いわし⤴"); // 選択食材ども
+		FoodList.getItems().addAll("豚肉", "牛肉", "鶏肉", "じゃがいも", "大根", "タケノコ", "かぼちゃ", "大豆", "キャベツ", "トマト", "にんじん", "コーン",
+				"白菜", "ナス", "卵", "鯖", "鰆", "鮭", "鰹", "貝", "海老", "ナス", "タコ", "イカ", "カレイ"); // 選択食材ども
 		FoodList.getSelectionModel().select(0); // 初期値
 	}
 

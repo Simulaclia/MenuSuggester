@@ -1,20 +1,24 @@
-.root{
-	-fx-background-color: #FFF8E1;
-}
-
 @font-face {
         font-family: keifont;
         src: url("../../../font/keifont.ttf");
 }
 
-.label{
-    -fx-font-family: "keifont";
+.root{
+	-fx-background-color: #FFF8E1;
 }
-.Text{
+
+.label, .button{
     -fx-font-family: "keifont";
 }
 
 .button{
--fx-font-size: 35px;
-	-fx-font-family: "keifont";
+	-fx-font-size: 35px;
+}
+
+.combo-box{
+	-fx-font-size: 35px;
+}
+
+#title2{
+	-fx-text-fill: #00BCD4;
 }

@@ -32,18 +32,18 @@ public class ResultPageController {
 	@FXML
 	void initialize() {
 		menu.setText(resultMenu.get(0));
-		country.setText(resultMenu.get(1));
 		genre.setText(resultMenu.get(2));
-		price.setText(resultMenu.get(3));
-		time.setText(resultMenu.get(4));
-		cal.setText(resultMenu.get(5));
-		protein.setText(resultMenu.get(6));
-		lipid.setText(resultMenu.get(7));
-		carbohydrate.setText(resultMenu.get(8));
+		country.setText(resultMenu.get(1));
 		food1.setText(resultMenu.get(9));
 		food2.setText(resultMenu.get(10));
 		food3.setText(resultMenu.get(11));
 		url.setText(resultMenu.get(0) + "へのレシピリンク");
+		price.setText("2人前価格:" + resultMenu.get(3) + "円");
+		time.setText("所要時間:" + resultMenu.get(4) + "分");
+		cal.setText("カロリー:" + resultMenu.get(5) + "kcal");
+		protein.setText("タンパク質:" + resultMenu.get(6) + "g");
+		lipid.setText("脂質:" + resultMenu.get(7) + "g");
+		carbohydrate.setText("炭水化物:" + resultMenu.get(8) + "g");
 
 		try {
 			URL = new URI(resultMenu.get(13));
@@ -89,5 +89,4 @@ public class ResultPageController {
 		backPageCss = css;
 		hasCss = true;
 	}
-
 }

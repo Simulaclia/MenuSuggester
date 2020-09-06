@@ -7,14 +7,10 @@
 	-fx-background-color: #FFF8E1;
 }
 
+.label, .button{
+	-fx-font-family: "keifont";
+}
 
 #RandumSuggest,#WeekSuggest,#FoodSerach,#SeasonSearch,#Bookmark{
-	-fx-font-family: "keifont";
-	-fx-font-size: 5em;
+	-fx-font-size: 50px;
 }
-#Title,#Title2{
-	-fx-font-family: "keifont";
-
-}
-
-

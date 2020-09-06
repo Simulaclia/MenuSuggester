@@ -5,126 +5,126 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.seasonsearch.SeasonSearchPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" stylesheets="@SeasonSearchPage.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.seasonsearch.SeasonSearchPageController">
    <children>
-      <Button layoutX="70.0" layoutY="70.0" mnemonicParsing="false" onAction="#ReturnTopButton_OnClick" prefHeight="95.0" prefWidth="326.0" text="Topへ戻る">
+      <Button fx:id="topButton" layoutX="25.0" layoutY="25.0" mnemonicParsing="false" onAction="#ReturnTopButton_OnClick" text="Topへ戻る">
          <font>
-            <Font size="42.0" />
+            <Font size="50.0" />
          </font>
       </Button>
-      <Label fx:id="menuName1" layoutX="10.0" layoutY="200.0" onMouseClicked="#menuName1_OnClick" text="料理名">
+      <Label fx:id="menuName1" alignment="CENTER" layoutX="25.0" layoutY="200.0" onMouseClicked="#menuName1_OnClick" prefWidth="550.0" text="料理名">
          <font>
-            <Font size="75.0" />
+            <Font size="50.0" />
          </font>
       </Label>
       <Label fx:id="country1" layoutX="600.0" layoutY="150.0" text="国">
          <font>
-            <Font size="55.0" />
+            <Font size="50.0" />
          </font>
       </Label>
       <Label fx:id="genre1" layoutX="600.0" layoutY="250.0" text="ジャンル">
          <font>
-            <Font size="55.0" />
+            <Font size="50.0" />
          </font>
       </Label>
       <Label fx:id="time1" layoutX="800.0" layoutY="150.0" text="時間">
          <font>
-            <Font size="55.0" />
+            <Font size="50.0" />
          </font>
       </Label>
       <Label fx:id="cal1" layoutX="800.0" layoutY="250.0" text="カロリー">
          <font>
-            <Font size="55.0" />
+            <Font size="50.0" />
          </font>
       </Label>
-      <Label fx:id="seasonFood1" layoutX="1025.0" layoutY="200.0" text="旬食材">
+      <Label fx:id="seasonFood1" alignment="CENTER" layoutX="1025.0" layoutY="200.0" prefWidth="350.0" text="旬食材">
          <font>
-            <Font size="55.0" />
+            <Font size="50.0" />
          </font>
       </Label>
-      <Label fx:id="menuName2" layoutX="10.0" layoutY="400.0" onMouseClicked="#menuName2_OnClick" text="料理名">
+      <Label fx:id="menuName2" alignment="CENTER" layoutX="25.0" layoutY="400.0" onMouseClicked="#menuName2_OnClick" prefWidth="550.0" text="料理名">
          <font>
-            <Font size="75.0" />
+            <Font size="50.0" />
          </font>
       </Label>
       <Label fx:id="country2" layoutX="600.0" layoutY="350.0" text="国">
          <font>
-            <Font size="55.0" />
+            <Font size="50.0" />
          </font>
       </Label>
       <Label fx:id="genre2" layoutX="600.0" layoutY="450.0" text="ジャンル">
          <font>
-            <Font size="55.0" />
+            <Font size="50.0" />
          </font>
       </Label>
       <Label fx:id="time2" layoutX="800.0" layoutY="350.0" text="時間">
          <font>
-            <Font size="55.0" />
+            <Font size="50.0" />
          </font>
       </Label>
       <Label fx:id="cal2" layoutX="800.0" layoutY="450.0" text="カロリー">
          <font>
-            <Font size="55.0" />
+            <Font size="50.0" />
          </font>
       </Label>
-      <Label fx:id="seasonFood2" layoutX="1025.0" layoutY="400.0" text="旬食材">
+      <Label fx:id="seasonFood2" alignment="CENTER" layoutX="1025.0" layoutY="400.0" prefWidth="350.0" text="旬食材">
          <font>
-            <Font size="55.0" />
+            <Font size="50.0" />
          </font>
       </Label>
-      <Label fx:id="menuName3" layoutX="10.0" layoutY="600.0" onMouseClicked="#menuName3_OnClick" text="料理名">
+      <Label fx:id="menuName3" alignment="CENTER" layoutX="25.0" layoutY="600.0" onMouseClicked="#menuName3_OnClick" prefWidth="550.0" text="料理名">
          <font>
-            <Font size="75.0" />
+            <Font size="50.0" />
          </font>
       </Label>
       <Label fx:id="country3" layoutX="600.0" layoutY="550.0" text="国">
          <font>
-            <Font size="55.0" />
+            <Font size="50.0" />
          </font>
       </Label>
       <Label fx:id="genre3" layoutX="600.0" layoutY="650.0" text="ジャンル">
          <font>
-            <Font size="55.0" />
+            <Font size="50.0" />
          </font>
       </Label>
       <Label fx:id="time3" layoutX="800.0" layoutY="550.0" text="時間">
          <font>
-            <Font size="55.0" />
+            <Font size="50.0" />
          </font>
       </Label>
       <Label fx:id="cal3" layoutX="800.0" layoutY="650.0" text="カロリー">
          <font>
-            <Font size="55.0" />
+            <Font size="50.0" />
          </font>
       </Label>
-      <Label fx:id="seasonFood3" layoutX="1025.0" layoutY="600.0" text="旬食材">
+      <Label fx:id="seasonFood3" alignment="CENTER" layoutX="1025.0" layoutY="600.0" prefWidth="350.0" text="旬食材">
          <font>
-            <Font size="55.0" />
+            <Font size="50.0" />
          </font>
       </Label>
-      <Button fx:id="addBookmarkButton1" layoutX="1250.0" layoutY="200.0" mnemonicParsing="false" onAction="#addBookmark1_OnClick" text="お気に入り追加">
+      <Button fx:id="addBookmarkButton1" layoutX="1400.0" layoutY="200.0" mnemonicParsing="false" onAction="#addBookmark1_OnClick" prefHeight="100.0" prefWidth="175.0" text="お気に入り追加">
          <font>
-            <Font size="37.0" />
+            <Font size="20.0" />
          </font>
       </Button>
-      <Button fx:id="addBookmarkButton2" layoutX="1250.0" layoutY="400.0" mnemonicParsing="false" onAction="#addBookmark2_OnClick" text="お気に入り追加">
+      <Button fx:id="addBookmarkButton2" layoutX="1400.0" layoutY="400.0" mnemonicParsing="false" onAction="#addBookmark2_OnClick" prefHeight="100.0" prefWidth="175.0" text="お気に入り追加">
          <font>
-            <Font size="37.0" />
+            <Font size="20.0" />
          </font>
       </Button>
-      <Button fx:id="addBookmarkButton3" layoutX="1250.0" layoutY="600.0" mnemonicParsing="false" onAction="#addBookmark3_OnClick" text="お気に入り追加">
+      <Button fx:id="addBookmarkButton3" layoutX="1400.0" layoutY="600.0" mnemonicParsing="false" onAction="#addBookmark3_OnClick" prefHeight="100.0" prefWidth="175.0" text="お気に入り追加">
          <font>
-            <Font size="37.0" />
+            <Font size="20.0" />
          </font>
       </Button>
       <Button fx:id="backButton" layoutX="350.0" layoutY="750.0" mnemonicParsing="false" onAction="#backButton_OnClick" text="前へ">
          <font>
-            <Font size="52.0" />
+            <Font size="40.0" />
          </font>
       </Button>
       <Button fx:id="nextButton" layoutX="1100.0" layoutY="750.0" mnemonicParsing="false" onAction="#nextButton_OnClick" text="次へ">
          <font>
-            <Font size="52.0" />
+            <Font size="40.0" />
          </font>
       </Button>
       <Label fx:id="pageNum" layoutX="545.0" layoutY="760.0">

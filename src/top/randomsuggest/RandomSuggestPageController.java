@@ -105,12 +105,12 @@ public class RandomSuggestPageController {
 		label[0].setText(RandomSuggestMenu.get(randomValue).get(0)); // 料理名
 		label[1].setText(RandomSuggestMenu.get(randomValue).get(1)); // 料理国
 		label[2].setText(RandomSuggestMenu.get(randomValue).get(2)); // 料理ジャンル
-		label[3].setText(RandomSuggestMenu.get(randomValue).get(3)); // 2人前価格
-		label[4].setText(RandomSuggestMenu.get(randomValue).get(4)); // 料理所要時間
-		label[5].setText(RandomSuggestMenu.get(randomValue).get(5)); // カロリー
-		label[6].setText(RandomSuggestMenu.get(randomValue).get(6)); // タンパク質量
-		label[7].setText(RandomSuggestMenu.get(randomValue).get(7)); // 脂質量
-		label[8].setText(RandomSuggestMenu.get(randomValue).get(8)); // 炭水化物量
+		label[3].setText("2人前価格:" + RandomSuggestMenu.get(randomValue).get(3) + "円"); // 2人前価格
+		label[4].setText("所要時間:" + RandomSuggestMenu.get(randomValue).get(4) + "分"); // 料理所要時間
+		label[5].setText("カロリー:" + RandomSuggestMenu.get(randomValue).get(5) + "kcal"); // カロリー
+		label[6].setText("タンパク質:" + RandomSuggestMenu.get(randomValue).get(6) + "g"); // タンパク質量
+		label[7].setText("脂質:" + RandomSuggestMenu.get(randomValue).get(7) + "g"); // 脂質量
+		label[8].setText("炭水化物:" + RandomSuggestMenu.get(randomValue).get(8) + "g"); // 炭水化物量
 		label[9].setText(RandomSuggestMenu.get(randomValue).get(9)); // よく使われる主食材
 		label[10].setText(RandomSuggestMenu.get(randomValue).get(10)); // 料理の主食材
 		label[11].setText(RandomSuggestMenu.get(randomValue).get(11)); // 主食材

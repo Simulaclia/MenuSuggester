@@ -26,3 +26,8 @@
 	-fx-font-family: "keifont";
 	-fx-font-size: 1.8em;
 }
+
+#CookMenu1{
+	-fx-text-fill: #03A9F4;
+	-fx-underline: true;
+}

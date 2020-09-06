@@ -5,129 +5,93 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="anchorpane" prefHeight="900.0" prefWidth="1600.0" stylesheets="@RSP.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.randomsuggest.RandomSuggestPageController">
+<AnchorPane prefHeight="900.0" prefWidth="1600.0" stylesheets="@RandomSuggestPage.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.randomsuggest.RandomSuggestPageController">
    <children>
-      <Button fx:id="topbutton" layoutX="176.0" layoutY="53.0" mnemonicParsing="false" onAction="#ReturnTopPage_OnClick" prefHeight="96.0" prefWidth="292.0" text="Topに戻る">
+      <Button fx:id="topbutton" layoutX="100.0" layoutY="50.0" mnemonicParsing="false" onAction="#ReturnTopPage_OnClick" text="Topに戻る">
          <font>
-            <Font size="36.0" />
+            <Font size="50.0" />
          </font>
       </Button>
-      <Button fx:id="refinementbutton" layoutX="1195.0" layoutY="54.0" mnemonicParsing="false" onAction="#RandomSuggestNarrow_onClick" prefHeight="94.0" prefWidth="324.0" text="絞り込み設定">
+      <Button fx:id="refinementbutton" layoutX="1150.0" layoutY="50.0" mnemonicParsing="false" onAction="#RandomSuggestNarrow_onClick" text="絞り込み設定">
          <font>
-            <Font size="36.0" />
+            <Font size="50.0" />
          </font>
       </Button>
-      <Button fx:id="favoritebutton" layoutX="602.0" layoutY="734.0" mnemonicParsing="false" onAction="#addBookmark_OnClick" prefHeight="115.0" prefWidth="414.0" text="お気に入りに追加" textAlignment="CENTER">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </Button>
-      <Text layoutX="629.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2人前価格:            円" wrappingWidth="437.714111328125">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Text>
-      <Text layoutX="1147.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="所要時間:         分" wrappingWidth="374.88549804687517">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Text>
-      <Text layoutX="1144.0" layoutY="655.0" strokeType="OUTSIDE" strokeWidth="0.0" text="脂質:            g" wrappingWidth="305.6000000000001">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Text>
-      <Text layoutX="1144.0" layoutY="579.0" strokeType="OUTSIDE" strokeWidth="0.0" text="タンパク質:         g" wrappingWidth="374.8854980468752">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Text>
-      <Text layoutX="1144.0" layoutY="502.0" strokeType="OUTSIDE" strokeWidth="0.0" text="カロリー:          kcal" wrappingWidth="374.8854980468752">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Text>
-      <Text layoutX="1137.0" layoutY="730.0" strokeType="OUTSIDE" strokeWidth="0.0" text="炭水化物:          g" wrappingWidth="366.4609375">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Text>
-      <Text layoutX="238.0" layoutY="504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="食材:">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Text>
-      <Hyperlink fx:id="url" layoutX="100.0" layoutY="750.0" onAction="#url_OnClick" text="Hyperlink">
-         <font>
-            <Font size="45.0" />
-         </font>
-      </Hyperlink>
-      <Label fx:id="foodstuff1" layoutX="349.0" layoutY="450.0" prefHeight="70.0" prefWidth="375.0" text="食材1">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Label>
-      <Label fx:id="ciusinename" layoutX="203.0" layoutY="194.0" prefHeight="94.0" prefWidth="790.0" text="料理名">
-         <font>
-            <Font size="64.0" />
-         </font>
-      </Label>
-      <Label fx:id="genre" layoutX="101.0" layoutY="333.0" text="料理ジャンル">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Label>
-      <Label fx:id="country" layoutX="425.0" layoutY="332.0" text="料理国">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Label>
-      <Label fx:id="price" layoutX="881.0" layoutY="333.0" prefHeight="70.0" prefWidth="136.0" text="0" textAlignment="RIGHT">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Label>
-      <Label fx:id="time" layoutX="1382.0" layoutY="333.0" prefHeight="70.0" prefWidth="91.0" text="0">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Label>
-      <Label fx:id="foodstuff2" layoutX="349.0" layoutY="536.0" prefHeight="70.0" prefWidth="414.0" text="食材2">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Label>
-      <Label fx:id="cal" layoutX="1285.0" layoutY="447.0" prefHeight="70.0" prefWidth="136.0" text="0" textAlignment="RIGHT">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Label>
-      <Label fx:id="pro" layoutX="1356.0" layoutY="527.0" prefHeight="70.0" prefWidth="114.0" text="0">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Label>
-      <Label fx:id="lip" layoutX="1256.0" layoutY="603.0" prefHeight="70.0" prefWidth="153.0" text="0">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Label>
-      <Label fx:id="car" layoutX="1346.0" layoutY="678.0" prefHeight="70.0" prefWidth="128.0" text="0">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Label>
-      <Label fx:id="foodstuff3" layoutX="345.0" layoutY="616.0" prefHeight="70.0" prefWidth="413.0" text="食材3">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Label>
-      <Label fx:id="noResultLabel" layoutX="55.0" layoutY="445.0">
+      <Label fx:id="ciusinename" layoutX="100.0" layoutY="200.0" text="料理名">
          <font>
             <Font size="75.0" />
          </font>
       </Label>
+      <Label fx:id="genre" layoutX="100.0" layoutY="350.0" text="料理ジャンル">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Label fx:id="country" layoutX="400.0" layoutY="350.0" text="料理国">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="450.0" text="食材:">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Label fx:id="foodstuff1" layoutX="250.0" layoutY="450.0" text="食材1">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Label fx:id="foodstuff2" layoutX="250.0" layoutY="550.0" text="食材2">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Label fx:id="foodstuff3" layoutX="250.0" layoutY="650.0" text="食材3">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="url" layoutX="100.0" layoutY="750.0" onAction="#url_OnClick" text="Hyperlink">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Hyperlink>
+      <Label fx:id="price" layoutX="900.0" layoutY="300.0" text="2人前価格:0000円" textAlignment="RIGHT">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Label fx:id="time" layoutX="900.0" layoutY="375.0" text="所要時間:000分">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Label fx:id="cal" layoutX="900.0" layoutY="450.0" text="カロリー:0.0kcal" textAlignment="RIGHT">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Label fx:id="pro" layoutX="900.0" layoutY="525.0" text="タンパク質:0.0g">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Label fx:id="lip" layoutX="900.0" layoutY="600.0" text="脂質:0.0g">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Label fx:id="car" layoutX="900.0" layoutY="675.0" text="炭水化物:0.0g">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Button fx:id="favoritebutton" layoutX="900.0" layoutY="750.0" mnemonicParsing="false" onAction="#addBookmark_OnClick" text="お気に入りに追加">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
